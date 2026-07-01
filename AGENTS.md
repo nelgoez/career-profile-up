@@ -64,3 +64,9 @@ Rules:
 - If graphify-out/wiki/index.md exists, use it for broad navigation instead of raw source browsing.
 - Read graphify-out/GRAPH_REPORT.md only for broad architecture review or when query/path/explain do not surface enough context.
 - After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost).
+
+## agentic-debate
+
+When the user types `/agentic-debate`, invoke the `skill` tool with `skill: "agentic-debate"` before doing anything else.
+
+Runs a structured multi-agent debate: defines 2-3 options, dispatches one subagent per option with Tavily research instructions, then synthesizes a recommendation with a comparison table. Use for any decision where multiple approaches exist and the user wants researched tradeoffs before choosing.

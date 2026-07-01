@@ -58,16 +58,20 @@
 >
 > Here's what actually works when testing AI-powered apps:
 >
-> 1. **Semantic assertions** — not "button text equals X" but "page contains intent Y"
-> 2. **Property-based testing** — test invariants, not specific outputs
-> 3. **Human-in-the-loop gates** — AI proposes, human approves
-> 4. **Observability-driven** — log everything, assert on patterns
+> 1. **Semantic assertions** — not "button text equals X" but "page contains intent Y". DeepEval and LLM-as-judge patterns are becoming standard (astaqc.com, 2026).
+> 2. **Property-based testing** — test invariants, not specific outputs. Hypothesis + statistical pass rates across multiple runs (danilop/non-deterministic-software-testing, arxiv 2509.19185).
+> 3. **Human-in-the-loop gates** — AI proposes, human approves. Real-world evidence shows teams adopting this as the primary pattern for agentic validation (arxiv 2509.19185, §4.2).
+> 4. **Observability-driven** — log everything, assert on behavioral patterns. Shift from pre-execution assertions to post-execution trace analysis.
 >
-> The frameworks we built at Newfold Digital (Cucumber + TypeScript, Robot Framework) still apply — but the **oracle problem** changes when the system under test is itself non-deterministic.
+> I work with teams using these patterns daily, and partners like Engenious (engenious.io/services/testing-and-release) are embedding AI-native QA into delivery pipelines — achieving ~90% test coverage with AI-driven validation.
 >
-> Written a test for an LLM-powered feature? I'd love to compare approaches.
+> The frameworks we built at Newfold (Cucumber + TypeScript, Robot Framework) still apply — but the **oracle problem** changes when the system under test is itself non-deterministic.
 >
-> #AgenticQA #SoftwareTesting #AI #QualityEngineering
+> Drop a comment or DM if you're building LLM-powered features — I'd love to compare approaches.
+>
+> Attach: nelthor.qzz.io/ai-testing-strategies.svg (custom diagram showing all 4 strategies)
+>
+> #AgenticQA #SoftwareTesting #AI #QualityEngineering #LLM
 
 ### Post 3 — Portfolio / personal project
 

@@ -139,7 +139,10 @@ export default function CVPage() {
             <div className="p-4 rounded-lg bg-[var(--color-bg)] border border-[var(--color-border)]">
               <h3 className="font-semibold text-sm">EF SET English Certificate</h3>
               <p className="text-sm text-[var(--color-text-muted)]">C1 Advanced — EF International Language Centers</p>
-              <p className="text-xs mt-1">Issued May 2021 · <a href="https://cert.efset.org/JeCf4i" target="_blank" className="text-[var(--color-accent)]">Credential ID EF</a></p>
+              <p className="text-xs mt-1">
+                Issued May 2021 ·
+                <a href="https://cert.efset.org/JeCf4i" target="_blank" className="text-[var(--color-accent)]">Credential ID EF</a>
+              </p>
             </div>
             <div className="p-4 rounded-lg bg-[var(--color-bg)] border border-[var(--color-border)]">
               <h3 className="font-semibold text-sm">AI-Powered Quality Engineer</h3>
@@ -148,12 +151,18 @@ export default function CVPage() {
             <div className="p-4 rounded-lg bg-[var(--color-bg)] border border-[var(--color-border)]">
               <h3 className="font-semibold text-sm">IA y Automatización de Flujos de Trabajo</h3>
               <p className="text-sm text-[var(--color-text-muted)]">Campus Virtual UNC</p>
-              <p className="text-xs mt-1">Issued Jan 2026 · <a href="https://drive.google.com/file/d/1T58Pd5MERetW6uM7lLd7h-Dl6vsyt-8f/view" target="_blank" className="text-[var(--color-accent)]">Credential ID YRtctId1Px</a></p>
+              <p className="text-xs mt-1">
+                Issued Jan 2026 ·
+                <a href="https://drive.google.com/file/d/1T58Pd5MERetW6uM7lLd7h-Dl6vsyt-8f/view" target="_blank" className="text-[var(--color-accent)]">Credential ID YRtctId1Px</a>
+              </p>
             </div>
             <div className="p-4 rounded-lg bg-[var(--color-bg)] border border-[var(--color-border)] md:col-span-2">
               <h3 className="font-semibold text-sm">How to Give Feedback People Can Actually Use</h3>
               <p className="text-sm text-[var(--color-text-muted)]">LinkedIn</p>
-              <p className="text-xs mt-1">Issued Mar 2024 · <a href="https://www.linkedin.com/learning/certificates/dc6760c072692cd97698842c34170c219bd160901797f378c6e0d5076767e324" target="_blank" className="text-[var(--color-accent)]">View Certificate</a></p>
+              <p className="text-xs mt-1">
+                Issued Mar 2024 ·
+                <a href="https://www.linkedin.com/learning/certificates/dc6760c072692cd97698842c34170c219bd160901797f378c6e0d5076767e324" target="_blank" className="text-[var(--color-accent)]">View Certificate</a>
+              </p>
               <p className="text-xs text-[var(--color-text-muted)] mt-1">Skills: Constructive Feedback, Interpersonal Communication</p>
             </div>
           </div>

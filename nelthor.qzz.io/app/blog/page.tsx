@@ -1,21 +1,21 @@
-import Link from 'next/link';
-import fs from 'fs';
-import path from 'path';
+import fs from 'node:fs';
+import path from 'node:path';
 import matter from 'gray-matter';
+import Link from 'next/link';
 
 interface PostMeta {
-  title: string;
-  date: string;
-  description: string;
-  tags: string[];
-  slug: string;
+  title: string
+  date: string
+  description: string
+  tags: string[]
+  slug: string
 }
 
 function getPosts(): PostMeta[] {
   const dir = path.join(process.cwd(), 'content/blog');
   const files = fs.readdirSync(dir).filter(f => f.endsWith('.mdx'));
 
-  return files.map(f => {
+  return files.map((f) => {
     const source = fs.readFileSync(path.join(dir, f), 'utf8');
     const { data } = matter(source);
     return {

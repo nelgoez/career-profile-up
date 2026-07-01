@@ -1,15 +1,15 @@
-import Link from 'next/link';
-import fs from 'fs';
-import path from 'path';
+import fs from 'node:fs';
+import path from 'node:path';
 import matter from 'gray-matter';
 import { MDXRemote } from 'next-mdx-remote/rsc';
+import Link from 'next/link';
 import remarkGfm from 'remark-gfm';
 
 interface Params { slug: string }
 
 function getPost(slug: string) {
   const filePath = path.join(process.cwd(), 'content/blog', `${slug}.mdx`);
-  if (!fs.existsSync(filePath)) return null;
+  if (!fs.existsSync(filePath)) { return null; }
   const source = fs.readFileSync(filePath, 'utf8');
   const { data, content } = matter(source);
   return { frontmatter: data, content };
@@ -17,7 +17,7 @@ function getPost(slug: string) {
 
 function getAllSlugs(): string[] {
   const dir = path.join(process.cwd(), 'content/blog');
-  if (!fs.existsSync(dir)) return [];
+  if (!fs.existsSync(dir)) { return []; }
   return fs.readdirSync(dir).filter(f => f.endsWith('.mdx')).map(f => f.replace(/\.mdx$/, ''));
 }
 

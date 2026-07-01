@@ -1,15 +1,15 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import matter from 'gray-matter';
 import Link from 'next/link';
 import { ProjectsSection } from '@/components/projects-section';
 import { Timeline } from '@/components/timeline';
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
 import './hero-animations.css';
 
 function getLatestPosts(count = 3) {
   const dir = path.join(process.cwd(), 'content/blog');
-  if (!fs.existsSync(dir)) return [];
-  return fs.readdirSync(dir).filter(f => f.endsWith('.mdx')).map(f => {
+  if (!fs.existsSync(dir)) { return []; }
+  return fs.readdirSync(dir).filter(f => f.endsWith('.mdx')).map((f) => {
     const source = fs.readFileSync(path.join(dir, f), 'utf8');
     const { data } = matter(source);
     return { title: data.title, date: data.date, description: data.description, slug: f.replace(/\.mdx$/, '') };
@@ -103,7 +103,7 @@ function Experience() {
   );
 }
 
-function LatestPosts({ posts }: { posts: { title: string; date: string; description: string; slug: string }[] }) {
+function LatestPosts({ posts }: { posts: { title: string, date: string, description: string, slug: string }[] }) {
   return (
     <section className="py-16 border-t border-[var(--color-border)]">
       <h2 className="text-2xl font-bold mb-4">Latest Posts</h2>

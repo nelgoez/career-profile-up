@@ -68,6 +68,27 @@ This repo is both the **source code** for the portfolio and the **workspace** wh
 - `.claude/skills/` — reusable AI workflow skills (sprint-development, product-management, etc.)
 - `.context/` — design specs, content plans, media assets
 
+## Use this as a template
+
+This repo is a **GitHub Template** — click the green "Use this template" button at the top of the repo page to create your own copy.
+
+### For your own portfolio
+
+1. Click **Use this template** → name it `<your-username>.github.io` or whatever you like
+2. Clone your new repo: `git clone https://github.com/<your-username>/<your-repo>.git`
+3. `bun install`
+4. Replace content in `nelthor.qzz.io/` with your own (pages, components, styles)
+5. Deploy: push to `main` — GitHub Actions builds and deploys automatically
+
+### For QA professionals / Analysts
+
+No CLI tools required beyond `git` and `bun`. The template includes:
+- A ready-to-deploy Next.js portfolio with dark theme
+- Health check scripts to validate your content
+- GitHub Actions CI that builds on every push
+
+Swap the name, bio, experience, and projects — your portfolio is live in minutes.
+
 ## Quick start (local)
 
 ```bash

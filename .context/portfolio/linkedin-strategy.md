@@ -118,6 +118,25 @@
 >
 > #AgenticDev #OpenCode #DevOps #QA
 
+### Post 6 — Template launch
+
+> I just turned my portfolio into a GitHub Template — free for anyone to use.
+>
+> https://github.com/nelgoez/career-profile-up
+>
+> It's a Next.js 15 static site, dark-themed, deployed to GitHub Pages with one push. Comes with:
+>
+> • Health check scripts (assets, consistency, staleness)
+> • Blog, projects, and behind-the-scenes sections
+> • GitHub Actions CI built in
+> • Agentic dev skills included if you use Claude/OpenCode
+>
+> Click "Use this template" on the repo, clone, `bun install`, and you have your own portfolio in minutes.
+>
+> Built with agentic workflows. Free for everyone. No strings attached.
+>
+> #Portfolio #NextJS #GitHub #OpenSource #Career
+
 ---
 
 ## Posting schedule

@@ -17,7 +17,7 @@
                                 Agentic QA Engineer | Backend Dev                                      
 </pre>
 
-<h1>Nahuel Elias — Career Profile</h1>
+<h1>Nahuel Gomez — Career Profile</h1>
 
 <p>
   <a href="https://nelthor.qzz.io"><b>nelthor.qzz.io</b></a> ·

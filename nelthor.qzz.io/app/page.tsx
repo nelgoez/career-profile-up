@@ -18,7 +18,7 @@ export default function HomePage() {
 function Hero() {
   return (
     <section className="py-20 text-center">
-      <h1 className="text-5xl font-bold mb-4">Nahuel Elias</h1>
+      <h1 className="text-5xl font-bold mb-4">Nahuel Gomez</h1>
       <p className="text-xl text-[var(--color-text-muted)] mb-6">
         SDET → Agentic QA Engineer &middot; Backend Dev &middot; TypeScript &amp; Python
       </p>

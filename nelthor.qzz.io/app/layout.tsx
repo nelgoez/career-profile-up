@@ -2,11 +2,11 @@ import type { ReactNode } from 'react';
 import './globals.css';
 
 export const metadata = {
-  title: 'Nahuel Elias — Agentic QA Engineer',
+  title: 'Nahuel Gomez — Agentic QA Engineer',
   description:
     'QA Automation Engineer with 5+ years at Newfold Digital. SDET → Agentic QA Engineer. TypeScript, Python, Playwright, Cucumber.',
   openGraph: {
-    title: 'Nahuel Elias — Agentic QA Engineer',
+    title: 'Nahuel Gomez — Agentic QA Engineer',
     description: 'QA Automation Engineer | Backend Dev | TypeScript & Python',
     url: 'https://nelthor.qzz.io',
     siteName: 'nelthor.qzz.io',

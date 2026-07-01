@@ -12,11 +12,11 @@ const MEDIA_TYPES: Record<string, string[]> = {
 };
 
 interface Asset {
-  id: string;
-  type: string;
-  file: string;
-  alt_text: string;
-  used_in: string[];
+  id: string
+  type: string
+  file: string
+  alt_text: string
+  used_in: string[]
 }
 
 function generateManifest(): Asset[] {

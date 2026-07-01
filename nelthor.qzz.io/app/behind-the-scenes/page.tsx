@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const MEDIA_DIR = path.resolve(process.cwd(), '..', '.context', 'portfolio', 'media', 'manifest.json');
 
-interface MediaAsset { id: string; type: string; file: string; alt_text: string }
+interface MediaAsset { id: string, type: string, file: string, alt_text: string }
 
 function getMediaAssets(): MediaAsset[] {
   try {

@@ -186,7 +186,7 @@ Example (same work, different register):
 
 > **Persistent memory** — `bun run setup` installs Engram via `gentle-ai install --preset minimal`. Active across sessions and compactions per §12 (proactive memory triggers). No other gentle-ai skills are installed.
 >
-> **T3 (community project-level)** — frontend/backend skills matched by category at runtime, NOT by literal name. List in `cli/install.ts`.
+> **T3 (community project-level)** — frontend/backend skills matched by category at runtime, NOT by literal name. Installed via `bunx skills add` (see `.agents/skills/`).
 >
 > **T4 (community user-level)** — repo-agnostic skills, auto-discovered at runtime, **ASK before load** per strategy §3.2.
 >
@@ -196,7 +196,7 @@ Example (same work, different register):
 
 | Command                       | Purpose                                                                                        |
 | ----------------------------- | ---------------------------------------------------------------------------------------------- |
-| `/sync-ai-memory`             | Audit + sync README, CLAUDE.md, CONTEXT.md, docs/, onboarding HTML against current repo state. |
+| `/sync-ai-memory`             | Audit + sync README, CLAUDE.md, CONTEXT.md, docs/ against current repo state. |
 | `/business-data-map`          | Refresh `.context/business/business-data-map.md` (entities, flows, state machines).            |
 | `/business-feature-map`       | Refresh `.context/business/business-feature-map.md` (CRUD matrix, UI inventory).               |
 | `/business-api-map`           | Refresh `.context/business/business-api-map.md` (auth model, endpoints, architecture).         |
@@ -269,7 +269,7 @@ Project values live in **`.agents/project.yaml`** — load once per session. NEV
 
 **Active env**: `active_env` defaults to `testing.default_env` in `.agents/project.yaml`. User says "test against production" → switch `active_env` to `production` for that session, ignore `default_env` until session ends.
 
-**Validation**: `bun run vars:check` checks every `{{VAR}}` resolves; `bun run jira:check` validates manifest vs catalog.
+**Validation**: `grep` checks that every `{{VAR}}` resolves against `.agents/project.yaml`.
 
 ---
 

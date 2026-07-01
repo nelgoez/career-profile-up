@@ -96,7 +96,7 @@ bun install
 cp .env.example .env
 bun run generate:readme   # auto-generate GitHub profile README
 bun run health:check      # run portfolio health checks
-cd nelthor.qzz.io && bun install && bun run build
+cd <your-porfolio-name> && bun install && bun run build
 ```
 
 ## License

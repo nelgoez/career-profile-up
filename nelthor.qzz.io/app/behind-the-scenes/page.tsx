@@ -68,7 +68,11 @@ export default function BehindTheScenesPage() {
       </section>
 
       <section className="mb-16">
-        <h2 className="text-2xl font-bold mb-6">Architecture Evolution</h2>
+        <h2 className="text-2xl font-bold mb-2">Architecture Evolution</h2>
+        <p className="text-sm text-[var(--color-text-muted)] mb-6">Two pipelines — same engineer, expanded toolkit.</p>
+        <div className="mb-8 rounded-xl overflow-hidden border border-[var(--color-border)] bg-[var(--color-surface)]">
+          <img src="/architecture.svg" alt="Architecture diagram comparing Traditional SDET and Agentic QA pipelines" className="w-full h-auto" />
+        </div>
         <div className="grid md:grid-cols-2 gap-8">
           <div className="p-6 rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)]">
             <h3 className="font-semibold mb-3">2019-2023: Traditional SDET</h3>

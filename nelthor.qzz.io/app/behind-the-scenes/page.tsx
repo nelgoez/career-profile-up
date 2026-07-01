@@ -4,12 +4,12 @@ import Link from 'next/link';
 
 const MEDIA_DIR = path.resolve(process.cwd(), '..', '.context', 'portfolio', 'media', 'manifest.json');
 
-interface MediaAsset { id: string, type: string, file: string, alt_text: string }
+interface MediaAsset { id: string; type: string; file: string; alt_text: string }
 
 function getMediaAssets(): MediaAsset[] {
   try {
     const raw = fs.readFileSync(MEDIA_DIR, 'utf8');
-    return JSON.parse(raw).assets.filter((a: MediaAsset) => fs.existsSync(path.resolve(process.cwd(), 'public', 'media', a.file)));
+    return JSON.parse(raw).assets.filter((a: MediaAsset) => a.type !== 'unknown');
   }
   catch { return []; }
 }

@@ -19,11 +19,14 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: nelthor.qzz.io
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
-      - run: bun install --cwd nelthor.qzz.io
-      - run: bun run build --cwd nelthor.qzz.io
+      - run: bun install
+      - run: bun run build
       - uses: actions/upload-pages-artifact@v3
         with:
           path: nelthor.qzz.io/out

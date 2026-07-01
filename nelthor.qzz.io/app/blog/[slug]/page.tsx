@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const POSTS: Record<string, { title: string; date: string; content: string[] }> = {
+const POSTS: Record<string, { title: string, date: string, content: string[] }> = {
   'how-i-built-this-portfolio': {
     title: 'How I Built This Portfolio — With AI Agents',
     date: '2026-07-01',
@@ -45,7 +45,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const { slug } = await params;
   const post = POSTS[slug];
 
-  if (!post) return <main><p>Post not found</p></main>;
+  if (!post) { return <main><p>Post not found</p></main>; }
 
   return (
     <main>
@@ -56,8 +56,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <h1 className="text-3xl font-bold mb-2">{post.title}</h1>
         <p className="text-sm text-[var(--color-text-muted)] mb-8">{post.date}</p>
         {post.content.map((line, i) => {
-          if (line.startsWith('## ')) return <h2 key={i} className="text-xl font-bold mt-8 mb-4">{line.slice(3)}</h2>;
-          if (line === '') return <br key={i} />;
+          if (line.startsWith('## ')) { return <h2 key={i} className="text-xl font-bold mt-8 mb-4">{line.slice(3)}</h2>; }
+          if (line === '') { return <br key={i} />; }
           return <p key={i} className="text-[var(--color-text)] mb-4">{line}</p>;
         })}
       </article>

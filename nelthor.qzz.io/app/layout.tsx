@@ -1,4 +1,6 @@
 import type { ReactNode } from 'react';
+import Link from 'next/link';
+
 import './globals.css';
 
 export const metadata = {
@@ -14,8 +16,6 @@ export const metadata = {
     images: [{ url: 'https://nelthor.qzz.io/og-image.png', width: 1200, height: 630 }],
   },
 };
-
-import Link from 'next/link';
 
 const NAV = [
   { href: '/', label: 'Home' },

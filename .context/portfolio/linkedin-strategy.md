@@ -139,13 +139,34 @@
 
 ---
 
-## Posting schedule
+## Template launch plan (multi-platform)
 
-| Day | Content type | Pillar |
-|-----|-------------|--------|
-| Tue | Technical post | Agentic QA / Deep dive |
-| Thu | Story / narrative | Career / Behind the scenes |
-| Sat (optional) | Shorter hot take | Any pillar, 1-2 paragraphs |
+### LinkedIn — 3-post sequence
+
+| # | Day | Content | Target |
+|---|-----|---------|--------|
+| 1 | Mon | **Launch post**: "I just turned my portfolio into a free GitHub template." Link + screenshot of the "Use this template" button. Call-to-action: fork it. | Broad reach — QA, dev, career changers |
+| 2 | Wed | **Behind the scenes**: "How this template was built — agentic dev in practice." Link to blog post. | Tech audience — developers, AI curious |
+| 3 | Fri | **Value post**: "3 things every QA portfolio needs (and how this template covers them)." Bullet list, no sales pitch. | QA peers — SDETs, automation engineers |
+
+### Cross-post to other platforms
+
+| Platform | Content | Format |
+|----------|---------|--------|
+| **Twitter/X** | Launch post condensed to 280 chars + screenshot | Short text + image |
+| **Blind** | "Made my QA portfolio open source — feedback welcome?" | Casual question |
+| **Dev.to** | Blog post "How I Built My Portfolio With AI Agents" (republish from nelthor.qzz.io) | Full article |
+| **Reddit** (r/QualityAssurance, r/softwaretesting) | "Built an open-source QA portfolio template — sharing in case it helps" | Text post with link |
+| **Hacker News** | "Show HN: Agentic QA Portfolio Template" | Show HN post |
+
+### Best timing
+
+| Platform | Best day/time |
+|----------|--------------|
+| LinkedIn | Tue-Thu, 8-10am or 12-1pm |
+| Twitter/X | Weekdays, 9am or 6pm |
+| Reddit | Weekdays, 10am-2pm EST |
+| Dev.to | Any weekday morning |
 
 ---
 

@@ -33,7 +33,7 @@
 
 ## What this is
 
-**carrer-profile-up** is a local command center that manages your professional career presence. It uses AI workflow skills to:
+**career-profile-up** is a local command center that manages your professional career presence. It uses AI workflow skills to:
 
 - **Auto-generate** your GitHub Profile README from live API data
 - **Host** a portfolio landing page (`nelthor.qzz.io`) with projects, blog, and behind-the-scenes content
@@ -64,7 +64,7 @@ cd nelthor.qzz.io && bun install && bun run build
 ## Project structure
 
 ```
-carrer-profile-up/
+career-profile-up/
 ├── .agents/              # Project config + git strategy
 ├── .claude/skills/       # AI workflow skills (sprint-dev, product-mgmt, etc.)
 ├── .context/             # Product backlog, business maps, media assets

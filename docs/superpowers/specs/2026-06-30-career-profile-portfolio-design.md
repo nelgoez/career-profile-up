@@ -8,7 +8,7 @@
 
 ## 1. Purpose
 
-Transform `carrer-profile-up` (currently a bare agentic-dev-boilerplate) into a **career command center** that:
+Transform `career-profile-up` (currently a bare agentic-dev-boilerplate) into a **career command center** that:
 
 1. **Orchestrates** Nahuel's professional presence across platforms (GitHub, LinkedIn, Outlier)
 2. **Auto-generates** a dynamic GitHub Profile README (`nelgoez/nelgoez`) with live metrics
@@ -21,7 +21,7 @@ Transform `carrer-profile-up` (currently a bare agentic-dev-boilerplate) into a 
 ## 2. Architecture
 
 ```
-carrer-profile-up (LOCAL — not published)
+career-profile-up (LOCAL — not published)
 ├── .context/portfolio/       ← Portfolio content as "product" (PRD, epics, stories)
 │   └── media/                ← Raw media assets + manifest.json
 ├── scripts/

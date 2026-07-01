@@ -8,9 +8,9 @@
 # Each downstream project that uses this starter must fill in the real values.
 
 project:
-  project_name: Carrer Profile Up
+  project_name: Career Profile Up
   project_key: CP
-  webapp_domain: nelgoez.github.io/carrer-profile-up
+  webapp_domain: nelgoez.github.io/career-profile-up
 
 backend:
   backend_repo: ''
@@ -92,6 +92,6 @@ environments:
     api_url: null
     db_project_ref: null
   production:
-    web_url: https://nelgoez.github.io/carrer-profile-up
+    web_url: https://nelgoez.github.io/career-profile-up
     api_url: null
     db_project_ref: null

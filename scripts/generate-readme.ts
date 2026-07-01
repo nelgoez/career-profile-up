@@ -29,7 +29,7 @@ interface GitHubUser {
 
 async function fetchJSON<T>(url: string): Promise<T> {
   const res = await fetch(url, {
-    headers: { 'User-Agent': 'carrer-profile-up' },
+    headers: { 'User-Agent': 'career-profile-up' },
   });
   if (!res.ok) { throw new Error(`GitHub API ${res.status}: ${url}`); }
   return res.json() as Promise<T>;

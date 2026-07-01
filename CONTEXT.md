@@ -1,6 +1,6 @@
 # Context Engineering — Career Profile Project
 
-> How `carrer-profile-up` structures context for AI agents.
+> How `career-profile-up` structures context for AI agents.
 > Loaded by Claude Code and OpenCode at session start.
 
 ---
@@ -12,7 +12,7 @@ A structured approach to organizing project knowledge so AI agents can find, con
 ## 2. Directory Structure
 
 ```
-carrer-profile-up/
+career-profile-up/
 ├── .agents/
 │   └── project.yaml            Project config + git strategy
 │

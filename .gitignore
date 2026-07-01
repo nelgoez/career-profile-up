@@ -130,3 +130,6 @@ dbhub.local.toml
 
 # ===== Graphify Knowledge Graph =====
 graphify-out/
+
+# Generated media copies (from scripts/build-media-index.ts)
+nelthor.qzz.io/public/media/

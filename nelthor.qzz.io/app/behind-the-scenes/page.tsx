@@ -1,4 +1,17 @@
 import Link from 'next/link';
+import fs from 'node:fs';
+import path from 'node:path';
+
+const MEDIA_DIR = path.resolve(process.cwd(), '..', '.context', 'portfolio', 'media', 'manifest.json');
+
+interface MediaAsset { id: string; type: string; file: string; alt_text: string }
+
+function getMediaAssets(): MediaAsset[] {
+  try {
+    const raw = fs.readFileSync(MEDIA_DIR, 'utf8');
+    return JSON.parse(raw).assets.filter((a: MediaAsset) => fs.existsSync(path.resolve(process.cwd(), 'public', 'media', a.file)));
+  } catch { return []; }
+}
 
 const COMPARISONS = [
   {
@@ -29,6 +42,7 @@ const COMPARISONS = [
 ];
 
 export default function BehindTheScenesPage() {
+  const media = getMediaAssets();
   return (
     <main>
       <div className="mb-8">
@@ -127,39 +141,29 @@ export default function BehindTheScenesPage() {
         </div>
       </section>
 
-      <section className="mb-16">
-        <h2 className="text-2xl font-bold mb-6">Media Gallery</h2>
-        <p className="text-[var(--color-text-muted)] mb-8">
-          Screenshots, diagrams, and recordings showing the tools and workflows in action.
-          More assets coming soon — terminal recordings, video walkthroughs, and Allure reports.
-        </p>
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="p-6 rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)]">
-            <div className="aspect-video rounded-lg bg-[var(--color-bg)] border border-[var(--color-border)] flex items-center justify-center text-[var(--color-text-muted)] text-sm mb-3">
-              📸 Screenshot — Homepage Hero
-            </div>
-            <p className="text-xs text-[var(--color-text-muted)]">Homepage with hero, skills grid, and experience timeline</p>
+      {media.length > 0 && (
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold mb-6">Media Gallery</h2>
+          <p className="text-[var(--color-text-muted)] mb-8">
+            Screenshots, diagrams, and recordings showing the portfolio and workflows in action.
+          </p>
+          <div className="grid md:grid-cols-2 gap-6">
+            {media.map(asset => (
+              <div key={asset.id} className="p-3 rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)]">
+                <a href={`/media/${asset.file}`} target="_blank">
+                  <img
+                    src={`/media/${asset.file}`}
+                    alt={asset.alt_text || asset.id}
+                    className="w-full rounded-lg border border-[var(--color-border)]"
+                    loading="lazy"
+                  />
+                </a>
+                <p className="text-xs text-[var(--color-text-muted)] mt-2 px-1">{asset.alt_text || asset.id}</p>
+              </div>
+            ))}
           </div>
-          <div className="p-6 rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)]">
-            <div className="aspect-video rounded-lg bg-[var(--color-bg)] border border-[var(--color-border)] flex items-center justify-center text-[var(--color-text-muted)] text-sm mb-3">
-              📸 Screenshot — Blog Listing
-            </div>
-            <p className="text-xs text-[var(--color-text-muted)]">Blog listing with all 5 MDX-powered posts</p>
-          </div>
-          <div className="p-6 rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)]">
-            <div className="aspect-video rounded-lg bg-[var(--color-bg)] border border-[var(--color-border)] flex items-center justify-center text-[var(--color-text-muted)] text-sm mb-3">
-              🎥 Recording — Agentic Dev Session (coming soon)
-            </div>
-            <p className="text-xs text-[var(--color-text-muted)]">Terminal recording of a sprint-development workflow in action</p>
-          </div>
-          <div className="p-6 rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)]">
-            <div className="aspect-video rounded-lg bg-[var(--color-bg)] border border-[var(--color-border)] flex items-center justify-center text-[var(--color-text-muted)] text-sm mb-3">
-              📊 Diagram — Architecture Evolution
-            </div>
-            <p className="text-xs text-[var(--color-text-muted)]">Traditional SDET vs Agentic QA pipeline comparison</p>
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       <section className="mb-16">
         <h2 className="text-2xl font-bold mb-6">This Portfolio — Built with Agentic Workflows</h2>

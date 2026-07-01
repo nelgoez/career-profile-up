@@ -1,11 +1,12 @@
-import { existsSync, mkdirSync, readdirSync, writeFileSync } from 'node:fs';
-import { resolve } from 'node:path';
+import { copyFileSync, existsSync, mkdirSync, readdirSync, statSync, writeFileSync } from 'node:fs';
+import { dirname, join, resolve } from 'node:path';
 
 const ROOT = resolve(import.meta.dirname, '..');
 const MEDIA_DIR = resolve(ROOT, '.context', 'portfolio', 'media');
+const PUBLIC_MEDIA = resolve(ROOT, 'nelthor.qzz.io', 'public', 'media');
 
 const MEDIA_TYPES: Record<string, string[]> = {
-  screenshot: ['.png', '.jpg', '.jpeg'],
+  screenshot: ['.png', '.jpg', '.jpeg', '.webp'],
   diagram: ['.svg', '.png'],
   recording: ['.gif', '.mp4', '.webm'],
   document: ['.pdf', '.html'],
@@ -19,25 +20,36 @@ interface Asset {
   used_in: string[]
 }
 
+function walk(dir: string, files: string[] = []) {
+  for (const entry of readdirSync(dir)) {
+    const full = join(dir, entry);
+    if (entry === 'manifest.json') { continue; }
+    if (statSync(full).isDirectory()) { walk(full, files); }
+    else { files.push(full); }
+  }
+  return files;
+}
+
 function generateManifest(): Asset[] {
   if (!existsSync(MEDIA_DIR)) {
     mkdirSync(MEDIA_DIR, { recursive: true });
     return [];
   }
 
-  const files = readdirSync(MEDIA_DIR);
+  const files = walk(MEDIA_DIR);
   const assets: Asset[] = [];
 
   for (const file of files) {
+    const rel = resolve(file).replace(resolve(MEDIA_DIR) + '\\', '').replace(resolve(MEDIA_DIR) + '/', '');
     const ext = file.toLowerCase().replace(/.*\./, '.');
     let type = 'unknown';
     for (const [category, exts] of Object.entries(MEDIA_TYPES)) {
       if (exts.includes(ext)) { type = category; break; }
     }
     assets.push({
-      id: file.replace(/\.[^.]+$/, ''),
+      id: rel.replace(/\.[^.]+$/, '').replace(/[/\\]/g, '-'),
       type,
-      file,
+      file: rel,
       alt_text: '',
       used_in: [],
     });
@@ -48,4 +60,16 @@ function generateManifest(): Asset[] {
 
 const manifest = { version: 1, updated: new Date().toISOString().split('T')[0], assets: generateManifest() };
 writeFileSync(resolve(MEDIA_DIR, 'manifest.json'), `${JSON.stringify(manifest, null, 2)}\n`);
-console.log(`Media manifest: ${manifest.assets.length} assets`);
+
+if (!existsSync(PUBLIC_MEDIA)) { mkdirSync(PUBLIC_MEDIA, { recursive: true }); }
+let copied = 0;
+for (const asset of manifest.assets) {
+  const src = resolve(MEDIA_DIR, asset.file);
+  if (!statSync(src).isFile()) { continue; }
+  const dst = resolve(PUBLIC_MEDIA, asset.file);
+  mkdirSync(dirname(dst), { recursive: true });
+  copyFileSync(src, dst);
+  copied++;
+}
+
+console.log(`Media manifest: ${manifest.assets.length} assets, ${copied} copied to public/media/`);

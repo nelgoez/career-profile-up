@@ -11,6 +11,7 @@ export const metadata = {
     url: 'https://nelthor.qzz.io',
     siteName: 'nelthor.qzz.io',
     type: 'website',
+    images: [{ url: 'https://nelthor.qzz.io/og-image.png', width: 1200, height: 630 }],
   },
 };
 

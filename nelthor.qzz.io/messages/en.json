@@ -1,5 +1,10 @@
 {
-  "nav": { "home": "Home", "projects": "Projects", "blog": "Blog", "behind-the-scenes": "Behind the Scenes" },
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "blog": "Blog",
+    "behind-the-scenes": "Behind the Scenes"
+  },
   "hero": {
     "tagline": "SDET → Agentic QA Engineer · Backend Dev · TypeScript & Python",
     "bio": "5+ years building test automation frameworks at Newfold Digital. Specializing in agentic QA engineering — intelligent systems that work alongside AI agents.",
@@ -7,11 +12,36 @@
     "download-cv": "Download CV",
     "contact": "Contact"
   },
-  "skills": { "title": "Tech Stack", "testing": "Testing & QA", "languages": "Languages & Backend", "tools": "Tools & Platforms" },
+  "skills": {
+    "title": "Tech Stack",
+    "testing": "Testing & QA",
+    "languages": "Languages & Backend",
+    "tools": "Tools & Platforms"
+  },
   "experience": { "title": "Experience" },
-  "latest-posts": { "title": "Latest Posts", "description": "Thoughts on QA engineering, agentic development, and career growth.", "view-all": "View all posts →" },
-  "behind-the-scenes": { "title": "Behind the Scenes", "description": "See how this portfolio was built — from traditional QA frameworks at Newfold Digital to agentic AI-assisted development. Side-by-side comparisons, architecture diagrams, and workflow recordings.", "cta": "Explore the process →" },
-  "contact": { "title": "Get in Touch", "description": "Open to opportunities in QA Engineering, Backend Development, and Agentic AI roles.", "linkedin": "LinkedIn", "github": "GitHub", "email": "Email" },
-  "blog": { "title": "Blog", "description": "Thoughts on QA engineering, agentic development, and career growth.", "back": "← Back", "back-to-blog": "← Back to Blog", "not-found": "Post not found" },
+  "latest-posts": {
+    "title": "Latest Posts",
+    "description": "Thoughts on QA engineering, agentic development, and career growth.",
+    "view-all": "View all posts →"
+  },
+  "behind-the-scenes": {
+    "title": "Behind the Scenes",
+    "description": "See how this portfolio was built — from traditional QA frameworks at Newfold Digital to agentic AI-assisted development. Side-by-side comparisons, architecture diagrams, and workflow recordings.",
+    "cta": "Explore the process →"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "description": "Open to opportunities in QA Engineering, Backend Development, and Agentic AI roles.",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "email": "Email"
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Thoughts on QA engineering, agentic development, and career growth.",
+    "back": "← Back",
+    "back-to-blog": "← Back to Blog",
+    "not-found": "Post not found"
+  },
   "cv": { "save-pdf": "Save as PDF", "back": "← Back" }
 }

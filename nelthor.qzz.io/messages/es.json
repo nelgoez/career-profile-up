@@ -1,5 +1,10 @@
 {
-  "nav": { "home": "Inicio", "projects": "Proyectos", "blog": "Blog", "behind-the-scenes": "Detrás de Escena" },
+  "nav": {
+    "home": "Inicio",
+    "projects": "Proyectos",
+    "blog": "Blog",
+    "behind-the-scenes": "Detrás de Escena"
+  },
   "hero": {
     "tagline": "SDET → Agente QA · Backend Dev · TypeScript & Python",
     "bio": "Más de 5 años construyendo frameworks de automatización en Newfold Digital. Especializado en ingeniería de calidad agente — sistemas inteligentes que trabajan junto a agentes de IA.",
@@ -7,11 +12,36 @@
     "download-cv": "Descargar CV",
     "contact": "Contacto"
   },
-  "skills": { "title": "Stack Tecnológico", "testing": "Testing & QA", "languages": "Lenguajes & Backend", "tools": "Herramientas & Plataformas" },
+  "skills": {
+    "title": "Stack Tecnológico",
+    "testing": "Testing & QA",
+    "languages": "Lenguajes & Backend",
+    "tools": "Herramientas & Plataformas"
+  },
   "experience": { "title": "Experiencia" },
-  "latest-posts": { "title": "Últimos Posts", "description": "Reflexiones sobre ingeniería de calidad, desarrollo agente y crecimiento profesional.", "view-all": "Ver todos →" },
-  "behind-the-scenes": { "title": "Detrás de Escena", "description": "Mirá cómo se construyó este portfolio — desde frameworks tradicionales en Newfold Digital hasta desarrollo asistido por agentes de IA. Comparaciones, diagramas de arquitectura y grabaciones de workflows.", "cta": "Explorar el proceso →" },
-  "contact": { "title": "Contacto", "description": "Abierto a oportunidades en QA Engineering, Backend Development y roles de IA Agente.", "linkedin": "LinkedIn", "github": "GitHub", "email": "Email" },
-  "blog": { "title": "Blog", "description": "Reflexiones sobre ingeniería de calidad, desarrollo agente y crecimiento profesional.", "back": "← Volver", "back-to-blog": "← Volver al Blog", "not-found": "Post no encontrado" },
+  "latest-posts": {
+    "title": "Últimos Posts",
+    "description": "Reflexiones sobre ingeniería de calidad, desarrollo agente y crecimiento profesional.",
+    "view-all": "Ver todos →"
+  },
+  "behind-the-scenes": {
+    "title": "Detrás de Escena",
+    "description": "Mirá cómo se construyó este portfolio — desde frameworks tradicionales en Newfold Digital hasta desarrollo asistido por agentes de IA. Comparaciones, diagramas de arquitectura y grabaciones de workflows.",
+    "cta": "Explorar el proceso →"
+  },
+  "contact": {
+    "title": "Contacto",
+    "description": "Abierto a oportunidades en QA Engineering, Backend Development y roles de IA Agente.",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "email": "Email"
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Reflexiones sobre ingeniería de calidad, desarrollo agente y crecimiento profesional.",
+    "back": "← Volver",
+    "back-to-blog": "← Volver al Blog",
+    "not-found": "Post no encontrado"
+  },
   "cv": { "save-pdf": "Guardar como PDF", "back": "← Volver" }
 }

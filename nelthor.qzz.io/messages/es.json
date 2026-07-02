@@ -19,6 +19,15 @@
     "tools": "Herramientas & Plataformas"
   },
   "experience": { "title": "Experiencia" },
+  "projects": {
+    "featured-title": "Proyectos Destacados",
+    "featured-badge": "Destacado",
+    "no-description": "Sin descripción",
+    "updated": "Actualizado",
+    "title": "Proyectos",
+    "description": "Datos en vivo desde la API de GitHub — se actualiza automáticamente.",
+    "back": "← Volver"
+  },
   "latest-posts": {
     "title": "Últimos Posts",
     "description": "Reflexiones sobre ingeniería de calidad, desarrollo agente y crecimiento profesional.",
@@ -43,5 +52,33 @@
     "back-to-blog": "← Volver al Blog",
     "not-found": "Post no encontrado"
   },
-  "cv": { "save-pdf": "Guardar como PDF", "back": "← Volver" }
+  "cv": { "save-pdf": "Guardar como PDF", "back": "← Volver" },
+  "qa": {
+    "nav": "QC",
+    "title": "Ingeniería de Calidad",
+    "subtitle": "Filosofía, estrategia y evidencia de proyectos reales.",
+    "approach-title": "Mi Enfoque de Calidad",
+    "approach": "La Ingeniería de Calidad es una disciplina de diseño, no una fase de testing. Creo en el shift-left — encontrar problemas antes de que sean bugs, construir testabilidad en la arquitectura, y usar automatización para amplificar el juicio humano, no reemplazarlo.",
+    "scorecard-title": "Scorecard de Testabilidad",
+    "scorecard-desc": "Evaluación por capas del Diploma Tracking System (DTS), una plataforma académica full-stack real en la que trabajo.",
+    "layer-ui": "UI (Frontend)",
+    "layer-ui-score": "En Progreso",
+    "layer-ui-detail": "Suite Playwright E2E con page objects, fixtures de auth y tests de flujo de negocio. Cubre login, dashboard, navegación RBAC, progreso de estudiantes. Expandiendo cobertura.",
+    "layer-api": "API (Backend)",
+    "layer-api-score": "Sólido",
+    "layer-api-detail": "Tests de integración + smoke + exploratorios cubriendo auth, RBAC, flujos de estudiantes y administradores, reglas de inscripción y aislamiento de datos. 15 archivos de rutas, patrón JWT + Zod consistente.",
+    "layer-db": "Base de Datos",
+    "layer-db-score": "Parcial",
+    "layer-db-detail": "Políticas RLS de Supabase validadas vía API. Tests de integración directa a DB con cliente Supabase. Schema con migraciones y auditoría.",
+    "layer-cicd": "CI / CD",
+    "layer-cicd-score": "Sólido",
+    "layer-cicd-detail": "6 workflows de GitHub Actions: typecheck + unit + API en cada push, smoke diario, regression semanal con video de Playwright, validación de producción, guardia de UX.",
+    "evidence-title": "Proyecto Real: bunkai-tms",
+    "evidence-desc": "Hallazgos reales de bugs en una aplicación web de producción testeada con Playwright, Cucumber y Allure Reports — integrados con Jira para trazabilidad.",
+    "evidence-bug1": "App shell con sidebar — verificación de integridad de layout",
+    "evidence-bug2": "Navegación multi-pestaña — consistencia de estado entre pestañas",
+    "evidence-bug3": "TC-10: Estado no encontrado — manejo faltante de 404 en rutas inválidas",
+    "cta": "¿Querés discutir cómo puedo mejorar la calidad de tu equipo?",
+    "cta-button": "Hablemos"
+  }
 }

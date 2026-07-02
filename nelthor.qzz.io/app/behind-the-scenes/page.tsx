@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import Link from 'next/link';
+import { T } from '@/components/t';
 
 const MEDIA_DIR = path.resolve(process.cwd(), '..', '.context', 'portfolio', 'media', 'manifest.json');
 
@@ -48,14 +49,13 @@ export default function BehindTheScenesPage() {
     <main>
       <div className="mb-8">
         <Link href="/" className="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-accent)]">
-          ← Back
+          <T k="blog.back" />
         </Link>
       </div>
 
-      <h1 className="text-3xl font-bold mb-4">Behind the Scenes</h1>
+      <h1 className="text-3xl font-bold mb-4"><T k="behind-the-scenes.title" /></h1>
       <p className="text-[var(--color-text-muted)] mb-12">
-        Same problems, two eras. How work was done at Newfold Digital (traditional SDET)
-        vs how it&apos;s done now with agentic AI workflows.
+        <T k="behind-the-scenes.description" />
       </p>
 
       <section className="mb-16">

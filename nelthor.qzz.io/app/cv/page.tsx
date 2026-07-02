@@ -1,16 +1,18 @@
 'use client';
 
 import Link from 'next/link';
+import { useLocale } from '@/lib/locale-context';
 
 export default function CVPage() {
+  const { t } = useLocale();
   return (
     <main>
       <div className="mb-8 flex justify-between items-center">
         <Link href="/" className="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-accent)]">
-          ← Back
+          {t('cv.back')}
         </Link>
         <button onClick={() => window.print()} className="px-4 py-2 rounded-lg bg-[var(--color-accent-strong)] text-white text-sm font-semibold hover:opacity-90 print-hidden">
-          Save as PDF
+          {t('cv.save-pdf')}
         </button>
       </div>
 

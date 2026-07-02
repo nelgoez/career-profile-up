@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useLocale } from '@/lib/locale-context';
 
 interface Repo {
   name: string
@@ -48,6 +49,7 @@ function SkeletonCard() {
 }
 
 export function ProjectsSection() {
+  const { t, locale } = useLocale();
   const [repos, setRepos] = useState<Repo[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -65,7 +67,7 @@ export function ProjectsSection() {
 
   return (
     <section>
-      <h2 className="text-2xl font-bold mb-8">Featured Projects</h2>
+      <h2 className="text-2xl font-bold mb-8">{t('projects.featured-title')}</h2>
       <div className="grid md:grid-cols-2 gap-6">
         {loading
           ? Array.from({ length: 4 }).map((_, i) => <SkeletonCard key={i} />)
@@ -80,7 +82,7 @@ export function ProjectsSection() {
                     <h3 className="font-semibold text-lg truncate">{repo.name}</h3>
                     {FEATURED.includes(repo.name) && (
                       <span className="shrink-0 text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-[var(--color-accent)]/15 text-[var(--color-accent)] border border-[var(--color-accent)]/30">
-                        Featured
+                        {t('projects.featured-badge')}
                       </span>
                     )}
                   </div>
@@ -93,7 +95,7 @@ export function ProjectsSection() {
                   )}
                 </div>
                 <p className="text-sm text-[var(--color-text-muted)] mb-4 line-clamp-2">
-                  {repo.description ?? 'No description'}
+                  {repo.description ?? t('projects.no-description')}
                 </p>
                 {repo.topics && repo.topics.length > 0 && (
                   <div className="flex flex-wrap gap-1.5 mb-4">
@@ -118,9 +120,9 @@ export function ProjectsSection() {
                     </span>
                   )}
                   <span>
-                    Updated
+                    {t('projects.updated')}
                     {' '}
-                    {new Date(repo.updated_at).toLocaleDateString('en-US', {
+                    {new Date(repo.updated_at).toLocaleDateString(locale === 'es' ? 'es-AR' : 'en-US', {
                       month: 'short',
                       day: 'numeric',
                       year: 'numeric',

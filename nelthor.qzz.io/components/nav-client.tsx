@@ -7,6 +7,7 @@ const NAV_KEYS = [
   { href: '/', key: 'nav.home' },
   { href: '/projects', key: 'nav.projects' },
   { href: '/blog', key: 'nav.blog' },
+  { href: '/qa', key: 'qa.nav' },
   { href: '/behind-the-scenes', key: 'nav.behind-the-scenes' },
 ];
 

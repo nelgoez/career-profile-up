@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { Timeline } from '@/components/timeline';
 import { useLocale } from '@/lib/locale-context';
 
 export function HeroSection() {
@@ -91,6 +92,16 @@ export function LatestPostsSection({ posts }: { posts: { title: string, date: st
       <div className="mt-6">
         <Link href="/blog" className="text-[var(--color-accent)] hover:underline text-sm">{t('latest-posts.view-all')}</Link>
       </div>
+    </section>
+  );
+}
+
+export function ExperienceSection() {
+  const { t } = useLocale();
+  return (
+    <section className="py-16 border-t border-[var(--color-border)]">
+      <h2 className="text-2xl font-bold mb-8">{t('experience.title')}</h2>
+      <Timeline />
     </section>
   );
 }

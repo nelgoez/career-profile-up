@@ -19,6 +19,15 @@
     "tools": "Tools & Platforms"
   },
   "experience": { "title": "Experience" },
+  "projects": {
+    "featured-title": "Featured Projects",
+    "featured-badge": "Featured",
+    "no-description": "No description",
+    "updated": "Updated",
+    "title": "Projects",
+    "description": "Live data from GitHub API — auto-updates when new code is pushed.",
+    "back": "← Back"
+  },
   "latest-posts": {
     "title": "Latest Posts",
     "description": "Thoughts on QA engineering, agentic development, and career growth.",
@@ -43,5 +52,33 @@
     "back-to-blog": "← Back to Blog",
     "not-found": "Post not found"
   },
-  "cv": { "save-pdf": "Save as PDF", "back": "← Back" }
+  "cv": { "save-pdf": "Save as PDF", "back": "← Back" },
+  "qa": {
+    "nav": "QA",
+    "title": "Quality Engineering",
+    "subtitle": "Philosophy, strategy, and evidence from real projects.",
+    "approach-title": "My QA Approach",
+    "approach": "Quality Engineering is a design discipline, not a testing phase. I believe in shift-left thinking — finding issues before they become bugs, building testability into architecture, and using automation to amplify human judgment, not replace it.",
+    "scorecard-title": "Testability Scorecard",
+    "scorecard-desc": "A layered assessment of the Diploma Tracking System (DTS), a real full-stack academic platform I work on.",
+    "layer-ui": "UI (Frontend)",
+    "layer-ui-score": "In Progress",
+    "layer-ui-detail": "Playwright E2E suite with page objects, auth fixtures, and business-flow tests. Covers login, dashboard, RBAC navigation, student progress. Expanding coverage.",
+    "layer-api": "API (Backend)",
+    "layer-api-score": "Strong",
+    "layer-api-detail": "Integration + smoke + exploratory tests covering auth, RBAC, student flows, admin flows, enrollment rules, and data isolation. 15 route files, consistent JWT + Zod pattern.",
+    "layer-db": "Database",
+    "layer-db-score": "Partial",
+    "layer-db-detail": "Supabase RLS policies tested via API layer. Direct DB integration tests via Supabase client. Migration-based schema with audit logging.",
+    "layer-cicd": "CI / CD",
+    "layer-cicd-score": "Solid",
+    "layer-cicd-detail": "6 GitHub Actions workflows: typecheck + unit + API on push, daily smoke, weekly regression with Playwright video, production validation, UX guard.",
+    "evidence-title": "Live Project: bunkai-tms",
+    "evidence-desc": "Real bug findings from a production web application tested with Playwright, Cucumber, and Allure Reports — integrated with Jira for traceability.",
+    "evidence-bug1": "App shell with sidebar — layout integrity check",
+    "evidence-bug2": "Multi-tab navigation — state consistency across tabs",
+    "evidence-bug3": "TC-10: Not found state — missing 404 handling on invalid routes",
+    "cta": "Want to discuss how I can improve your team's quality?",
+    "cta-button": "Let's Talk"
+  }
 }

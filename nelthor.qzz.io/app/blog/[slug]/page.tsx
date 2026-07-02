@@ -4,6 +4,7 @@ import matter from 'gray-matter';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import Link from 'next/link';
 import remarkGfm from 'remark-gfm';
+import { T } from '@/components/t';
 
 interface Params { slug: string }
 
@@ -34,10 +35,10 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
       <main>
         <div className="mb-8">
           <Link href="/blog" className="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-accent)]">
-            ← Back to Blog
+            <T k="blog.back-to-blog" />
           </Link>
         </div>
-        <h1 className="text-2xl font-bold">Post not found</h1>
+        <h1 className="text-2xl font-bold"><T k="blog.not-found" /></h1>
       </main>
     );
   }
@@ -46,7 +47,7 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
     <main>
       <div className="mb-8">
         <Link href="/blog" className="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-accent)]">
-          ← Back to Blog
+          <T k="blog.back-to-blog" />
         </Link>
       </div>
 

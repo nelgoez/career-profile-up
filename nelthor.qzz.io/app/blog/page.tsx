@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
 import Link from 'next/link';
+import { T } from '@/components/t';
 
 interface PostMeta {
   title: string
@@ -35,13 +36,13 @@ export default function BlogPage() {
     <main>
       <div className="mb-8">
         <Link href="/" className="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-accent)]">
-          ← Back
+          <T k="blog.back" />
         </Link>
       </div>
 
-      <h1 className="text-3xl font-bold mb-4">Blog</h1>
+      <h1 className="text-3xl font-bold mb-4"><T k="blog.title" /></h1>
       <p className="text-[var(--color-text-muted)] mb-12">
-        Thoughts on QA engineering, agentic development, and career growth.
+        <T k="blog.description" />
       </p>
 
       <div className="space-y-6">

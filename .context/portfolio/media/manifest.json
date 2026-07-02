@@ -1,7 +1,28 @@
 {
   "version": 1,
-  "updated": "2026-07-01",
+  "updated": "2026-07-02",
   "assets": [
+    {
+      "id": "qa-bk147-app-shell-with-sidebar",
+      "type": "screenshot",
+      "file": "qa\\bk147-app-shell-with-sidebar.png",
+      "alt_text": "",
+      "used_in": []
+    },
+    {
+      "id": "qa-bk147-multi-tab",
+      "type": "screenshot",
+      "file": "qa\\bk147-multi-tab.png",
+      "alt_text": "",
+      "used_in": []
+    },
+    {
+      "id": "qa-bk147-tc10-not-found",
+      "type": "screenshot",
+      "file": "qa\\bk147-tc10-not-found.png",
+      "alt_text": "",
+      "used_in": []
+    },
     {
       "id": "screenshots-behind-the-scenes",
       "type": "screenshot",

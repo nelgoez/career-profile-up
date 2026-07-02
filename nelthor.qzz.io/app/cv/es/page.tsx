@@ -112,8 +112,13 @@ export default function CVEsPage() {
           </div>
 
           <div className="mb-6">
-            <h3 className="font-semibold">Coderhouse</h3>
-            <p className="text-sm text-[var(--color-text-muted)] mb-1">Argentina</p>
+            <div className="flex justify-between items-start mb-2">
+              <div>
+                <h3 className="font-semibold">Coderhouse</h3>
+                <p className="text-sm text-[var(--color-text-muted)]">Argentina</p>
+              </div>
+              <span className="text-sm text-[var(--color-text-muted)] whitespace-nowrap">Jul 2021 – Feb 2022 • 8 meses</span>
+            </div>
             <p className="text-sm text-[var(--color-accent)] font-medium mb-2">Tutor — Backend Development (MERN Stack)</p>
             <p className="text-sm text-[var(--color-text)]">Instrucción y mentoring práctico en Node.js, Express, MongoDB y React.</p>
           </div>

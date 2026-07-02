@@ -1,8 +1,8 @@
 'use client';
 
+import { Activity, Briefcase, GitFork, ShieldCheck } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useLocale } from '@/lib/locale-context';
-import { GitFork, Activity, ShieldCheck, Briefcase } from 'lucide-react';
 
 interface Metric {
   icon: typeof GitFork
@@ -21,7 +21,8 @@ function useCountUp(target: number, duration = 1500): number {
       if (start >= target) {
         setCount(target);
         clearInterval(timer);
-      } else {
+      }
+      else {
         setCount(start);
       }
     }, 16);

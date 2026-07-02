@@ -1,9 +1,9 @@
 'use client';
 
+import { Bug, Code, Wrench } from 'lucide-react';
 import Link from 'next/link';
 import { Timeline } from '@/components/timeline';
 import { useLocale } from '@/lib/locale-context';
-import { Bug, Code, Wrench } from 'lucide-react';
 
 export function HeroSection() {
   const { t } = useLocale();

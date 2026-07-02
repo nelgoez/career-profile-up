@@ -1,10 +1,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
-import { ProjectsSection } from '@/components/projects-section';
-import { BtsTeaserSection, ContactSection, ExperienceSection, HeroSection, LatestPostsSection, SkillsSection } from '@/components/translated-home';
 import { EvidenceShowcase } from '@/components/evidence-showcase';
 import { ImpactMetrics } from '@/components/impact-metrics';
+import { ProjectsSection } from '@/components/projects-section';
+import { BtsTeaserSection, ContactSection, ExperienceSection, HeroSection, LatestPostsSection, SkillsSection } from '@/components/translated-home';
 import './hero-animations.css';
 
 function getLatestPosts(count = 3) {

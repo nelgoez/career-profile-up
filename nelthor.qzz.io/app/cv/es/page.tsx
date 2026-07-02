@@ -69,42 +69,44 @@ export default function CVEsPage() {
                 <h3 className="font-semibold">Newfold Digital</h3>
                 <p className="text-sm text-[var(--color-text-muted)]">Córdoba, Argentina</p>
               </div>
-              <span className="text-sm text-[var(--color-text-muted)] whitespace-nowrap">Ago 2021 – Presente • ~5 años</span>
+              <span className="text-sm text-[var(--color-text-muted)] whitespace-nowrap">Ago 2021 – Ene 2026 • 4 años 6 meses</span>
             </div>
-            <p className="text-sm text-[var(--color-accent)] font-medium mb-3">Software Development Engineer in Test II (SDET II) — Mar 2022 – Presente</p>
-            <p className="text-sm text-[var(--color-text-muted)] mb-2 italic">Líder global en hosting web — Bluehost, HostGator, Domain.com, Network Solutions</p>
+            <p className="text-sm text-[var(--color-accent)] font-medium mb-1">Software Development Engineer in Test II (SDET II) — Mar 2022 – Ene 2026</p>
+            <ul className="space-y-2 text-sm text-[var(--color-text)] mb-4">
+              <li className="flex gap-2">
+                <span className="text-[var(--color-accent)] mt-1">▸</span>
+                QA de productos a escala global — NetworkSolutions.com, Bluehost.com — sirviendo a millones de usuarios en plataformas de hosting y pequeñas empresas.
+              </li>
+              <li className="flex gap-2">
+                <span className="text-[var(--color-accent)] mt-1">▸</span>
+                Lideré la migración de una suite legacy de WebdriverIO (600+ casos) a Robot Framework sobre Python, reduciendo el tiempo de regresión en un 60%.
+              </li>
+              <li className="flex gap-2">
+                <span className="text-[var(--color-accent)] mt-1">▸</span>
+                Diseñé estrategias de prueba en múltiples líneas de productos — funcional, API, cross-browser, regresión.
+              </li>
+              <li className="flex gap-2">
+                <span className="text-[var(--color-accent)] mt-1">▸</span>
+                Lideré mejoras de automatización y mentoricé a miembros del equipo en código limpio y diseño de pruebas.
+              </li>
+              <li className="flex gap-2">
+                <span className="text-[var(--color-accent)] mt-1">▸</span>
+                Integré suites automatizadas en CI/CD (Jenkins + Jira), moviendo la calidad hacia la izquierda en el ciclo de desarrollo.
+              </li>
+            </ul>
+            <p className="text-sm text-[var(--color-accent)] font-medium mb-1">Software Development Engineer — Ago 2021 – Feb 2022</p>
             <ul className="space-y-2 text-sm text-[var(--color-text)]">
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Lideré la migración de una suite heredada de 600+ casos de WebdriverIO/TypeScript → Robot Framework/Python, reduciendo el tiempo de regresión en un 35%.
+                Migré una suite de pruebas legacy (600+ casos) de manual/funcional a WebdriverIO + TypeScript automatizado.
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Integré suites de pruebas automatizadas en pipelines CI/CD de Jenkins, habilitando una cultura shift-left de calidad.
+                Colaboré con DevOps y equipos de desarrollo para integrar pruebas temprano en el SDLC, reduciendo defectos en producción.
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Diseñé planes de prueba integrales para aplicaciones SaaS web complejas que sirven a millones de usuarios.
-              </li>
-              <li className="flex gap-2">
-                <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Mentoricé a 20+ estudiantes, logrando un 90% de tasa de finalización mediante coaching estructurado de automatización QA.
-              </li>
-              <li className="flex gap-2">
-                <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Desarrollé 10 scripts de pruebas automatizadas que aumentaron la cobertura en un 60% en flujos críticos de negocio.
-              </li>
-              <li className="flex gap-2">
-                <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Lideré una migración de infraestructura reduciendo costos de servidores en un 20%.
-              </li>
-              <li className="flex gap-2">
-                <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Realicé pruebas de API en capas REST, middleware y microservicios — validando contratos, flujos de autenticación e integraciones usando Postman y suites automatizadas.
-              </li>
-              <li className="flex gap-2">
-                <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Probé aplicaciones frontend modernas con React y Angular, más plataformas WordPress CMS — cubriendo componentes, integración y journeys E2E.
+                Construí la base del framework de automatización que luego escaló a Robot Framework + Python.
               </li>
             </ul>
           </div>

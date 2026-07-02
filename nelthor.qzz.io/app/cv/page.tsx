@@ -67,42 +67,44 @@ export default function CVPage() {
                 <h3 className="font-semibold">Newfold Digital</h3>
                 <p className="text-sm text-[var(--color-text-muted)]">Córdoba, Argentina</p>
               </div>
-              <span className="text-sm text-[var(--color-text-muted)] whitespace-nowrap">Aug 2021 – Present • ~5 yrs</span>
+              <span className="text-sm text-[var(--color-text-muted)] whitespace-nowrap">Aug 2021 – Jan 2026 • 4 yrs 6 mos</span>
             </div>
-            <p className="text-sm text-[var(--color-accent)] font-medium mb-3">Software Development Engineer in Test II (SDET II) — Mar 2022 – Present</p>
-            <p className="text-sm text-[var(--color-text-muted)] mb-2 italic">Global leader in web hosting — Bluehost, HostGator, Domain.com, Network Solutions</p>
+            <p className="text-sm text-[var(--color-accent)] font-medium mb-1">Software Development Engineer in Test II (SDET II) — Mar 2022 – Jan 2026</p>
+            <ul className="space-y-2 text-sm text-[var(--color-text)] mb-4">
+              <li className="flex gap-2">
+                <span className="text-[var(--color-accent)] mt-1">▸</span>
+                QA'd consumer-facing products at scale — NetworkSolutions.com, Bluehost.com — serving millions of users across hosting and small business platforms.
+              </li>
+              <li className="flex gap-2">
+                <span className="text-[var(--color-accent)] mt-1">▸</span>
+                Spearheaded migration of legacy WebdriverIO suite (600+ cases) to Robot Framework over Python, reducing regression cycle time by 60%.
+              </li>
+              <li className="flex gap-2">
+                <span className="text-[var(--color-accent)] mt-1">▸</span>
+                Designed test strategies across multiple product lines — functional, API, cross-browser, regression.
+              </li>
+              <li className="flex gap-2">
+                <span className="text-[var(--color-accent)] mt-1">▸</span>
+                Led automation improvements and mentored team members on clean code and test design.
+              </li>
+              <li className="flex gap-2">
+                <span className="text-[var(--color-accent)] mt-1">▸</span>
+                Embedded automated suites into CI/CD (Jenkins + Jira), shifting quality left in the dev cycle.
+              </li>
+            </ul>
+            <p className="text-sm text-[var(--color-accent)] font-medium mb-1">Software Development Engineer — Aug 2021 – Feb 2022</p>
             <ul className="space-y-2 text-sm text-[var(--color-text)]">
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Led migration of a 600+ case legacy suite from WebdriverIO/TypeScript → Robot Framework/Python, cutting regression time by 35%.
+                Migrated legacy test suite (600+ cases) from manual/functional to automated WebdriverIO + TypeScript.
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Integrated automated test suites into Jenkins CI/CD pipelines, enabling true shift-left quality.
+                Collaborated with DevOps and Dev teams to integrate testing earlier in the SDLC, reducing defects reaching production.
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Designed comprehensive test plans for complex SaaS web apps serving millions of users.
-              </li>
-              <li className="flex gap-2">
-                <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Mentored 20+ students, achieving a 90% course completion rate through structured QA automation coaching.
-              </li>
-              <li className="flex gap-2">
-                <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Developed 10 automated test scripts that boosted coverage by 60% across critical business flows.
-              </li>
-              <li className="flex gap-2">
-                <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Led cost-efficient infrastructure migration, reducing server costs by 20%.
-              </li>
-              <li className="flex gap-2">
-                <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Performed API testing across REST, middleware, and microservice layers — validating contracts, auth flows, and integrations using Postman and automated suites.
-              </li>
-              <li className="flex gap-2">
-                <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Tested modern frontend apps built with React and Angular, plus WordPress CMS platforms — covering component, integration, and E2E journeys.
+                Built foundation for the automation framework that later scaled to Robot Framework + Python.
               </li>
             </ul>
           </div>

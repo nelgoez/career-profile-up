@@ -82,6 +82,9 @@ export default antfu({
     // in opencode.jsonc which this rule rejects). Prettier owns JSONC style.
     'jsonc/comma-dangle': 'off',
 
+    // Next.js no-img-element: plugin not available at root level
+    '@next/next/no-img-element': 'off',
+
     // Allow unused vars with underscore prefix
     'unused-imports/no-unused-vars': [
       'warn',

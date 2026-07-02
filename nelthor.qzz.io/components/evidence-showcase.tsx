@@ -1,7 +1,7 @@
 'use client';
 
+import { ArrowUpRight, BugPlay, FlaskConical, Monitor, Workflow } from 'lucide-react';
 import { useLocale } from '@/lib/locale-context';
-import { Monitor, BugPlay, FlaskConical, Workflow, ArrowUpRight } from 'lucide-react';
 
 const ITEMS = [
   {
@@ -37,7 +37,7 @@ export function EvidenceShowcase() {
       <h2 className="text-2xl font-bold mb-2">{t('evidence.title')}</h2>
       <p className="text-[var(--color-text-muted)] mb-10 max-w-2xl">{t('evidence.description')}</p>
       <div className="grid md:grid-cols-2 gap-8">
-        {ITEMS.map(item => {
+        {ITEMS.map((item) => {
           const Icon = item.icon;
           return (
             <div key={item.titleKey} className="group scroll-reveal">
@@ -49,7 +49,6 @@ export function EvidenceShowcase() {
                   <span className="ml-2 text-[11px] text-[var(--color-text-muted)] font-mono">nelthor.qzz.io</span>
                 </div>
                 <div className="aspect-video overflow-hidden bg-[var(--color-bg)]">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={item.img}
                     alt={t(item.titleKey)}

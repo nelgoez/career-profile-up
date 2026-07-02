@@ -11,9 +11,9 @@ const SCORE = [
 ];
 
 const SCREENSHOTS = [
-  { src: '/media/qa/bk147-app-shell-with-sidebar.png', key: 'qa.evidence-bug1' },
-  { src: '/media/qa/bk147-multi-tab.png', key: 'qa.evidence-bug2' },
-  { src: '/media/qa/bk147-tc10-not-found.png', key: 'qa.evidence-bug3' },
+  { src: '/images/qa/bk147-app-shell-with-sidebar.png', key: 'qa.evidence-bug1' },
+  { src: '/images/qa/bk147-multi-tab.png', key: 'qa.evidence-bug2' },
+  { src: '/images/qa/bk147-tc10-not-found.png', key: 'qa.evidence-bug3' },
 ];
 
 export default function QAPage() {

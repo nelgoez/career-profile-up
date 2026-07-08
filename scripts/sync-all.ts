@@ -309,36 +309,36 @@ function generateProfileReadme(_repos: SourceRepo[]) {
   // ── Skill definitions ──
   const skills = {
     testing: [
-      { name: 'Playwright', color: '45ba4b' },
-      { name: 'Cucumber', color: '23D96C' },
-      { name: 'Selenium', color: '43B02A' },
-      { name: 'Robot Framework', color: '000000' },
-      { name: 'Jest', color: 'C21325' },
-      { name: 'WebdriverIO', color: 'EA5906' },
-      { name: 'Allure', color: 'FF6600' },
-      { name: 'Postman', color: 'FF6C37' },
+      { name: 'Playwright', color: '45ba4b', logo: 'playwright' },
+      { name: 'Cucumber', color: '23D96C', logo: 'cucumber' },
+      { name: 'Selenium', color: '43B02A', logo: 'selenium' },
+      { name: 'Robot Framework', color: '000000', logo: 'robotframework' },
+      { name: 'Jest', color: 'C21325', logo: 'jest' },
+      { name: 'WebdriverIO', color: 'EA5906', logo: 'webdriverio' },
+      { name: 'Allure', color: 'FF6600', logo: 'allure' },
+      { name: 'Postman', color: 'FF6C37', logo: 'postman' },
     ],
     backend: [
-      { name: 'TypeScript', color: '3178C6' },
-      { name: 'Python', color: '3776AB' },
-      { name: 'Node.js', color: '339933' },
-      { name: 'Next.js', color: '000000' },
-      { name: 'Express', color: '000000' },
-      { name: 'PostgreSQL', color: '336791' },
-      { name: 'Supabase', color: '3ECF8E' },
+      { name: 'TypeScript', color: '3178C6', logo: 'typescript' },
+      { name: 'Python', color: '3776AB', logo: 'python' },
+      { name: 'Node.js', color: '339933', logo: 'nodedotjs' },
+      { name: 'Next.js', color: '000000', logo: 'nextdotjs' },
+      { name: 'Express', color: '000000', logo: 'express' },
+      { name: 'PostgreSQL', color: '336791', logo: 'postgresql' },
+      { name: 'Supabase', color: '3ECF8E', logo: 'supabase' },
     ],
     tools: [
-      { name: 'GitHub Actions', color: '2088FF' },
-      { name: 'Jenkins', color: 'D24939' },
-      { name: 'Docker', color: '2496ED' },
-      { name: 'Vercel', color: '000000' },
-      { name: 'Jira', color: '0052CC' },
-      { name: 'Confluence', color: '172B4D' },
+      { name: 'GitHub Actions', color: '2088FF', logo: 'githubactions' },
+      { name: 'Jenkins', color: 'D24939', logo: 'jenkins' },
+      { name: 'Docker', color: '2496ED', logo: 'docker' },
+      { name: 'Vercel', color: '000000', logo: 'vercel' },
+      { name: 'Jira', color: '0052CC', logo: 'jira' },
+      { name: 'Confluence', color: '172B4D', logo: 'confluence' },
     ],
   };
 
-  const skillShields = (items: { name: string, color: string }[]) =>
-    items.map(s => `![${s.name}](https://img.shields.io/badge/${encodeURIComponent(s.name)}-${s.color}?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiByeD0iNCIgZmlsbD0idHJhbnNwYXJlbnQiLz48L3N2Zz4=)`).join('\n');
+  const skillShields = (items: { name: string, color: string, logo: string }[]) =>
+    items.map(s => `![${s.name}](https://img.shields.io/badge/${encodeURIComponent(s.name)}-${s.color}?style=for-the-badge&logo=${s.logo}&logoColor=white)`).join('\n');
 
   // ── Build project cards ──
   const featuredRepos = syncedEntries.filter(r => r.featured).slice(0, 6);
@@ -498,7 +498,7 @@ function generateProfileReadme(_repos: SourceRepo[]) {
     '',
     '</div>',
     '',
-  ].filter(Boolean).join('\n');
+  ].join('\n');
 
   return readme;
 }

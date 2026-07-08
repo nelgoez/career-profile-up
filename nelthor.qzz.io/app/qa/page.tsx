@@ -68,6 +68,54 @@ export default function QAPage() {
       </section>
 
       <section className="mb-16">
+        <h2 className="text-2xl font-bold mb-2">Live Allure Dashboards</h2>
+        <p className="text-[var(--color-text-muted)] mb-8">
+          CI-generated test report dashboards deployed to GitHub Pages — live after every run.
+        </p>
+        <div className="grid md:grid-cols-3 gap-6">
+          <a
+            href="https://nelgoez.github.io/diploma-tracking-sys/staging/smoke/"
+            target="_blank"
+            className="group block rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)] overflow-hidden hover:border-[var(--color-accent)]/50 transition-all hover:scale-[1.02]"
+          >
+            <div className="aspect-video overflow-hidden">
+              <img src="/media/qa/DTS-smoke-allure-report.png" alt="DTS Staging Smoke" className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+            </div>
+            <div className="p-4 flex items-center justify-between">
+              <span className="text-sm font-medium">DTS — Staging Smoke</span>
+              <span className="text-[var(--color-accent)] text-sm">↗</span>
+            </div>
+          </a>
+          <a
+            href="https://nelgoez.github.io/diploma-tracking-sys/production/smoke/"
+            target="_blank"
+            className="group block rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)] overflow-hidden hover:border-[var(--color-accent)]/50 transition-all hover:scale-[1.02]"
+          >
+            <div className="aspect-video overflow-hidden">
+              <img src="/media/qa/DTS-smoke-suites-PROD.png" alt="DTS Production Smoke" className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+            </div>
+            <div className="p-4 flex items-center justify-between">
+              <span className="text-sm font-medium">DTS — Production Smoke</span>
+              <span className="text-[var(--color-accent)] text-sm">↗</span>
+            </div>
+          </a>
+          <a
+            href="https://nelgoez.github.io/bunkai-qa-engineering/staging/sanity/"
+            target="_blank"
+            className="group block rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)] overflow-hidden hover:border-[var(--color-accent)]/50 transition-all hover:scale-[1.02]"
+          >
+            <div className="aspect-video overflow-hidden">
+              <img src="/media/qa/allure-smoke-report.png" alt="bunkai Sanity Smoke" className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+            </div>
+            <div className="p-4 flex items-center justify-between">
+              <span className="text-sm font-medium">bunkai — Sanity Smoke</span>
+              <span className="text-[var(--color-accent)] text-sm">↗</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section className="mb-16">
         <h2 className="text-2xl font-bold mb-2">{t('qa.evidence-title')}</h2>
         <p className="text-[var(--color-text-muted)] mb-8">{t('qa.evidence-desc')}</p>
         <div className="grid md:grid-cols-3 gap-6">

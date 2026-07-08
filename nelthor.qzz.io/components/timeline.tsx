@@ -18,6 +18,7 @@ const EXPERIENCE = [
     details: [
       'Built bunkai-qa-engineering: agentic QA platform with KATA architecture',
       'Developed diploma tracking system with Supabase backend, RLS security, and Moodle integration',
+      'Deployed public Allure test report dashboards on GitHub Pages for DTS — smoke, regression, and a11y results live in CI',
       'Expanded food-app Jest coverage 40%→78% + Playwright E2E critical paths',
       'Pioneered agentic development workflows using AI-assisted coding + multi-skill orchestration',
       'Implemented autonomous mode gate bypass for streamlined development pipelines',

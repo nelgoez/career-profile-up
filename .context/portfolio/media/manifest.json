@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "updated": "2026-07-02",
+  "version": 2,
+  "updated": "2026-07-08",
   "assets": [
     {
       "id": "qa-allure-smoke-report",
@@ -87,10 +87,66 @@
       "used_in": []
     },
     {
-      "id": "screenshots-projects-page",
+      "id": "qa-jira-board",
       "type": "screenshot",
-      "file": "screenshots\\projects-page.png",
+      "file": "qa\\jira-board.png",
       "alt_text": "",
+      "used_in": []
+    },
+    {
+      "id": "qa-dts-smoke-allure-report",
+      "type": "screenshot",
+      "file": "qa\\DTS-smoke-allure-report.png",
+      "alt_text": "DTS Allure smoke report overview — staging",
+      "used_in": ["/qa"]
+    },
+    {
+      "id": "qa-dts-smoke-allure-graphs",
+      "type": "screenshot",
+      "file": "qa\\DTS-smoke-allure-graphs.png",
+      "alt_text": "DTS Allure smoke report graphs — staging",
+      "used_in": ["/qa"]
+    },
+    {
+      "id": "qa-dts-smoke-suite-details",
+      "type": "screenshot",
+      "file": "qa\\DTS-smoke-suite-details.png",
+      "alt_text": "DTS Allure smoke suite details — staging",
+      "used_in": ["/qa"]
+    },
+    {
+      "id": "qa-dts-smoke-lang-es-categories",
+      "type": "screenshot",
+      "file": "qa\\DTS-smoke-leng-options-ES-categories-section.png",
+      "alt_text": "DTS Allure smoke language + categories — staging",
+      "used_in": ["/qa"]
+    },
+    {
+      "id": "qa-dts-smoke-func-video-PROD",
+      "type": "screenshot",
+      "file": "qa\\DTS-smoke-funtionalities-video-check-PROD.png",
+      "alt_text": "DTS Allure smoke functionalities + video — production",
+      "used_in": ["/qa"]
+    },
+    {
+      "id": "qa-dts-smoke-graphs-PROD",
+      "type": "screenshot",
+      "file": "qa\\DTS-smoke-graphs-PROD.png",
+      "alt_text": "DTS Allure smoke graphs — production",
+      "used_in": ["/qa"]
+    },
+    {
+      "id": "qa-dts-smoke-suites-PROD",
+      "type": "screenshot",
+      "file": "qa\\DTS-smoke-suites-PROD.png",
+      "alt_text": "DTS Allure smoke suites — production",
+      "used_in": ["/qa"]
+    },
+    {
+      "id": "qa-bunkasi-failed-case-details",
+      "type": "screenshot",
+      "file": "qa\\bunkasi-allure-failed-case-details.png",
+      "alt_text": "bunkai Allure failed case details",
       "used_in": []
     }
   ]

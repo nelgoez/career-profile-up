@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import Link from 'next/link';
-import { Carousel } from '@/components/carousel';
+import { BtsMediaGallery } from '@/components/bts-media-gallery';
 import { T } from '@/components/t';
 
 const MEDIA_DIR = path.resolve(process.cwd(), '..', '.context', 'portfolio', 'media', 'manifest.json');
@@ -143,29 +143,7 @@ export default function BehindTheScenesPage() {
         </div>
       </section>
 
-      {media.length > 0 && (
-        <section className="mb-16">
-          <h2 className="text-2xl font-bold mb-6">Media Gallery</h2>
-          <p className="text-[var(--color-text-muted)] mb-8">
-            Screenshots, diagrams, and recordings showing the portfolio and workflows in action.
-          </p>
-          <Carousel
-            slides={media.map(asset => (
-              <div key={asset.id} className="p-3 rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)]">
-                <a href={`/media/${asset.file}`} target="_blank">
-                  <img
-                    src={`/media/${asset.file}`}
-                    alt={asset.alt_text || asset.id}
-                    className="w-full rounded-lg border border-[var(--color-border)]"
-                    loading="lazy"
-                  />
-                </a>
-                <p className="text-xs text-[var(--color-text-muted)] mt-2 px-1">{asset.alt_text || asset.id}</p>
-              </div>
-            ))}
-          />
-        </section>
-      )}
+      <BtsMediaGallery assets={media} />
 
       <section className="mb-16">
         <h2 className="text-2xl font-bold mb-6">This Portfolio — Built with Agentic Workflows</h2>

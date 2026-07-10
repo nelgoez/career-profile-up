@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
+import { BrandsSection } from '@/components/brands-section';
 import { EvidenceShowcase } from '@/components/evidence-showcase';
 import { ImpactMetrics } from '@/components/impact-metrics';
 import { ProjectsSection } from '@/components/projects-section';
@@ -38,6 +39,7 @@ export default function HomePage() {
       <SkillsSection />
       <ExperienceSection />
       <ProjectsSection initialProjects={initialProjects} />
+      <BrandsSection />
       <EvidenceShowcase />
       {latestPosts.length > 0 && <LatestPostsSection posts={latestPosts} />}
       <BtsTeaserSection />

@@ -38,6 +38,16 @@
     "description": "See how this portfolio was built — from traditional QA frameworks at Newfold Digital to agentic AI-assisted development. Side-by-side comparisons, architecture diagrams, and workflow recordings.",
     "cta": "Explore the process →"
   },
+  "brands": {
+    "title": "Brands I've Shipped For",
+    "description": "Over 4 years at Newfold Digital, I contributed to QA and quality engineering across these major web presence platforms — plus early full-stack work on IntegraApp.",
+    "netsol-desc": "Domain registration & web presence — QA'd core user flows",
+    "webcom-desc": "DIY website builder — automated critical checkout paths",
+    "bluehost-desc": "Hosting platform — CI pipeline reliability & test coverage",
+    "hostgator-desc": "Shared & VPS hosting — backend API validation suites",
+    "integra-desc": "Healthcare platform — full-stack development & testing",
+    "cta": "View Full CV →"
+  },
   "evidence": {
     "title": "Real Results, Real Evidence",
     "description": "Screenshots and artifacts from real projects — test automation, CI/CD pipelines, bug findings, and architecture work.",

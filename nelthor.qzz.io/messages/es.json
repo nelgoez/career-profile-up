@@ -38,6 +38,16 @@
     "description": "Mirá cómo se construyó este portfolio — desde frameworks tradicionales en Newfold Digital hasta desarrollo asistido por agentes de IA. Comparaciones, diagramas de arquitectura y grabaciones de workflows.",
     "cta": "Explorar el proceso →"
   },
+  "brands": {
+    "title": "Marcas para las que trabajé",
+    "description": "Más de 4 años en Newfold Digital, contribuyendo a QA e ingeniería de calidad en estas plataformas de presencia web — más trabajo full-stack temprano en IntegraApp.",
+    "netsol-desc": "Registro de dominios — QA de flujos principales de usuario",
+    "webcom-desc": "Creador de sitios web DIY — automatización de checkout crítico",
+    "bluehost-desc": "Plataforma de hosting — fiabilidad de pipelines CI y cobertura",
+    "hostgator-desc": "Hosting compartido y VPS — validación de APIs backend",
+    "integra-desc": "Plataforma de salud — desarrollo full-stack y testing",
+    "cta": "Ver CV Completo →"
+  },
   "evidence": {
     "title": "Resultados Reales, Evidencia Real",
     "description": "Capturas y artefactos de proyectos reales — automatización de pruebas, pipelines CI/CD, hallazgos de bugs y trabajo de arquitectura.",

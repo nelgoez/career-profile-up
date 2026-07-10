@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import Link from 'next/link';
+import { Carousel } from '@/components/carousel';
 import { T } from '@/components/t';
 
 const MEDIA_DIR = path.resolve(process.cwd(), '..', '.context', 'portfolio', 'media', 'manifest.json');
@@ -148,8 +149,8 @@ export default function BehindTheScenesPage() {
           <p className="text-[var(--color-text-muted)] mb-8">
             Screenshots, diagrams, and recordings showing the portfolio and workflows in action.
           </p>
-          <div className="grid md:grid-cols-2 gap-6">
-            {media.map(asset => (
+          <Carousel
+            slides={media.map(asset => (
               <div key={asset.id} className="p-3 rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)]">
                 <a href={`/media/${asset.file}`} target="_blank">
                   <img
@@ -162,7 +163,7 @@ export default function BehindTheScenesPage() {
                 <p className="text-xs text-[var(--color-text-muted)] mt-2 px-1">{asset.alt_text || asset.id}</p>
               </div>
             ))}
-          </div>
+          />
         </section>
       )}
 

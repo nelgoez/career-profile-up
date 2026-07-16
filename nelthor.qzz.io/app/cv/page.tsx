@@ -155,8 +155,27 @@ export default function CVPage() {
               </p>
             </div>
             <div className="p-4 rounded-lg bg-[var(--color-bg)] border border-[var(--color-border)]">
-              <h3 className="font-semibold text-sm">AI-Powered Quality Engineer</h3>
-              <p className="text-sm text-[var(--color-text-muted)]">UPEX Galaxy — in progress, 2026</p>
+              <h3 className="font-semibold text-sm">Agentic Quality Analyst Engineer</h3>
+              <p className="text-sm text-[var(--color-text-muted)]">UPEX Galaxy • 2026</p>
+              <p className="text-xs mt-1">
+                <a href="https://www.upexgalaxy.com/verify/UPEX-DOJOQUALITYENGINEER-2026-KE8HBJXR" target="_blank" className="text-[var(--color-accent)]">Verify ↗</a>
+                <span className="mx-1">·</span>
+                <a href="/certificates/Quality-Engineer-UPEX.pdf" target="_blank" className="text-[var(--color-accent)]">PDF</a>
+              </p>
+            </div>
+            <div className="p-4 rounded-lg bg-[var(--color-bg)] border border-[var(--color-border)]">
+              <h3 className="font-semibold text-sm">Jira & Xray DOJO 3</h3>
+              <p className="text-sm text-[var(--color-text-muted)]">UPEX Galaxy • 2026</p>
+              <p className="text-xs mt-1">
+                <a href="/certificates/Jira-Xray-UPEX.pdf" target="_blank" className="text-[var(--color-accent)]">View Certificate (PDF)</a>
+              </p>
+            </div>
+            <div className="p-4 rounded-lg bg-[var(--color-bg)] border border-[var(--color-border)]">
+              <h3 className="font-semibold text-sm">DOJO 3 — Agentic QA Engineering</h3>
+              <p className="text-sm text-[var(--color-text-muted)]">UPEX Galaxy • 2026</p>
+              <p className="text-xs mt-1">
+                <a href="/certificates/Nahuel%20Gomez%20DOJO%203.png" target="_blank" className="text-[var(--color-accent)]">View Badge</a>
+              </p>
             </div>
             <div className="p-4 rounded-lg bg-[var(--color-bg)] border border-[var(--color-border)]">
               <h3 className="font-semibold text-sm">IA y Automatización de Flujos de Trabajo</h3>

@@ -4,6 +4,9 @@
   "version": "0.1.0",
   "description": "",
   "license": "ISC",
+  "bin": {
+    "generate-readme": "scripts/generate-readme.ts"
+  },
   "scripts": {
     "claude": "bash -c 'set -a; . ./.env; set +a; exec claude \"$@\"' --",
     "env": "set -a; source .env; set +a",

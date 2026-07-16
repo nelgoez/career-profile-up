@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-15",
+  "updated": "2026-07-16",
   "repos": [
     {
       "name": "bunkai-qa-engineering",
@@ -42,20 +42,6 @@
       }
     },
     {
-      "name": "agentic-diplo-track-sys",
-      "displayName": "agentic-diplo-track-sys",
-      "description": "",
-      "url": "https://github.com/nelgoez/agentic-diplo-track-sys",
-      "language": "TypeScript",
-      "tags": [],
-      "thumbnail": null,
-      "featured": false,
-      "order": 99,
-      "updatedAt": "2026-07-08T20:58:15Z",
-      "screenshots": [],
-      "links": {}
-    },
-    {
       "name": "diploma-tracking-sys",
       "displayName": "diploma-tracking-sys",
       "description": "Diploma Tracking System — UNC",
@@ -66,6 +52,20 @@
       "featured": false,
       "order": 99,
       "updatedAt": "2026-07-08T06:14:17Z",
+      "screenshots": [],
+      "links": {}
+    },
+    {
+      "name": "agentic-diplo-track-sys",
+      "displayName": "agentic-diplo-track-sys",
+      "description": "",
+      "url": "https://github.com/nelgoez/agentic-diplo-track-sys",
+      "language": "TypeScript",
+      "tags": [],
+      "thumbnail": null,
+      "featured": false,
+      "order": 99,
+      "updatedAt": "2026-07-08T20:58:15Z",
       "screenshots": [],
       "links": {}
     },

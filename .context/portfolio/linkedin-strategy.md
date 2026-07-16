@@ -1,19 +1,10 @@
 # LinkedIn Content Strategy — Nahuel Gomez
 
-**Positioning:** SDET → Agentic QA Engineer | Backend Dev | TypeScript & Python  
-**Domain:** nelthor.qzz.io (live portfolio)  
-**Target audience:** Recruiters, QA peers, engineering managers, AI/automation enthusiasts
-
----
-
-## Content pillars (rotate weekly)
-
-| Pillar | Topic | Hook angle |
-|--------|-------|------------|
-| **Agentic QA** | AI-assisted testing, agent workflows, non-deterministic testing | "Testing is becoming a prompt engineering discipline" |
-| **Career transition** | SDET → Agentic QA Engineer, upskilling, portfolio | "I built my portfolio with AI agents — here's how" |
-| **Technical deep-dives** | Playwright, KATA framework, CI/CD, test architecture | "What 5 years of test automation taught me" |
-| **Meta / behind the scenes** | This portfolio itself, agentic-dev boilerplate, OpenCode | "The code that built itself — my agentic dev setup" |
+> **Internal planning document.** Draft posts below are public-ready content.
+>
+> **Positioning:** SDET → Agentic QA Engineer | Backend Dev | TypeScript & Python  
+> **Domain:** nelthor.qzz.io (live portfolio)  
+> **Target audience:** Recruiters, QA peers, engineering managers, AI/automation enthusiasts
 
 ---
 
@@ -150,42 +141,4 @@
 >
 > #Portfolio #NextJS #GitHub #OpenSource #Career
 
----
-
-## Template launch plan (multi-platform)
-
-### LinkedIn — 3-post sequence
-
-| # | Day | Content | Target |
-|---|-----|---------|--------|
-| 1 | Mon | **Launch post**: "I just turned my portfolio into a free GitHub template." Link + screenshot of the "Use this template" button. Call-to-action: fork it. | Broad reach — QA, dev, career changers |
-| 2 | Wed | **Behind the scenes**: "How this template was built — agentic dev in practice." Link to blog post. | Tech audience — developers, AI curious |
-| 3 | Fri | **Value post**: "3 things every QA portfolio needs (and how this template covers them)." Bullet list, no sales pitch. | QA peers — SDETs, automation engineers |
-
-### Cross-post to other platforms
-
-| Platform | Content | Format |
-|----------|---------|--------|
-| **Twitter/X** | Launch post condensed to 280 chars + screenshot | Short text + image |
-| **Blind** | "Made my QA portfolio open source — feedback welcome?" | Casual question |
-| **Dev.to** | Blog post "How I Built My Portfolio With AI Agents" (republish from nelthor.qzz.io) | Full article |
-| **Reddit** (r/QualityAssurance, r/softwaretesting) | "Built an open-source QA portfolio template — sharing in case it helps" | Text post with link |
-| **Hacker News** | "Show HN: Agentic QA Portfolio Template" | Show HN post |
-
-### Best timing
-
-| Platform | Best day/time |
-|----------|--------------|
-| LinkedIn | Tue-Thu, 8-10am or 12-1pm |
-| Twitter/X | Weekdays, 9am or 6pm |
-| Reddit | Weekdays, 10am-2pm EST |
-| Dev.to | Any weekday morning |
-
----
-
-## Profile optimization checklist
-
-- [ ] Headline includes "Agentic QA Engineer" + "Backend Dev"
-- [ ] About section links to nelthor.qzz.io
-- [ ] Featured section has portfolio link + top post
-- [ ] Open to work: QA Engineering, Backend Dev, Agentic AI roles
+(scheduling and cross-platform plan removed — internal strategy)

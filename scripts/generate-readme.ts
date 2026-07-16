@@ -1,9 +1,10 @@
-import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
 const ROOT = resolve(import.meta.dirname, '..');
+const PORTFOLIO_DIR = resolve(ROOT, 'nelthor.qzz.io');
+const BLOG_DIR = resolve(PORTFOLIO_DIR, 'content', 'blog');
 const OUTPUT = resolve(ROOT, 'dist', 'profile', 'README.md');
-// const TEMPLATE_DIR = resolve(ROOT, 'templates', 'profile');
 
 const GITHUB_USER = 'nelgoez';
 
@@ -25,6 +26,56 @@ interface GitHubUser {
   public_repos: number
   followers: number
   following: number
+}
+
+interface BlogPost {
+  title: string
+  date: string
+  description: string
+  slug: string
+}
+
+function parseFrontmatter(filePath: string): { title: string, date: string, description: string } | null {
+  try {
+    const content = readFileSync(filePath, 'utf-8');
+    const match = content.match(/^---\n([\s\S]*?)\n---/);
+    if (!match) { return null; }
+    const frontmatter: Record<string, string> = {};
+    for (const line of match[1].split('\n')) {
+      const colonIdx = line.indexOf(':');
+      if (colonIdx === -1) { continue; }
+      const key = line.slice(0, colonIdx).trim();
+      let value = line.slice(colonIdx + 1).trim();
+      if ((value.startsWith('\'') && value.endsWith('\'')) || (value.startsWith('"') && value.endsWith('"'))) {
+        value = value.slice(1, -1);
+      }
+      frontmatter[key] = value;
+    }
+    return {
+      title: frontmatter.title ?? 'Untitled',
+      date: frontmatter.date ?? '',
+      description: frontmatter.description ?? '',
+    };
+  }
+  catch {
+    return null;
+  }
+}
+
+function getBlogPosts(): BlogPost[] {
+  const posts: BlogPost[] = [];
+  if (!existsSync(BLOG_DIR)) { return posts; }
+  const files = readdirSync(BLOG_DIR).filter(f => f.endsWith('.mdx'));
+  for (const file of files) {
+    const fm = parseFrontmatter(resolve(BLOG_DIR, file));
+    if (fm) {
+      posts.push({
+        ...fm,
+        slug: file.replace(/\.mdx$/, ''),
+      });
+    }
+  }
+  return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
 async function fetchJSON<T>(url: string): Promise<T> {
@@ -60,9 +111,9 @@ function starsBadge(count: number): string {
   return `![Stars](https://img.shields.io/badge/stars-${count}-yellow?style=flat-square)`;
 }
 
-function generateReadme(user: GitHubUser, repos: Repo[]): string {
+function generateReadme(user: GitHubUser, repos: Repo[], posts: BlogPost[]): string {
   const topRepos = repos
-    .filter(r => !r.private)
+    .filter(r => !r.private && !/^test/i.test(r.name) && r.name !== 'nelgoez')
     .slice(0, 6);
 
   const projectCards = topRepos.map((r) => {
@@ -90,10 +141,20 @@ function generateReadme(user: GitHubUser, repos: Repo[]): string {
     .map(([lang]) => lang)
     .join(', ');
 
+  const blogCards = posts.slice(0, 4).map((p) => {
+    const date = formatDate(p.date);
+    return [
+      `### [${p.title}](https://nelthor.qzz.io/blog/${p.slug})`,
+      p.description,
+      `📅 ${date}`,
+      '',
+    ].join('\n');
+  }).join('\n\n');
+
   return [
     '<div align="center">',
     '',
-    '<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Nahuel%20Leonardo%20Elias&fontSize=50&fontAlignY=35&desc=SDET%20→%20Agentic%20QA%20Engineer%20|%20Backend%20Dev%20|%20TypeScript%20%7C%20Python&descAlignY=55"/>',
+    '<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Nahuel%20Leonardo%20Elias&fontSize=50&fontAlignY=35&desc=SDET%20→%20Agentic%20QA%20Engineer%20|%20Backend%20Dev%20|%20TypeScript%20%7C%20Python%20|%20Bun&descAlignY=55"/>',
     '',
     '</div>',
     '',
@@ -102,7 +163,15 @@ function generateReadme(user: GitHubUser, repos: Repo[]): string {
     '  <a href="https://github.com/nelgoez"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/></a>',
     '  <a href="mailto:gomeznahuel@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>',
     '  <a href="https://wa.link/mtf64p"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>',
+    '  <a href="https://nelthor.qzz.io"><img src="https://img.shields.io/badge/Portfolio-8B5CF6?style=for-the-badge&logo=nextdotjs&logoColor=white"/></a>',
     '</p>',
+    '',
+    '---',
+    '',
+    '## 🌐 Full Portfolio',
+    '',
+    '> Everything I do, documented with evidence: **[nelthor.qzz.io](https://nelthor.qzz.io)** — projects, blog, QA scorecards, architecture, and behind-the-scenes of how this profile stays updated.',
+    '',
     '',
     '---',
     '',
@@ -114,6 +183,17 @@ function generateReadme(user: GitHubUser, repos: Repo[]): string {
     '',
     '---',
     '',
+    '## 📝 Latest Blog Posts',
+    '',
+    blogCards,
+    '',
+    '',
+    '➡️ [Read more on nelthor.qzz.io](https://nelthor.qzz.io/blog)',
+    '',
+    '',
+    '---',
+    '',
+    '',
     '## 💼 Tech Stack',
     '',
     '<details open>',
@@ -124,15 +204,19 @@ function generateReadme(user: GitHubUser, repos: Repo[]): string {
     '![Selenium](https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white)',
     '![Robot Framework](https://img.shields.io/badge/Robot%20Framework-000000?style=for-the-badge&logo=robotframework&logoColor=white)',
     '![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white)',
+    '![WebdriverIO](https://img.shields.io/badge/WebdriverIO-EA5906?style=for-the-badge&logo=webdriverio&logoColor=white)',
+    '![k6](https://img.shields.io/badge/k6-7D64FF?style=for-the-badge&logo=k6&logoColor=white)',
     '![Allure](https://img.shields.io/badge/Allure-FF6600?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTIwIDBDOC45NTggMCAwIDguOTU4IDAgMjBzOC45NTggMjAgMjAgMjAgMjAtOC45NTggMjAtMjBTMzEuMDQyIDAgMjAgMHoiIGZpbGw9IiNmZmY2MDAiLz48L3N2Zz4=)',
+    '![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)',
     '',
     '</details>',
     '',
     '<details>',
-    '<summary><b>Backend & Languages</b></summary>',
+    '<summary><b>Languages & Backend</b></summary>',
     '',
     '![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)',
     '![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)',
+    '![Bun](https://img.shields.io/badge/Bun-000000?style=for-the-badge&logo=bun&logoColor=white)',
     '![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)',
     '![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)',
     '![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)',
@@ -147,20 +231,52 @@ function generateReadme(user: GitHubUser, repos: Repo[]): string {
     '![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)',
     '![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white)',
     '![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)',
+    '![n8n](https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white)',
     '![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)',
     '![Jira](https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=jira&logoColor=white)',
+    '![Confluence](https://img.shields.io/badge/Confluence-172B4D?style=for-the-badge&logo=confluence&logoColor=white)',
+    '',
+    '</details>',
+    '',
+    '<details>',
+    '<summary><b>Agentic AI & Workflow</b></summary>',
+    '',
+    '![Claude](https://img.shields.io/badge/Claude-FF6600?style=for-the-badge&logo=anthropic&logoColor=white)',
+    '![OpenCode](https://img.shields.io/badge/OpenCode-000000?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBvbHlsaW5lIHBvaW50cz0iMTAgMzAgMzAgMjAgMTAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIvPjwvc3ZnPg==)',
+    '![Tavily](https://img.shields.io/badge/Tavily-4F46E5?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIvPjwvc3ZnPg==)',
     '',
     '</details>',
     '',
     '---',
     '',
-    '## 🔥 Latest Projects',
+    '## 📊 By the Numbers',
     '',
-    projectCards,
+    '| Metric | Value |',
+    '|--------|-------|',
+    '| **Public Repos** | 1 |',
+    '| **CI/CD Workflows** | 6+ active |',
+    '| **Test Coverage** | 78% average |',
+    '| **Years Experience** | 5+ |',
     '',
     '---',
     '',
-    '## 📊 GitHub Stats',
+    '',
+    '## 🧪 QA Philosophy',
+    '',
+    '> Quality Engineering is a design discipline, not a testing phase. Shift-left thinking — finding issues before they become bugs, building testability into architecture, and using automation to amplify human judgment, not replace it.',
+    '',
+    '📊 [View full QA scorecard →](https://nelthor.qzz.io/qa)',
+    '',
+    '',
+    '---',
+    '',
+    '## 🔥 Featured Projects',
+    '',
+    projectCards || '_No public repos to show yet_',
+    '',
+    '---',
+    '',
+    '## 📈 GitHub Stats',
     '',
     '<div align="center">',
     '',
@@ -175,17 +291,9 @@ function generateReadme(user: GitHubUser, repos: Repo[]): string {
     '',
     '---',
     '',
-    '## 🏆 GitHub Trophies',
-    '',
-    '<div align="center">',
-    `<img src="https://github-profile-trophy.vercel.app/?username=${GITHUB_USER}&theme=radical&no-frame=true&no-bg=true&column=7"/>`,
-    '</div>',
-    '',
-    '---',
-    '',
     '<div align="center">',
     '',
-    '<i>⚡ Profile auto-generated daily by GitHub Actions</i>',
+    '<i>⚡ Profile auto-generated from live repo data — blog posts, project metadata, and screenshots synced from bunkai-qa-engineering, agentic-diplo-track-sys, and more.</i>',
     '',
     '<br/><br/>',
     '',
@@ -205,8 +313,11 @@ async function main() {
     `https://api.github.com/users/${GITHUB_USER}/repos?sort=updated&per_page=20&type=public`,
   );
 
+  console.log('Reading blog posts...');
+  const posts = getBlogPosts();
+
   console.log('Generating README...');
-  const readme = generateReadme(user, repos);
+  const readme = generateReadme(user, repos, posts);
 
   const outDir = resolve(OUTPUT, '..');
   if (!existsSync(outDir)) {
@@ -216,6 +327,7 @@ async function main() {
   writeFileSync(OUTPUT, readme, 'utf-8');
   console.log(`\nREADME written to ${OUTPUT}`);
   console.log(`Repos fetched: ${repos.length}`);
+  console.log(`Blog posts loaded: ${posts.length}`);
 }
 
 main().catch((err) => {

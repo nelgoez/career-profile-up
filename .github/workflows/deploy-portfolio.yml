@@ -1,12 +1,10 @@
-name: Deploy Portfolio to GitHub Pages
+name: Deploy Portfolio
 
 on:
   push:
     branches: [main]
-    paths:
-      - 'nelthor.qzz.io/**'
-      - '.context/portfolio/media/**'
-      - 'scripts/**'
+  schedule:
+    - cron: '0 6 * * *'
   workflow_dispatch:
 
 permissions:
@@ -16,32 +14,42 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: nelthor.qzz.io
     steps:
       - uses: actions/checkout@v4
+
       - uses: oven-sh/setup-bun@v2
-      - run: bun install
-        working-directory: .
-      - run: bun run generate:media-index
-        working-directory: .
-      - run: bun install
-      - run: bun run build
-      - uses: actions/upload-pages-artifact@v3
+
+      - name: Install root dependencies
+        run: bun install
+
+      - name: Sync content — generate profile README from repos + blog
+        run: bun run generate:readme
+
+      - name: Install portfolio dependencies
+        working-directory: ./nelthor.qzz.io
+        run: bun install
+
+      - name: Build portfolio
+        working-directory: ./nelthor.qzz.io
+        run: bun run build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: nelthor.qzz.io/out
+          path: ./nelthor.qzz.io/out
 
   deploy:
-    needs: build
-    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
     steps:
-      - uses: actions/deploy-pages@v4
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

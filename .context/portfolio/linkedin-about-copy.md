@@ -1,5 +1,7 @@
 # LinkedIn About — Copy-paste ready
 
+> Internal planning reference — LinkedIn profile copy drafts.
+
 Replace your About section with:
 
 ---

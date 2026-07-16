@@ -30,6 +30,9 @@ jobs:
       - name: Sync content — generate profile README from repos + blog
         run: bun run generate:readme
 
+      - name: Sync media assets — copy images to public/
+        run: bun run generate:media-index
+
       - name: Install portfolio dependencies
         working-directory: ./nelthor.qzz.io
         run: bun install

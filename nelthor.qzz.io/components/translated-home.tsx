@@ -24,7 +24,7 @@ export function HeroSection() {
         <a href="/cv" className="px-6 py-2 rounded-lg bg-[var(--color-accent-strong)] text-white font-semibold hover:opacity-90 shadow-sm">
           {t('hero.download-cv')}
         </a>
-        <a href="mailto:gomeznahuel@gmail.com" className="px-6 py-2 rounded-lg border border-[var(--color-accent)] text-[var(--color-accent)] font-medium hover:opacity-80">
+        <a href="mailto:gomeznahuel.le@gmail.com" className="px-6 py-2 rounded-lg border border-[var(--color-accent)] text-[var(--color-accent)] font-medium hover:opacity-80">
           {t('hero.contact')}
         </a>
       </div>
@@ -75,7 +75,7 @@ export function ContactSection() {
       <div className="flex gap-4 justify-center">
         <a href="https://linkedin.com/in/nelgoez" className="px-6 py-2 rounded-lg bg-[var(--color-accent-strong)] text-white font-semibold hover:opacity-90 shadow-sm">{t('contact.linkedin')}</a>
         <a href="https://github.com/nelgoez" className="px-6 py-2 rounded-lg border border-[var(--color-accent-strong)] text-[var(--color-accent-strong)] font-medium hover:opacity-80">{t('contact.github')}</a>
-        <a href="mailto:gomeznahuel@gmail.com" className="px-6 py-2 rounded-lg border border-[var(--color-accent-strong)] text-[var(--color-accent-strong)] font-medium hover:opacity-80">{t('contact.email')}</a>
+        <a href="mailto:gomeznahuel.le@gmail.com" className="px-6 py-2 rounded-lg border border-[var(--color-accent-strong)] text-[var(--color-accent-strong)] font-medium hover:opacity-80">{t('contact.email')}</a>
       </div>
     </section>
   );

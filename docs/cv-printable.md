@@ -2,7 +2,7 @@
 
 **Senior QA Automation Engineer • SDET II • AI-Enhanced Quality Engineering**
 
-Córdoba, Argentina · +54 351 380-8759 · nahuelgomez.cti@gmail.com
+Córdoba, Argentina · +54 351 380-8759 · gomeznahuel.le@gmail.com
 [linkedin.com/in/nelgoez](https://linkedin.com/in/nelgoez) · [github.com/nelgoez](https://github.com/nelgoez)
 
 ---

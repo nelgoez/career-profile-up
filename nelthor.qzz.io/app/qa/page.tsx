@@ -138,7 +138,7 @@ export default function QAPage() {
       <section className="p-8 rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)] text-center">
         <h2 className="text-xl font-bold mb-4">{t('qa.cta')}</h2>
         <a
-          href="mailto:gomeznahuel@gmail.com"
+          href="mailto:gomeznahuel.le@gmail.com"
           className="inline-block px-6 py-3 rounded-lg bg-[var(--color-accent-strong)] text-white font-semibold hover:opacity-90 shadow-sm"
         >
           {t('qa.cta-button')}

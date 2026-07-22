@@ -3,11 +3,54 @@
 import Link from 'next/link';
 import { useLocale } from '@/lib/locale-context';
 
-const SCORE = [
-  { layerKey: 'qa.layer-ui', scoreKey: 'qa.layer-ui-score', detailKey: 'qa.layer-ui-detail', color: '#10B981', reportUrl: 'https://nelgoez.github.io/diploma-tracking-sys/staging/smoke/' },
-  { layerKey: 'qa.layer-api', scoreKey: 'qa.layer-api-score', detailKey: 'qa.layer-api-detail', color: '#10B981', reportUrl: 'https://nelgoez.github.io/bunkai-qa-engineering/staging/sanity/' },
-  { layerKey: 'qa.layer-db', scoreKey: 'qa.layer-db-score', detailKey: 'qa.layer-db-detail', color: '#10B981', reportUrl: 'https://nelgoez.github.io/bunkai-qa-engineering/staging/sanity/' },
-  { layerKey: 'qa.layer-cicd', scoreKey: 'qa.layer-cicd-score', detailKey: 'qa.layer-cicd-detail', color: '#10B981', reportUrl: 'https://github.com/nelgoez/diploma-tracking-sys/actions' },
+interface ScoreLayer {
+  layerKey: string
+  scoreKey: string
+  detailKey: string
+  color: string
+  reportUrls: { label: string, url: string }[]
+}
+
+const SCORE: ScoreLayer[] = [
+  {
+    layerKey: 'qa.layer-ui',
+    scoreKey: 'qa.layer-ui-score',
+    detailKey: 'qa.layer-ui-detail',
+    color: '#10B981',
+    reportUrls: [
+      { label: 'DTS Staging', url: 'https://nelgoez.github.io/diploma-tracking-sys/staging/smoke/' },
+      { label: 'UNC Course Audit', url: 'https://nelgoez.github.io/unc-agentic-dev/allure/' },
+    ],
+  },
+  {
+    layerKey: 'qa.layer-api',
+    scoreKey: 'qa.layer-api-score',
+    detailKey: 'qa.layer-api-detail',
+    color: '#10B981',
+    reportUrls: [
+      { label: 'bunkai ATCs', url: 'https://nelgoez.github.io/bunkai-qa-engineering/staging/sanity/' },
+      { label: 'UNC Moodle API', url: 'https://nelgoez.github.io/unc-agentic-dev/allure/' },
+    ],
+  },
+  {
+    layerKey: 'qa.layer-db',
+    scoreKey: 'qa.layer-db-score',
+    detailKey: 'qa.layer-db-detail',
+    color: '#10B981',
+    reportUrls: [
+      { label: 'bunkai ATCs', url: 'https://nelgoez.github.io/bunkai-qa-engineering/staging/sanity/' },
+    ],
+  },
+  {
+    layerKey: 'qa.layer-cicd',
+    scoreKey: 'qa.layer-cicd-score',
+    detailKey: 'qa.layer-cicd-detail',
+    color: '#10B981',
+    reportUrls: [
+      { label: 'DTS Actions', url: 'https://github.com/nelgoez/diploma-tracking-sys/actions' },
+      { label: 'UNC Audit CI', url: 'https://github.com/nelgoez/unc-agentic-dev/actions/workflows/audit-ci.yml' },
+    ],
+  },
 ];
 
 const SCREENSHOTS = [
@@ -54,14 +97,21 @@ export default function QAPage() {
               <div className="flex items-center justify-between mb-3">
                 <h3 className="font-semibold text-lg">{t(s.layerKey)}</h3>
                 <div className="flex items-center gap-3">
-                  {s.reportUrl && (
-                    <a
-                      href={s.reportUrl}
-                      target="_blank"
-                      className="text-xs text-[var(--color-accent)] hover:underline"
-                    >
-                      Live report ↗
-                    </a>
+                  {s.reportUrls.length > 0 && (
+                    <div className="flex items-center gap-2">
+                      {s.reportUrls.map(r => (
+                        <a
+                          key={r.url}
+                          href={r.url}
+                          target="_blank"
+                          className="text-xs text-[var(--color-accent)] hover:underline"
+                        >
+                          {r.label}
+                          {' '}
+                          ↗
+                        </a>
+                      ))}
+                    </div>
                   )}
                   <span
                     className="text-sm font-medium px-3 py-1 rounded-full"

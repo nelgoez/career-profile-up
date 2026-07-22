@@ -117,7 +117,7 @@ export function ProjectsSection({ initialProjects }: Props) {
       .then(async r => r.json())
       .then((data: Repo[]) => {
         const syncedMap = new Map(initialProjects?.map(s => [s.name, s]) ?? []);
-        const cards = data.map(r => buildCard(r, syncedMap.get(r.name)));
+        const cards = data.filter(r => r.name !== 'nelgoez').map(r => buildCard(r, syncedMap.get(r.name)));
         setCards(cards);
       })
       .catch(() => {})

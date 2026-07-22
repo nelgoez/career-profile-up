@@ -4,10 +4,10 @@ import Link from 'next/link';
 import { useLocale } from '@/lib/locale-context';
 
 const SCORE = [
-  { layerKey: 'qa.layer-ui', scoreKey: 'qa.layer-ui-score', detailKey: 'qa.layer-ui-detail', color: '#F59E0B' },
-  { layerKey: 'qa.layer-api', scoreKey: 'qa.layer-api-score', detailKey: 'qa.layer-api-detail', color: '#10B981' },
-  { layerKey: 'qa.layer-db', scoreKey: 'qa.layer-db-score', detailKey: 'qa.layer-db-detail', color: '#F59E0B' },
-  { layerKey: 'qa.layer-cicd', scoreKey: 'qa.layer-cicd-score', detailKey: 'qa.layer-cicd-detail', color: '#10B981' },
+  { layerKey: 'qa.layer-ui', scoreKey: 'qa.layer-ui-score', detailKey: 'qa.layer-ui-detail', color: '#10B981', reportUrl: 'https://nelgoez.github.io/diploma-tracking-sys/staging/smoke/' },
+  { layerKey: 'qa.layer-api', scoreKey: 'qa.layer-api-score', detailKey: 'qa.layer-api-detail', color: '#10B981', reportUrl: 'https://nelgoez.github.io/bunkai-qa-engineering/staging/sanity/' },
+  { layerKey: 'qa.layer-db', scoreKey: 'qa.layer-db-score', detailKey: 'qa.layer-db-detail', color: '#10B981', reportUrl: 'https://nelgoez.github.io/bunkai-qa-engineering/staging/sanity/' },
+  { layerKey: 'qa.layer-cicd', scoreKey: 'qa.layer-cicd-score', detailKey: 'qa.layer-cicd-detail', color: '#10B981', reportUrl: 'https://github.com/nelgoez/diploma-tracking-sys/actions' },
 ];
 
 const SCREENSHOTS = [
@@ -17,6 +17,9 @@ const SCREENSHOTS = [
   { src: '/media/qa/bk147-app-shell-with-sidebar.png', key: 'qa.evidence-bug1' },
   { src: '/media/qa/bk147-multi-tab.png', key: 'qa.evidence-bug2' },
   { src: '/media/qa/bk147-tc10-not-found.png', key: 'qa.evidence-bug3' },
+  { src: '/media/qa/unc-audit-section0.png', key: 'qa.evidence-unc-audit-section0' },
+  { src: '/media/qa/unc-audit-section4.png', key: 'qa.evidence-unc-audit-section4' },
+  { src: '/media/qa/unc-admin-explore.png', key: 'qa.evidence-unc-admin-explore' },
 ];
 
 export default function QAPage() {
@@ -50,16 +53,27 @@ export default function QAPage() {
             <div key={s.layerKey} className="p-6 rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)]">
               <div className="flex items-center justify-between mb-3">
                 <h3 className="font-semibold text-lg">{t(s.layerKey)}</h3>
-                <span
-                  className="text-sm font-medium px-3 py-1 rounded-full"
-                  style={{
-                    backgroundColor: `${s.color}20`,
-                    color: s.color,
-                    border: `1px solid ${s.color}40`,
-                  }}
-                >
-                  {t(s.scoreKey)}
-                </span>
+                <div className="flex items-center gap-3">
+                  {s.reportUrl && (
+                    <a
+                      href={s.reportUrl}
+                      target="_blank"
+                      className="text-xs text-[var(--color-accent)] hover:underline"
+                    >
+                      Live report ↗
+                    </a>
+                  )}
+                  <span
+                    className="text-sm font-medium px-3 py-1 rounded-full"
+                    style={{
+                      backgroundColor: `${s.color}20`,
+                      color: s.color,
+                      border: `1px solid ${s.color}40`,
+                    }}
+                  >
+                    {t(s.scoreKey)}
+                  </span>
+                </div>
               </div>
               <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">{t(s.detailKey)}</p>
             </div>
@@ -72,7 +86,7 @@ export default function QAPage() {
         <p className="text-[var(--color-text-muted)] mb-8">
           CI-generated test report dashboards deployed to GitHub Pages — live after every run.
         </p>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-4 gap-6">
           <a
             href="https://nelgoez.github.io/diploma-tracking-sys/staging/smoke/"
             target="_blank"
@@ -110,6 +124,23 @@ export default function QAPage() {
             <div className="p-4 flex items-center justify-between">
               <span className="text-sm font-medium">bunkai — Sanity Smoke</span>
               <span className="text-[var(--color-accent)] text-sm">↗</span>
+            </div>
+          </a>
+          <a
+            href="https://nelgoez.github.io/unc-agentic-dev/allure/"
+            target="_blank"
+            className="group block rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)] overflow-hidden hover:border-[var(--color-accent)]/50 transition-all hover:scale-[1.02]"
+          >
+            <div className="aspect-video overflow-hidden">
+              <img src="/media/qa/unc-audit-section0.png" alt="UNC Course Audit" className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+            </div>
+            <div className="p-4">
+              <span className="text-sm font-medium">UNC Moodle — Course Audit</span>
+              <p className="text-xs text-[var(--color-text-muted)] mt-1">
+                Allure dashboard +
+                {' '}
+                <a href="https://nelgoez.github.io/unc-agentic-dev/" target="_blank" className="text-[var(--color-accent)] hover:underline" onClick={e => e.stopPropagation()}>audit report ↗</a>
+              </p>
             </div>
           </a>
         </div>

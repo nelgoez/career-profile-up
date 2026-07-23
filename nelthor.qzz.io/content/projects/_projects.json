@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-22",
+  "updated": "2026-07-23",
   "repos": [
     {
       "name": "bunkai-qa-engineering",
@@ -20,7 +20,7 @@
       "thumbnail": "/media/bunkai-qa-engineering/thumbnail.png",
       "featured": true,
       "order": 1,
-      "updatedAt": "2026-07-11T00:24:41Z",
+      "updatedAt": "2026-07-23T00:20:15Z",
       "screenshots": [
         {
           "path": "bk147-app-shell-with-sidebar.png",
@@ -40,48 +40,6 @@
         "allure_production": "https://nelgoez.github.io/bunkai-qa-engineering/production/sanity/",
         "docs": "https://github.com/nelgoez/bunkai-qa-engineering/tree/main/docs"
       }
-    },
-    {
-      "name": "diploma-tracking-sys",
-      "displayName": "diploma-tracking-sys",
-      "description": "Diploma Tracking System — UNC",
-      "url": "https://github.com/nelgoez/diploma-tracking-sys",
-      "language": "HTML",
-      "tags": [],
-      "thumbnail": null,
-      "featured": false,
-      "order": 99,
-      "updatedAt": "2026-07-17T19:36:38Z",
-      "screenshots": [],
-      "links": {}
-    },
-    {
-      "name": "agentic-diplo-track-sys",
-      "displayName": "agentic-diplo-track-sys",
-      "description": "",
-      "url": "https://github.com/nelgoez/agentic-diplo-track-sys",
-      "language": "TypeScript",
-      "tags": [],
-      "thumbnail": null,
-      "featured": false,
-      "order": 99,
-      "updatedAt": "2026-07-21T05:40:13Z",
-      "screenshots": [],
-      "links": {}
-    },
-    {
-      "name": "unc-agentic-dev",
-      "displayName": "unc-agentic-dev",
-      "description": "UNC Campus Virtual — Agentic dev infrastructure for Moodle automation, reengagement & diploma tracking",
-      "url": "https://github.com/nelgoez/unc-agentic-dev",
-      "language": "HTML",
-      "tags": [],
-      "thumbnail": null,
-      "featured": false,
-      "order": 99,
-      "updatedAt": "2026-07-22T00:14:27Z",
-      "screenshots": [],
-      "links": {}
     }
   ]
 }

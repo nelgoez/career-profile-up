@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-07-22",
+  "updated": "2026-07-23",
   "assets": [
     {
       "id": "screenshots-homepage-hero",
@@ -87,6 +87,13 @@
       "used_in": []
     },
     {
+      "id": "qa-unc-admin-explore",
+      "type": "screenshot",
+      "file": "qa/unc-admin-explore.png",
+      "alt_text": "",
+      "used_in": []
+    },
+    {
       "id": "qa-allure-tests",
       "type": "screenshot",
       "file": "qa/allure-tests.png",
@@ -129,6 +136,13 @@
       "used_in": []
     },
     {
+      "id": "qa-unc-audit-section0",
+      "type": "screenshot",
+      "file": "qa/unc-audit-section0.png",
+      "alt_text": "",
+      "used_in": []
+    },
+    {
       "id": "qa-DTS-smoke-allure-report",
       "type": "screenshot",
       "file": "qa/DTS-smoke-allure-report.png",
@@ -146,6 +160,13 @@
       "id": "qa-DTS-smoke-graphs-PROD",
       "type": "screenshot",
       "file": "qa/DTS-smoke-graphs-PROD.png",
+      "alt_text": "",
+      "used_in": []
+    },
+    {
+      "id": "qa-unc-audit-section4",
+      "type": "screenshot",
+      "file": "qa/unc-audit-section4.png",
       "alt_text": "",
       "used_in": []
     },

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-30",
+  "updated": "2026-07-31",
   "repos": [
     {
       "name": "bunkai-qa-engineering",
@@ -74,12 +74,12 @@
       "displayName": "diploma-tracking-sys",
       "description": "Diploma Tracking System — UNC",
       "url": "https://github.com/nelgoez/diploma-tracking-sys",
-      "language": "HTML",
+      "language": "TypeScript",
       "tags": [],
       "thumbnail": null,
       "featured": false,
       "order": 99,
-      "updatedAt": "2026-07-17T19:36:38Z",
+      "updatedAt": "2026-07-31T05:38:45Z",
       "screenshots": [],
       "links": {}
     }

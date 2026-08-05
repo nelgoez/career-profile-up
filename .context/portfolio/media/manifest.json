@@ -318,6 +318,13 @@
       "used_in": []
     },
     {
+      "id": "unc-agentic-dev-thumbnail",
+      "type": "screenshot",
+      "file": "unc-agentic-dev/thumbnail.png",
+      "alt_text": "",
+      "used_in": []
+    },
+    {
       "id": "unc-agentic-dev-docs-pitch-images-gemini-cli-terminal",
       "type": "screenshot",
       "file": "unc-agentic-dev/docs/pitch/images/gemini-cli-terminal.png",

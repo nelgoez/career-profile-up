@@ -42,6 +42,39 @@
       }
     },
     {
+      "name": "diploma-tracking-sys",
+      "displayName": "Diploma Tracking System",
+      "description": "Full-stack academic diploma management platform for Universidad Nacional de Córdoba — React + Hono + Supabase + Allure. AI-driven 14-phase methodology from PRD to production.",
+      "url": "https://github.com/nelgoez/diploma-tracking-sys",
+      "language": "TypeScript",
+      "tags": [
+        "react",
+        "hono",
+        "supabase",
+        "typescript",
+        "vite",
+        "mui",
+        "playwright",
+        "allure",
+        "vercel",
+        "i18n",
+        "diploma-tracking",
+        "unc",
+        "kata-testing"
+      ],
+      "thumbnail": null,
+      "featured": true,
+      "order": 2,
+      "updatedAt": "2026-08-05T21:31:44Z",
+      "screenshots": [],
+      "links": {
+        "production": "https://diplomatrackingsystem.qzz.io",
+        "allure_staging": "https://nelgoez.github.io/diploma-tracking-sys/staging/smoke/",
+        "allure_production": "https://nelgoez.github.io/diploma-tracking-sys/production/smoke/",
+        "docs": "https://github.com/nelgoez/diploma-tracking-sys/tree/main/docs"
+      }
+    },
+    {
       "name": "agentic-diplo-track-sys",
       "displayName": "Agentic Diplo Track Sys",
       "description": "Agentic-dev boilerplate — from PRD to staging deploy, driven by AI skills. Built for real teams shipping backlogs with Playwright, Allure, and Jira integration.",
@@ -114,20 +147,6 @@
         "allure": "https://nelgoez.github.io/unc-agentic-dev",
         "docs": "https://github.com/nelgoez/unc-agentic-dev/tree/main/docs"
       }
-    },
-    {
-      "name": "diploma-tracking-sys",
-      "displayName": "diploma-tracking-sys",
-      "description": "Diploma Tracking System — UNC",
-      "url": "https://github.com/nelgoez/diploma-tracking-sys",
-      "language": "TypeScript",
-      "tags": [],
-      "thumbnail": null,
-      "featured": false,
-      "order": 99,
-      "updatedAt": "2026-07-31T05:38:45Z",
-      "screenshots": [],
-      "links": {}
     }
   ]
 }

@@ -158,7 +158,7 @@ export function ImpactMetrics() {
     { icon: GitFork, value: repos, labelKey: 'metrics.repos' },
     { icon: Activity, value: workflows, suffix: '+', labelKey: 'metrics.workflows' },
     { icon: ShieldCheck, value: coverage, suffix: '%', labelKey: 'metrics.coverage' },
-    { icon: Briefcase, value: 5, suffix: '+', labelKey: 'metrics.experience' },
+    { icon: Briefcase, value: 6, suffix: '+', labelKey: 'metrics.experience' },
   ];
 
   return (

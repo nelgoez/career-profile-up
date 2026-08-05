@@ -20,7 +20,7 @@
       "thumbnail": "/media/bunkai-qa-engineering/thumbnail.png",
       "featured": true,
       "order": 1,
-      "updatedAt": "2026-08-05T20:37:32Z",
+      "updatedAt": "2026-08-05T23:45:18Z",
       "screenshots": [
         {
           "path": "bk147-app-shell-with-sidebar.png",
@@ -39,113 +39,6 @@
         "allure_staging": "https://nelgoez.github.io/bunkai-qa-engineering/staging/sanity/",
         "allure_production": "https://nelgoez.github.io/bunkai-qa-engineering/production/sanity/",
         "docs": "https://github.com/nelgoez/bunkai-qa-engineering/tree/main/docs"
-      }
-    },
-    {
-      "name": "diploma-tracking-sys",
-      "displayName": "Diploma Tracking System",
-      "description": "Full-stack academic diploma management platform for Universidad Nacional de Córdoba — React + Hono + Supabase + Allure. AI-driven 14-phase methodology from PRD to production.",
-      "url": "https://github.com/nelgoez/diploma-tracking-sys",
-      "language": "TypeScript",
-      "tags": [
-        "react",
-        "hono",
-        "supabase",
-        "typescript",
-        "vite",
-        "mui",
-        "playwright",
-        "allure",
-        "vercel",
-        "i18n",
-        "diploma-tracking",
-        "unc",
-        "kata-testing"
-      ],
-      "thumbnail": null,
-      "featured": true,
-      "order": 2,
-      "updatedAt": "2026-08-05T21:31:44Z",
-      "screenshots": [],
-      "links": {
-        "production": "https://diplomatrackingsystem.qzz.io",
-        "allure_staging": "https://nelgoez.github.io/diploma-tracking-sys/staging/smoke/",
-        "allure_production": "https://nelgoez.github.io/diploma-tracking-sys/production/smoke/",
-        "docs": "https://github.com/nelgoez/diploma-tracking-sys/tree/main/docs"
-      }
-    },
-    {
-      "name": "agentic-diplo-track-sys",
-      "displayName": "Agentic Diplo Track Sys",
-      "description": "Agentic-dev boilerplate — from PRD to staging deploy, driven by AI skills. Built for real teams shipping backlogs with Playwright, Allure, and Jira integration.",
-      "url": "https://github.com/nelgoez/agentic-diplo-track-sys",
-      "language": "TypeScript",
-      "tags": [
-        "agentic-development",
-        "ai-workflow",
-        "boilerplate",
-        "typescript",
-        "bun",
-        "playwright",
-        "allure",
-        "vercel",
-        "supabase",
-        "jira-integration",
-        "kata-testing",
-        "mcp"
-      ],
-      "thumbnail": null,
-      "featured": true,
-      "order": 3,
-      "updatedAt": "2026-08-05T21:26:39Z",
-      "screenshots": [],
-      "links": {
-        "staging": "https://nelgoez-diploma-tracking-sys-git-staging-nelgoezs-projects.vercel.app",
-        "allure_staging": "https://nelgoez.github.io/diploma-tracking-sys/staging/smoke/",
-        "docs": "https://github.com/nelgoez/agentic-diplo-track-sys/tree/main/docs"
-      }
-    },
-    {
-      "name": "unc-agentic-dev",
-      "displayName": "UNC Agentic Dev",
-      "description": "Moodle automation & course audit infrastructure for UNC Campus Virtual — Playwright, Allure, Netlify, and AI-driven reengagement pipelines.",
-      "url": "https://github.com/nelgoez/unc-agentic-dev",
-      "language": "HTML",
-      "tags": [
-        "moodle",
-        "automation",
-        "playwright",
-        "allure",
-        "netlify",
-        "typescript",
-        "bun",
-        "course-audit",
-        "unc",
-        "reengagement",
-        "kata-testing"
-      ],
-      "thumbnail": "/media/unc-agentic-dev/thumbnail.png",
-      "featured": true,
-      "order": 4,
-      "updatedAt": "2026-08-05T21:25:54Z",
-      "screenshots": [
-        {
-          "path": "reports/audit/course-269-section-0.png",
-          "alt": "Course 269 audit — section overview"
-        },
-        {
-          "path": "reports/audit/course-269-admin-section-0.png",
-          "alt": "Course 269 audit — admin view"
-        },
-        {
-          "path": "reports/audit/cas-before-submit.png",
-          "alt": "Moodle CAS workflow — before submission"
-        }
-      ],
-      "links": {
-        "production": "https://unc-course-kit.netlify.app",
-        "allure": "https://nelgoez.github.io/unc-agentic-dev",
-        "docs": "https://github.com/nelgoez/unc-agentic-dev/tree/main/docs"
       }
     }
   ]

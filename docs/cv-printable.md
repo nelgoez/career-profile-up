@@ -9,7 +9,12 @@ Córdoba, Argentina · +54 351 380-8759 · gomeznahuel.le@gmail.com
 
 ## Professional Summary
 
-Senior QA Automation Engineer with 6 years of experience building and scaling test automation for web-based SaaS products. Specialized in Playwright, TypeScript, WebdriverIO, and Robot Framework, with a strong track record of migrating legacy suites, integrating tests into CI/CD pipelines, and driving shift-left quality culture. Fluent in English with extensive experience in distributed engineering teams.
+Senior QA Automation Engineer with 6 years of experience building and scaling test automation for SaaS platforms.
+Specialized in Playwright, TypeScript, Python, and Robot Framework with a strong track record of migrating legacy suites,
+integrating tests into CI/CD pipelines, and driving shift-left quality culture. Recently focused on AI/LLM quality
+engineering — building agentic testing frameworks with KATA architecture, designing CI/CD quality gates with
+autonomous workflows, and combining traditional automation with AI-assisted test generation. Fluent in English
+with extensive experience in distributed engineering teams.
 
 ---
 
@@ -47,6 +52,17 @@ Global leader in web hosting and digital presence — Bluehost, HostGator, Domai
 - Collaborated with DevOps and Dev teams to integrate testing earlier in the SDLC, reducing defects reaching production.
 - Built foundation for the automation framework that later scaled to Robot Framework + Python.
 
+### UPEX Galaxy — Remote, Argentina
+*Jan 2026 – Present · 7 mos*
+
+**Agentic QA Engineer (DOJO Program)**
+
+- Built bunkai-qa-engineering: an agentic QA framework (KATA architecture, Playwright + TypeScript) providing automated testing for UPEX's bunkai-tms product.
+- QA'd UPEX's diploma tracking platform (production-bound) — E2E Playwright suites, API testing (45+ endpoints), accessibility (axe-core), and multi-role authorization.
+- Designed CI/CD quality gates across 6+ GitHub Actions workflows — Allure dashboards auto-deployed to GitHub Pages on every run.
+- Implemented Jira/Xray test traceability with structured decorators for automated test case synchronization.
+- Evaluated through UPEX's Agentic QA DOJO — peer-reviewed test architecture and CI/CD design on production-grade products.
+
 ### Coderhouse — Argentina
 *Jul 2021 – Feb 2022 · 8 mos*
 
@@ -70,7 +86,9 @@ Delivered instruction and hands-on mentoring for Node.js, Express, MongoDB, and 
 |------------|-------------|------|
 | Full Stack Web Development | Henry Bootcamp | 2021 |
 | EF SET English Certificate (C1 Advanced) | EF International Language Centers | May 2021 |
-| AI-Powered Quality Engineer | UPEX Galaxy | In progress, 2026 |
+| AI-Powered Quality Engineer (DOJO 3) | UPEX Galaxy | 2026 |
+| Jira & Xray — Test Management | UPEX Galaxy | 2026 |
+| Agentic Automation Engineering | UPEX Galaxy | In progress, 2026 |
 | IA y Automatización de Flujos de Trabajo | Campus Virtual UNC | Jan 2026 |
 | How to Give Feedback People Can Actually Use | LinkedIn | Mar 2024 |
 

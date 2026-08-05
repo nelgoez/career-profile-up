@@ -35,9 +35,11 @@ export default function CVEsPage() {
         <section className="mb-8">
           <h2 className="text-xl font-bold mb-3 border-b border-[var(--color-border)] pb-2">Resumen Profesional</h2>
           <p className="text-[var(--color-text)] leading-relaxed">
-            Senior QA Automation Engineer con 6 años de experiencia construyendo y escalando automatización de pruebas para productos SaaS web.
-            Especializado en Playwright, TypeScript, WebdriverIO y Robot Framework, con un historial comprobado de migración de suites heredadas,
-            integración de pruebas en pipelines CI/CD y promoción de cultura shift-left. Inglés fluido con amplia experiencia en equipos de ingeniería distribuidos.
+            Senior QA Automation Engineer con 6 años de experiencia construyendo y escalando automatización de pruebas para plataformas SaaS.
+            Especializado en Playwright, TypeScript, Python y Robot Framework, con un historial comprobado de migración de suites heredadas,
+            integración de pruebas en pipelines CI/CD y promoción de cultura shift-left. Enfocado recientemente en ingeniería de calidad con IA/LLM —
+            construyendo frameworks de testing agente con arquitectura KATA, diseñando quality gates en CI/CD con flujos autónomos y combinando
+            automatización tradicional con generación de pruebas asistida por IA. Inglés fluido con amplia experiencia en equipos de ingeniería distribuidos.
           </p>
         </section>
 
@@ -114,6 +116,39 @@ export default function CVEsPage() {
           <div className="mb-6">
             <div className="flex justify-between items-start mb-2">
               <div>
+                <h3 className="font-semibold">UPEX Galaxy</h3>
+                <p className="text-sm text-[var(--color-text-muted)]">Remoto, Argentina</p>
+              </div>
+              <span className="text-sm text-[var(--color-text-muted)] whitespace-nowrap">Ene 2026 – Presente • 7 meses</span>
+            </div>
+            <p className="text-sm text-[var(--color-accent)] font-medium mb-1">Agentic QA Engineer (Programa DOJO)</p>
+            <ul className="space-y-2 text-sm text-[var(--color-text)]">
+              <li className="flex gap-2">
+                <span className="text-[var(--color-accent)] mt-1">▸</span>
+                Construí bunkai-qa-engineering: un framework de QA agente (arquitectura KATA, Playwright + TypeScript) para testing automatizado del producto bunkai-tms de UPEX.
+              </li>
+              <li className="flex gap-2">
+                <span className="text-[var(--color-accent)] mt-1">▸</span>
+                QA de la plataforma de seguimiento de diplomas de UPEX (con salida a producción) — suites E2E con Playwright, testing de API (45+ endpoints), accesibilidad (axe-core) y autorización multi-rol.
+              </li>
+              <li className="flex gap-2">
+                <span className="text-[var(--color-accent)] mt-1">▸</span>
+                Diseñé quality gates en CI/CD con 6+ workflows de GitHub Actions — dashboards Allure publicados automáticamente en GitHub Pages en cada ejecución.
+              </li>
+              <li className="flex gap-2">
+                <span className="text-[var(--color-accent)] mt-1">▸</span>
+                Implementé trazabilidad de pruebas con Jira/Xray usando decoradores estructurados para sincronización automatizada de casos de prueba.
+              </li>
+              <li className="flex gap-2">
+                <span className="text-[var(--color-accent)] mt-1">▸</span>
+                Evaluado a través del DOJO de Agentic QA de UPEX — arquitectura de pruebas y diseño CI/CD revisados por pares sobre productos con salida a producción.
+              </li>
+            </ul>
+          </div>
+
+          <div className="mb-6">
+            <div className="flex justify-between items-start mb-2">
+              <div>
                 <h3 className="font-semibold">Coderhouse</h3>
                 <p className="text-sm text-[var(--color-text-muted)]">Argentina</p>
               </div>
@@ -160,7 +195,23 @@ export default function CVEsPage() {
             </div>
             <div className="p-4 rounded-lg bg-[var(--color-bg)] border border-[var(--color-border)]">
               <h3 className="font-semibold text-sm">AI-Powered Quality Engineer</h3>
-              <p className="text-sm text-[var(--color-text-muted)]">UPEX Galaxy — en progreso, 2026</p>
+              <p className="text-sm text-[var(--color-text-muted)]">UPEX Galaxy • 2026</p>
+              <p className="text-xs mt-1">
+                <a href="https://www.upexgalaxy.com/verify/UPEX-DOJOQUALITYENGINEER-2026-KE8HBJXR" target="_blank" className="text-[var(--color-accent)]">Verificar ↗</a>
+                <span className="mx-1">·</span>
+                <a href="/certificates/Quality-Engineer-UPEX.pdf" target="_blank" className="text-[var(--color-accent)]">PDF</a>
+              </p>
+            </div>
+            <div className="p-4 rounded-lg bg-[var(--color-bg)] border border-[var(--color-border)]">
+              <h3 className="font-semibold text-sm">Jira & Xray — Gestión de Pruebas</h3>
+              <p className="text-sm text-[var(--color-text-muted)]">UPEX Galaxy • 2026</p>
+              <p className="text-xs mt-1">
+                <a href="/certificates/Jira-Xray-UPEX.pdf" target="_blank" className="text-[var(--color-accent)]">Ver Certificado (PDF)</a>
+              </p>
+            </div>
+            <div className="p-4 rounded-lg bg-[var(--color-bg)] border border-[var(--color-border)]">
+              <h3 className="font-semibold text-sm">Agentic Automation Engineering</h3>
+              <p className="text-sm text-[var(--color-text-muted)]">UPEX Galaxy • En Progreso, 2026</p>
             </div>
             <div className="p-4 rounded-lg bg-[var(--color-bg)] border border-[var(--color-border)]">
               <h3 className="font-semibold text-sm">IA y Automatización de Flujos de Trabajo</h3>

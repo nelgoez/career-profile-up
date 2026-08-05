@@ -13,15 +13,14 @@ const EXPERIENCE = [
   },
   {
     role: 'Agentic QA Engineer',
-    company: 'UPEX Galaxy — Course Projects',
+    company: 'UPEX Galaxy',
     period: '2025 – Present',
     details: [
-      'Built bunkai-qa-engineering: agentic QA platform with KATA architecture',
-      'Developed diploma tracking system with Supabase backend, RLS security, and Moodle integration',
-      'Deployed public Allure test report dashboards on GitHub Pages for DTS — smoke, regression, and a11y results live in CI',
-      'Expanded food-app Jest coverage 40%→78% + Playwright E2E critical paths',
-      'Pioneered agentic development workflows using AI-assisted coding + multi-skill orchestration',
-      'Implemented autonomous mode gate bypass for streamlined development pipelines',
+      'Built bunkai-qa-engineering: agentic QA framework (KATA + Playwright + TypeScript) providing automated testing for UPEX\'s bunkai-tms product',
+      'QA\'d UPEX\'s diploma tracking platform — E2E Playwright, API (45+ endpoints), accessibility (axe-core), multi-role auth',
+      'CI/CD quality gates across 6+ GitHub Actions workflows — Allure dashboards auto-deployed on every run',
+      'Jira/Xray traceability with structured decorators for automated case sync',
+      'Evaluated through UPEX\'s Agentic QA DOJO program',
     ],
   },
 ];

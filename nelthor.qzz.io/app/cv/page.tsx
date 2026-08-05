@@ -32,10 +32,12 @@ export default function CVPage() {
         <section className="mb-8">
           <h2 className="text-xl font-bold mb-3 border-b border-[var(--color-border)] pb-2">Professional Summary</h2>
           <p className="text-[var(--color-text)] leading-relaxed">
-            Senior QA Automation Engineer with 6 years of experience building and scaling test automation for web-based SaaS products.
-            Specialized in Playwright, TypeScript, WebdriverIO, and Robot Framework, with a strong track record of migrating legacy suites,
-            integrating tests into CI/CD pipelines, and driving shift-left quality culture. Fluent in English with extensive experience in
-            distributed engineering teams.
+            Senior QA Automation Engineer with 6 years of experience building and scaling test automation for SaaS platforms.
+            Specialized in Playwright, TypeScript, Python, and Robot Framework with a strong track record of migrating legacy suites,
+            integrating tests into CI/CD pipelines, and driving shift-left quality culture. Recently focused on AI/LLM quality
+            engineering — building agentic testing frameworks with KATA architecture, designing CI/CD quality gates with
+            autonomous workflows, and combining traditional automation with AI-assisted test generation. Fluent in English
+            with extensive experience in distributed engineering teams.
           </p>
         </section>
 
@@ -112,6 +114,39 @@ export default function CVPage() {
           <div className="mb-6">
             <div className="flex justify-between items-start mb-2">
               <div>
+                <h3 className="font-semibold">UPEX Galaxy</h3>
+                <p className="text-sm text-[var(--color-text-muted)]">Remote, Argentina</p>
+              </div>
+              <span className="text-sm text-[var(--color-text-muted)] whitespace-nowrap">Jan 2026 – Present • 7 mos</span>
+            </div>
+            <p className="text-sm text-[var(--color-accent)] font-medium mb-1">Agentic QA Engineer (DOJO Program)</p>
+            <ul className="space-y-2 text-sm text-[var(--color-text)]">
+              <li className="flex gap-2">
+                <span className="text-[var(--color-accent)] mt-1">▸</span>
+                Built bunkai-qa-engineering: an agentic QA framework (KATA architecture, Playwright + TypeScript) providing automated testing for UPEX's bunkai-tms product.
+              </li>
+              <li className="flex gap-2">
+                <span className="text-[var(--color-accent)] mt-1">▸</span>
+                QA'd UPEX's diploma tracking platform (production-bound) — E2E Playwright suites, API testing (45+ endpoints), accessibility (axe-core), and multi-role authorization.
+              </li>
+              <li className="flex gap-2">
+                <span className="text-[var(--color-accent)] mt-1">▸</span>
+                Designed CI/CD quality gates across 6+ GitHub Actions workflows — Allure dashboards auto-deployed to GitHub Pages on every run.
+              </li>
+              <li className="flex gap-2">
+                <span className="text-[var(--color-accent)] mt-1">▸</span>
+                Implemented Jira/Xray test traceability with structured decorators for automated test case synchronization.
+              </li>
+              <li className="flex gap-2">
+                <span className="text-[var(--color-accent)] mt-1">▸</span>
+                Evaluated through UPEX's Agentic QA DOJO — peer-reviewed test architecture and CI/CD design on production-grade products.
+              </li>
+            </ul>
+          </div>
+
+          <div className="mb-6">
+            <div className="flex justify-between items-start mb-2">
+              <div>
                 <h3 className="font-semibold">Coderhouse</h3>
                 <p className="text-sm text-[var(--color-text-muted)]">Argentina</p>
               </div>
@@ -169,6 +204,10 @@ export default function CVPage() {
               <p className="text-xs mt-1">
                 <a href="/certificates/Jira-Xray-UPEX.pdf" target="_blank" className="text-[var(--color-accent)]">View Certificate (PDF)</a>
               </p>
+            </div>
+            <div className="p-4 rounded-lg bg-[var(--color-bg)] border border-[var(--color-border)]">
+              <h3 className="font-semibold text-sm">Agentic Automation Engineering</h3>
+              <p className="text-sm text-[var(--color-text-muted)]">UPEX Galaxy • In Progress, 2026</p>
             </div>
 
             <div className="p-4 rounded-lg bg-[var(--color-bg)] border border-[var(--color-border)]">

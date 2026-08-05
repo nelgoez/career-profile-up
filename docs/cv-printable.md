@@ -3,7 +3,7 @@
 **Senior QA Automation Engineer • SDET II • AI-Enhanced Quality Engineering**
 
 Córdoba, Argentina · +54 351 380-8759 · gomeznahuel.le@gmail.com
-[linkedin.com/in/nelgoez](https://linkedin.com/in/nelgoez) · [github.com/nelgoez](https://github.com/nelgoez)
+[linkedin.com/in/nelgoez](https://linkedin.com/in/nelgoez) · [github.com/nelgoez](https://github.com/nelgoez) · [nelthor.com.ar](https://nelthor.com.ar)
 
 ---
 
@@ -22,12 +22,14 @@ with extensive experience in distributed engineering teams.
 
 | Area | Skills |
 |------|--------|
-| Test Automation | Playwright, Selenium WebDriver, WebdriverIO, Cypress, Robot Framework, Protractor, Cucumber |
+| Test Automation | Playwright, Selenium WebDriver, WebdriverIO, Cypress, Robot Framework, Cucumber |
 | Languages | TypeScript, JavaScript, Python, Node.js |
-| API Testing | REST APIs, Microservices, Middleware, Postman, Automated API suites |
-| CI / CD | Jenkins, GitHub Actions — pipeline integration and maintenance |
-| Frontend & CMS | React, Angular, WordPress, Redux, Express, Supabase, Firebase |
-| Methodologies | Shift-Left Testing, KATA Architecture, Agile/Scrum, Test Plan Design |
+| API Testing | REST APIs, Microservices, Middleware validation, Postman, Automated API suites |
+| CI/CD & Automation | Jenkins, GitHub Actions — pipeline design, maintenance, quality gates |
+| Infrastructure & Containers | Docker, Kubernetes (basic), AWS (familiar), sandbox environments |
+| Monitoring & Observability | Kibana, Grafana, Allure Framework — dashboards, logging, runtime tracking |
+| AI & Developer Tooling | Claude Code, GitHub Copilot, Cursor — AI-assisted testing, code review |
+| Methodologies | Shift-Left Testing, KATA Architecture, Agile/Scrum, Test Plan Design, Risk-Based Testing |
 
 ---
 
@@ -85,12 +87,12 @@ Delivered instruction and hands-on mentoring for Node.js, Express, MongoDB, and 
 | Credential | Institution | Date |
 |------------|-------------|------|
 | Full Stack Web Development | Henry Bootcamp | 2021 |
-| EF SET English Certificate (C1 Advanced) | EF International Language Centers | May 2021 |
-| AI-Powered Quality Engineer (DOJO 3) | UPEX Galaxy | 2026 |
+| Agentic Quality Analyst Engineer | UPEX Galaxy | 2026 |
 | Jira & Xray — Test Management | UPEX Galaxy | 2026 |
 | Agentic Automation Engineering | UPEX Galaxy | In progress, 2026 |
 | IA y Automatización de Flujos de Trabajo | Campus Virtual UNC | Jan 2026 |
-| How to Give Feedback People Can Actually Use | LinkedIn | Mar 2024 |
+| EF SET English Certificate (C1 Advanced) | EF International Language Centers | — |
+| How to Give Feedback People Can Actually Use | LinkedIn Learning | Mar 2024 |
 
 ---
 

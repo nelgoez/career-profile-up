@@ -26,9 +26,10 @@ export default function CVEsPage() {
           <div className="flex flex-wrap justify-center gap-4 text-sm text-[var(--color-text-muted)]">
             <span>📍 Córdoba, Argentina</span>
             <span>📞 +54 351 380-8759</span>
-            <span>✉️ nahuelgomez.cti@gmail.com</span>
+            <span>✉️ gomeznahuel.le@gmail.com</span>
             <a href="https://linkedin.com/in/nelgoez" className="text-[var(--color-accent)]">💼 linkedin.com/in/nelgoez</a>
             <a href="https://github.com/nelgoez" className="text-[var(--color-accent)]">🐙 github.com/nelgoez</a>
+            <a href="https://nelthor.com.ar" className="text-[var(--color-accent)]">🌐 nelthor.com.ar</a>
           </div>
         </header>
 
@@ -47,11 +48,13 @@ export default function CVEsPage() {
           <h2 className="text-xl font-bold mb-3 border-b border-[var(--color-border)] pb-2">Competencias Clave</h2>
           <div className="grid md:grid-cols-2 gap-4">
             {[
-              { label: 'Automatización de Pruebas', items: 'Playwright, Selenium WebDriver, WebdriverIO, Cypress, Robot Framework, Protractor, Cucumber' },
+              { label: 'Automatización de Pruebas', items: 'Playwright, Selenium WebDriver, WebdriverIO, Cypress, Robot Framework, Cucumber' },
               { label: 'Lenguajes', items: 'TypeScript, JavaScript, Python, Node.js' },
               { label: 'Testing de APIs', items: 'REST APIs, Microservicios, Middleware, Postman, Suites automatizadas' },
-              { label: 'CI / CD', items: 'Jenkins, GitHub Actions — integración y mantenimiento de pipelines' },
-              { label: 'Frontend & CMS', items: 'React, Angular, WordPress, Redux, Express, Supabase, Firebase' },
+              { label: 'CI/CD & Automatización', items: 'Jenkins, GitHub Actions — diseño de pipelines, mantenimiento, quality gates' },
+              { label: 'Infraestructura & Contenedores', items: 'Docker, Kubernetes (básico), AWS (familiar), entornos sandbox' },
+              { label: 'Monitoreo & Observabilidad', items: 'Kibana, Grafana, Allure Framework — dashboards, logging, seguimiento' },
+              { label: 'IA & Herramientas de Desarrollo', items: 'Claude Code, GitHub Copilot, Cursor — testing asistido por IA' },
               { label: 'Metodologías', items: 'Shift-Left Testing, KATA Architecture, Agile/Scrum, Diseño de Planes de Prueba' },
             ].map(cat => (
               <div key={cat.label} className="p-4 rounded-lg bg-[var(--color-bg)] border border-[var(--color-border)]">
@@ -194,7 +197,7 @@ export default function CVEsPage() {
               </p>
             </div>
             <div className="p-4 rounded-lg bg-[var(--color-bg)] border border-[var(--color-border)]">
-              <h3 className="font-semibold text-sm">AI-Powered Quality Engineer</h3>
+              <h3 className="font-semibold text-sm">Agentic Quality Analyst Engineer</h3>
               <p className="text-sm text-[var(--color-text-muted)]">UPEX Galaxy • 2026</p>
               <p className="text-xs mt-1">
                 <a href="https://www.upexgalaxy.com/verify/UPEX-DOJOQUALITYENGINEER-2026-KE8HBJXR" target="_blank" className="text-[var(--color-accent)]">Verificar ↗</a>

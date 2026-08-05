@@ -23,9 +23,10 @@ export default function CVPage() {
           <div className="flex flex-wrap justify-center gap-4 text-sm text-[var(--color-text-muted)]">
             <span>📍 Córdoba, Argentina</span>
             <span>📞 +54 351 380-8759</span>
-            <span>✉️ nahuelgomez.cti@gmail.com</span>
+            <span>✉️ gomeznahuel.le@gmail.com</span>
             <a href="https://linkedin.com/in/nelgoez" className="text-[var(--color-accent)]">💼 linkedin.com/in/nelgoez</a>
             <a href="https://github.com/nelgoez" className="text-[var(--color-accent)]">🐙 github.com/nelgoez</a>
+            <a href="https://nelthor.com.ar" className="text-[var(--color-accent)]">🌐 nelthor.com.ar</a>
           </div>
         </header>
 
@@ -45,12 +46,14 @@ export default function CVPage() {
           <h2 className="text-xl font-bold mb-3 border-b border-[var(--color-border)] pb-2">Core Competencies</h2>
           <div className="grid md:grid-cols-2 gap-4">
             {[
-              { label: 'Test Automation', items: 'Playwright, Selenium WebDriver, WebdriverIO, Cypress, Robot Framework, Protractor, Cucumber' },
+              { label: 'Test Automation', items: 'Playwright, Selenium WebDriver, WebdriverIO, Cypress, Robot Framework, Cucumber' },
               { label: 'Languages', items: 'TypeScript, JavaScript, Python, Node.js' },
-              { label: 'API Testing', items: 'REST APIs, Microservices, Middleware, Postman, Automated API suites' },
-              { label: 'CI / CD', items: 'Jenkins, GitHub Actions — pipeline integration and maintenance' },
-              { label: 'Frontend & CMS', items: 'React, Angular, WordPress, Redux, Express, Supabase, Firebase' },
-              { label: 'Methodologies', items: 'Shift-Left Testing, KATA Architecture, Agile/Scrum, Test Plan Design' },
+              { label: 'API Testing', items: 'REST APIs, Microservices, Middleware validation, Postman, Automated API suites' },
+              { label: 'CI/CD & Automation', items: 'Jenkins, GitHub Actions — pipeline design, maintenance, quality gates' },
+              { label: 'Infrastructure & Containers', items: 'Docker, Kubernetes (basic), AWS (familiar), sandbox environments' },
+              { label: 'Monitoring & Observability', items: 'Kibana, Grafana, Allure Framework — dashboards, logging, runtime tracking' },
+              { label: 'AI & Developer Tooling', items: 'Claude Code, GitHub Copilot, Cursor — AI-assisted testing, code review' },
+              { label: 'Methodologies', items: 'Shift-Left Testing, KATA Architecture, Agile/Scrum, Test Plan Design, Risk-Based Testing' },
             ].map(cat => (
               <div key={cat.label} className="p-4 rounded-lg bg-[var(--color-bg)] border border-[var(--color-border)]">
                 <h3 className="text-sm font-semibold text-[var(--color-accent)] mb-1">{cat.label}</h3>

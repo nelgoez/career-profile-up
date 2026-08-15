@@ -7,7 +7,7 @@ import './globals.css';
 export const metadata = {
   title: 'Nahuel Gomez — Agentic QA Engineer',
   description:
-    'QA Automation Engineer with 5+ years at Newfold Digital. SDET → Agentic QA Engineer. TypeScript, Python, Playwright, Cucumber.',
+    'QA Automation Engineer with 4+ years at Newfold Digital. SDET → Agentic QA Engineer. TypeScript, Python, Playwright, Cucumber.',
   openGraph: {
     title: 'Nahuel Gomez — Agentic QA Engineer',
     description: 'QA Automation Engineer | Backend Dev | TypeScript & Python',

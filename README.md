@@ -26,7 +26,7 @@
   <a href="https://wa.link/mtf64p">WhatsApp</a>
 </p>
 
-<p><i>SDET turned Agentic QA Engineer. 5+ years building test automation at Newfold Digital. Now designing intelligent quality systems that work alongside AI agents.</i></p>
+<p><i>SDET turned Agentic QA Engineer. 4+ years building test automation at Newfold Digital. Now designing intelligent quality systems that work alongside AI agents.</i></p>
 
 <br />
 

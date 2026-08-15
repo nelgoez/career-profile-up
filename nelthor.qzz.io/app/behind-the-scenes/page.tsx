@@ -91,7 +91,7 @@ export default function BehindTheScenesPage() {
         </div>
         <div className="grid md:grid-cols-2 gap-8">
           <div className="p-6 rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)]">
-            <h3 className="font-semibold mb-3">2019-2023: Traditional SDET</h3>
+            <h3 className="font-semibold mb-3">2021-2026: Traditional SDET</h3>
             <ul className="space-y-2 text-sm text-[var(--color-text-muted)]">
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)]">•</span>
@@ -116,7 +116,7 @@ export default function BehindTheScenesPage() {
             </ul>
           </div>
           <div className="p-6 rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)]">
-            <h3 className="font-semibold mb-3">2025+: Agentic QA</h3>
+            <h3 className="font-semibold mb-3">2026+: Agentic QA</h3>
             <ul className="space-y-2 text-sm text-[var(--color-text-muted)]">
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)]">•</span>

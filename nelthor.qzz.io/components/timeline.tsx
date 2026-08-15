@@ -2,7 +2,7 @@ const EXPERIENCE = [
   {
     role: 'SDET — Quality Engineering',
     company: 'Newfold Digital (Florida, USA)',
-    period: '2021 – 2025',
+    period: 'Aug 2021 – Jan 2026',
     details: [
       'Built and maintained test automation frameworks using Cucumber + TypeScript across multiple product lines',
       'Developed Robot Framework + Python test suites for backend API validation',
@@ -14,7 +14,7 @@ const EXPERIENCE = [
   {
     role: 'Agentic QA Engineer',
     company: 'UPEX Galaxy',
-    period: '2025 – Present',
+    period: 'Jan 2026 – Present',
     details: [
       'Built bunkai-qa-engineering: agentic QA framework (KATA + Playwright + TypeScript) providing automated testing for UPEX\'s bunkai-tms product',
       'QA\'d UPEX\'s diploma tracking platform — E2E Playwright, API (45+ endpoints), accessibility (axe-core), multi-role auth',

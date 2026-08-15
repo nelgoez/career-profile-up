@@ -21,10 +21,10 @@
 
   <!-- Column headers -->
   <text x="240" y="93" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#a78bfa">Traditional SDET</text>
-  <text x="240" y="108" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#666">Newfold Digital 2019-2023</text>
+  <text x="240" y="108" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#666">Newfold Digital 2021-2026</text>
 
   <text x="660" y="93" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#7c3aed">Agentic QA</text>
-  <text x="660" y="108" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#666">Current 2025+</text>
+  <text x="660" y="108" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#666">Current 2026+</text>
 
   <!-- LEFT COLUMN — Traditional SDET -->
   <g>

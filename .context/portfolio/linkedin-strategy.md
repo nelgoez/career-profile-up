@@ -19,12 +19,12 @@
 > Same job title (QA Engineer). Completely different job.
 >
 > The shift happened gradually:
-> • 🤖 2020: Manual → Automated (Selenium → Playwright)
+> • 🤖 2021: Manual → Automated (Selenium → Playwright)
 > • 🏗️ 2022: Framework architecture (Cucumber + TypeScript, Robot Framework + Python)
 > • 🧠 2024: Agentic workflows (AI writes tests, I review)
-> • ⚙️ 2025: Built agentic QA platform (KATA architecture) with Supabase + Playwright — AI plans tests, I approve and review
-> • 🎓 2025: Developed diploma tracking system with RLS-secured Supabase backend + Moodle integration
-> • 📈 2025: Expanded food-app test coverage 40% → 78% with Jest + Playwright E2E critical paths
+> • ⚙️ 2026: Built agentic QA platform (KATA architecture) with Supabase + Playwright — AI plans tests, I approve and review
+> • 🎓 2026: Developed diploma tracking system with RLS-secured Supabase backend + Moodle integration
+> • 📈 2026: Expanded food-app test coverage 40% → 78% with Jest + Playwright E2E critical paths
 > • 🚀 2026: Launched career portfolio at nelthor.com.ar — built via agentic dev workflows, now a free GitHub template
 >
 > The biggest unlock? Realizing that **test automation is not about recording scripts — it's about designing systems that find bugs faster than humans can think of them.**

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-18",
+  "updated": "2026-08-19",
   "repos": [
     {
       "name": "bunkai-qa-engineering",
@@ -127,7 +127,7 @@
       "thumbnail": "/media/unc-agentic-dev/thumbnail.png",
       "featured": true,
       "order": 4,
-      "updatedAt": "2026-08-05T21:25:54Z",
+      "updatedAt": "2026-08-19T05:28:22Z",
       "screenshots": [
         {
           "path": "reports/audit/course-269-section-0.png",

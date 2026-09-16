@@ -13,11 +13,11 @@ Same job title (QA Engineer). Completely different job.
 
 The shift happened gradually:
 
-- **2021:** Manual → Automated (Selenium → Playwright)
+- **2021:** Manual → Automated (WebdriverIO + TypeScript)
 - **2022:** Framework architecture — Cucumber + TypeScript, Robot Framework + Python
 - **2024:** Agentic workflows — AI writes tests, I review
-- **2026:** Built agentic QA platform (KATA architecture) with Supabase + Playwright
-- **2026:** Launched career portfolio at nelthor.qzz.io — built via agentic dev workflows
+- **2026:** Built the Agentic QA Boilerplate (KATA + Playwright) — open-source, with a create-agentic-qa scaffolder, 20+ agent skills, a full Xray CLI, and 7 MCP integrations
+- **2026:** Launched career portfolio at nelthor.com.ar — built via agentic dev workflows
 
 ## The Newfold Years (2021–2026)
 
@@ -40,7 +40,7 @@ The bottleneck shifted from writing code to **designing intent**. That's the age
 
 ## What I Built
 
-The KATA (Knowledge-Augmented Test Automation) framework emerged from this work — a three-layer pattern:
+The KATA (Component Action Test Architecture) framework emerged from this work — a three-layer pattern:
 
 | Layer | Purpose | Who owns it |
 |-------|---------|-------------|
@@ -49,6 +49,10 @@ The KATA (Knowledge-Augmented Test Automation) framework emerged from this work 
 | Test | What you assert | AI + Human |
 
 AI fits naturally at Layer 3: it generates assertions from natural language intent while the abstraction layers keep the framework stable.
+
+That framework grew into the **Agentic QA Boilerplate** — an open-source starter that turns the whole QA lifecycle into agent skills. Instead of isolated test snippets, it orchestrates the loop: shift-left testing (Stage 0), in-sprint manual QA (Stages 1–3), test documentation and ROI prioritization (Stage 4), KATA automation (Stage 5), and regression with GO/CAUTION/NO-GO sign-off (Stage 6). It ships with a `create-agentic-qa` scaffolder, 20+ skills, a 13-command Xray CLI for Jira/Xray traceability, and 7 MCP integrations.
+
+The lesson stayed the same: **design your framework for AI collaboration, not just human maintenance.**
 
 ## Looking Forward
 

@@ -120,23 +120,23 @@ export default function BehindTheScenesPage() {
             <ul className="space-y-2 text-sm text-[var(--color-text-muted)]">
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)]">•</span>
-                KATA framework with component-action-test layers
+                Agentic QA Boilerplate — open-source, KATA component-action-test layers
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)]">•</span>
-                AI-driven test generation from AC Gherkin
+                create-agentic-qa scaffolder — one command bootstraps the whole framework
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)]">•</span>
-                GitHub Actions CI with multi-stage orchestration
+                20+ agent skills orchestrating Stage 0→6 (shift-left → regression GO/NO-GO)
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)]">•</span>
-                Autonomous mode gate bypass for sprint workflows
+                13-command Xray CLI + @atc decorators for Jira/Xray traceability
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)]">•</span>
-                Health tooling: asset integrity, staleness, consistency
+                7 MCP integrations (Tavily, Atlassian, API, Postman, and more)
               </li>
             </ul>
           </div>

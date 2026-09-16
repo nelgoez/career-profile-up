@@ -335,6 +335,12 @@ function generateProfileReadme(_repos: SourceRepo[]) {
       { name: 'Jira', color: '0052CC', logo: 'jira' },
       { name: 'Confluence', color: '172B4D', logo: 'confluence' },
     ],
+    agentic: [
+      { name: 'Claude Code', color: 'FF6600', logo: 'anthropic' },
+      { name: 'OpenCode', color: '000000', logo: 'opencode' },
+      { name: 'Tavily', color: '4F46E5', logo: 'tavily' },
+      { name: 'Xray', color: '0052CC', logo: 'jira' },
+    ],
   };
 
   const skillShields = (items: { name: string, color: string, logo: string }[]) =>
@@ -377,7 +383,7 @@ function generateProfileReadme(_repos: SourceRepo[]) {
 
   // ── Metrics ──
   const metricsLine = syncedEntries.length > 0
-    ? `| Metric | Value |\n|--------|-------|\n| **Public Repos** | ${syncedEntries.length} |\n| **CI/CD Workflows** | 6+ active |\n| **Test Coverage** | 78% average |\n| **Years Experience** | 5+ |`
+    ? '| Metric | Value |\n|--------|-------|\n| **Years Experience** | 6+ |\n| **Featured Project** | Agentic QA Boilerplate — 20+ skills, Xray CLI, 7 MCPs |'
     : '';
 
   // ── QA approach ──
@@ -420,9 +426,9 @@ function generateProfileReadme(_repos: SourceRepo[]) {
     '',
     '## 🎯 What I Do',
     '',
-    'QA Automation Engineer with 5+ years building robust test automation frameworks. I specialize in **agentic QA engineering** — building intelligent test automation systems that work alongside AI agents.',
+    'Agentic QA Engineer with 5+ years building test automation. Author of the open-source **Agentic QA Boilerplate** — KATA + Playwright, a create-agentic-qa scaffolder, 20+ agent skills, a full Xray CLI, and 7 MCP integrations.',
     '',
-    '**Impact:** Reduced test execution overhead by leveraging agentic patterns while maintaining deterministic quality gates.',
+    '**Impact:** Turned the QA workflow into agent skills — shift-left testing through regression sign-off — and shipped it as a free open-source boilerplate.',
     '',
     '---',
     '',
@@ -448,6 +454,13 @@ function generateProfileReadme(_repos: SourceRepo[]) {
     '<summary><b>Tools & Platforms</b></summary>',
     '',
     skillShields(skills.tools),
+    '',
+    '</details>',
+    '',
+    '<details>',
+    '<summary><b>Agentic AI & Workflow</b></summary>',
+    '',
+    skillShields(skills.agentic),
     '',
     '</details>',
     '',

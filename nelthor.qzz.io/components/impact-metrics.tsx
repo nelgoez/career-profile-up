@@ -63,16 +63,16 @@ async function loadRepoWorkflows(name: string): Promise<number> {
 function useMetrics() {
   const [repos, setRepos] = useState(14);
   const [workflows, setWorkflows] = useState(6);
-  const [coverage, setCoverage] = useState(78);
+  const [passRate, setPassRate] = useState(95);
 
   useEffect(() => {
     let cancelled = false;
 
     const load = async () => {
-      const [repoResp, dtsSummary, bunkaiSummary, uncSummary] = await Promise.allSettled([
+      const [repoResp, dtsStaging, dtsProduction, uncSummary] = await Promise.allSettled([
         fetch('https://api.github.com/users/nelgoez/repos?per_page=100&type=public'),
         fetchAllureSummary('https://nelgoez.github.io/diploma-tracking-sys/staging/smoke/'),
-        fetchAllureSummary('https://nelgoez.github.io/bunkai-qa-engineering/staging/sanity/'),
+        fetchAllureSummary('https://nelgoez.github.io/diploma-tracking-sys/production/smoke/'),
         fetchAllureSummary('https://nelgoez.github.io/unc-agentic-dev/allure/'),
       ]);
 
@@ -87,19 +87,19 @@ function useMetrics() {
         }
       }
 
-      const summaries = [dtsSummary, bunkaiSummary, uncSummary].filter(isFulfilled).map(s => s.value).filter(Boolean) as AllureStat[];
+      const summaries = [dtsStaging, dtsProduction, uncSummary].filter(isFulfilled).map(s => s.value).filter(Boolean) as AllureStat[];
 
       if (summaries.length > 0) {
         const totalPassed = summaries.reduce((s, v) => s + v.passed, 0);
         const totalAll = summaries.reduce((s, v) => s + v.total, 0);
         if (totalAll > 0) {
-          setCoverage(Math.round((totalPassed / totalAll) * 100));
+          setPassRate(Math.round((totalPassed / totalAll) * 100));
         }
       }
 
-      const KEY_REPOS = ['diploma-tracking-sys', 'bunkai-qa-engineering', 'unc-agentic-dev'];
+      const KEY_REPOS = ['diploma-tracking-sys', 'bunkai-qa-engineering', 'unc-agentic-dev', 'career-profile-up'];
       const workflowResults = await Promise.allSettled(KEY_REPOS.map(loadRepoWorkflows));
-      const wfCount = workflowResults.filter(isFulfilled).reduce((s, r) => s + r.value, 0) + 4;
+      const wfCount = workflowResults.filter(isFulfilled).reduce((s, r) => s + r.value, 0);
 
       if (!cancelled) {
         if (wfCount > 0) {
@@ -112,7 +112,7 @@ function useMetrics() {
     return () => { cancelled = true; };
   }, []);
 
-  return { repos, workflows, coverage };
+  return { repos, workflows, passRate };
 }
 
 function useCountUp(target: number, duration = 1500): number {
@@ -152,12 +152,12 @@ function AnimatedMetric({ icon: Icon, value, suffix, labelKey }: Metric) {
 
 export function ImpactMetrics() {
   const { t } = useLocale();
-  const { repos, workflows, coverage } = useMetrics();
+  const { repos, workflows, passRate } = useMetrics();
 
   const metrics: Metric[] = [
     { icon: GitFork, value: repos, labelKey: 'metrics.repos' },
     { icon: Activity, value: workflows, suffix: '+', labelKey: 'metrics.workflows' },
-    { icon: ShieldCheck, value: coverage, suffix: '%', labelKey: 'metrics.coverage' },
+    { icon: ShieldCheck, value: passRate, suffix: '%', labelKey: 'metrics.passrate' },
     { icon: Briefcase, value: 6, suffix: '+', labelKey: 'metrics.experience' },
   ];
 

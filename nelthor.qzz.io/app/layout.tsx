@@ -7,10 +7,10 @@ import './globals.css';
 export const metadata = {
   title: 'Nahuel Gomez — Agentic QA Engineer',
   description:
-    'QA Automation Engineer with 4+ years at Newfold Digital. SDET → Agentic QA Engineer. TypeScript, Python, Playwright, Cucumber.',
+    'Agentic QA Engineer with 5+ years in test automation. Builder of the open-source Agentic QA Boilerplate (KATA + Playwright, 20+ skills, Xray CLI, 7 MCPs). TypeScript, Python, Playwright, Jira/Xray.',
   openGraph: {
     title: 'Nahuel Gomez — Agentic QA Engineer',
-    description: 'QA Automation Engineer | Backend Dev | TypeScript & Python',
+    description: 'Agentic QA Engineer | Open-Source Boilerplate Author | TypeScript & Python',
     url: 'https://nelthor.com.ar',
     siteName: 'nelthor.com.ar',
     type: 'website',

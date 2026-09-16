@@ -6,13 +6,13 @@ Replace your About section with:
 
 ---
 
-QA Engineer / SDET with 4+ years architecting automation at Newfold Digital — QA'ing consumer-facing products across their brand portfolio including **networksolutions.com**, **bluehost.com**, and others. Led migration of 600+ test cases to Cucumber + WebdriverIO/TypeScript, reducing regression cycles by 60%.
+QA Engineer / SDET with 5+ years in test automation — 4+ years architecting automation at Newfold Digital across their brand portfolio including **networksolutions.com**, **bluehost.com**, and others. Led migration of 600+ test cases to Cucumber + WebdriverIO/TypeScript, reducing regression cycles by 60%.
 
-Now specializing in **Agentic Quality Engineering** — integrating AI-driven workflows into the testing lifecycle. Building predictive, autonomous quality systems that work alongside AI agents.
+Now building the **Agentic QA Boilerplate** — an open-source QA framework (KATA + Playwright) shipped with a create-agentic-qa scaffolder, 20+ agent skills, a full Xray CLI, and 7 MCP integrations. It drives the entire QA lifecycle from shift-left testing to release sign-off.
 
 Portfolio → nelthor.com.ar
 
-Stack: TypeScript, JavaScript, Python, Node.js · WebdriverIO, Robot Framework, Playwright, Cucumber, Selenium · CI/CD, GitHub Actions, Jenkins
+Stack: TypeScript, JavaScript, Python, Node.js · Playwright, WebdriverIO, Robot Framework, Cucumber, Selenium · CI/CD, GitHub Actions, Jenkins · Jira/Xray
 
 ---
 

@@ -28,7 +28,7 @@ const SCORE: ScoreLayer[] = [
     detailKey: 'qa.layer-api-detail',
     color: '#10B981',
     reportUrls: [
-      { label: 'bunkai ATCs', url: 'https://nelgoez.github.io/bunkai-qa-engineering/staging/sanity/' },
+      { label: 'DTS API', url: 'https://nelgoez.github.io/diploma-tracking-sys/staging/smoke/' },
       { label: 'UNC Moodle API', url: 'https://nelgoez.github.io/unc-agentic-dev/allure/' },
     ],
   },
@@ -38,7 +38,7 @@ const SCORE: ScoreLayer[] = [
     detailKey: 'qa.layer-db-detail',
     color: '#10B981',
     reportUrls: [
-      { label: 'bunkai ATCs', url: 'https://nelgoez.github.io/bunkai-qa-engineering/staging/sanity/' },
+      { label: 'DTS RLS', url: 'https://nelgoez.github.io/diploma-tracking-sys/staging/smoke/' },
     ],
   },
   {
@@ -49,6 +49,15 @@ const SCORE: ScoreLayer[] = [
     reportUrls: [
       { label: 'DTS Actions', url: 'https://github.com/nelgoez/diploma-tracking-sys/actions' },
       { label: 'UNC Audit CI', url: 'https://github.com/nelgoez/unc-agentic-dev/actions/workflows/audit-ci.yml' },
+    ],
+  },
+  {
+    layerKey: 'qa.layer-trace',
+    scoreKey: 'qa.layer-trace-score',
+    detailKey: 'qa.layer-trace-detail',
+    color: '#8B5CF6',
+    reportUrls: [
+      { label: 'Boilerplate Xray CLI', url: 'https://github.com/nelgoez/bunkai-qa-engineering/tree/main/cli/xray' },
     ],
   },
 ];
@@ -132,9 +141,9 @@ export default function QAPage() {
       </section>
 
       <section className="mb-16">
-        <h2 className="text-2xl font-bold mb-2">Live Allure Dashboards</h2>
+        <h2 className="text-2xl font-bold mb-2">Live Quality Evidence</h2>
         <p className="text-[var(--color-text-muted)] mb-8">
-          CI-generated test report dashboards deployed to GitHub Pages — live after every run.
+          CI-generated Allure dashboards deployed to GitHub Pages — live after every run — plus the open-source framework that produces them.
         </p>
         <div className="grid md:grid-cols-4 gap-6">
           <a
@@ -164,15 +173,15 @@ export default function QAPage() {
             </div>
           </a>
           <a
-            href="https://nelgoez.github.io/bunkai-qa-engineering/staging/sanity/"
+            href="https://github.com/nelgoez/bunkai-qa-engineering"
             target="_blank"
             className="group block rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)] overflow-hidden hover:border-[var(--color-accent)]/50 transition-all hover:scale-[1.02]"
           >
             <div className="aspect-video overflow-hidden">
-              <img src="/media/qa/allure-smoke-report.png" alt="bunkai Sanity Smoke" className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <img src="/media/bunkai-qa-engineering/docs/media/demo.png" alt="Agentic QA Boilerplate" className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" loading="lazy" />
             </div>
             <div className="p-4 flex items-center justify-between">
-              <span className="text-sm font-medium">bunkai — Sanity Smoke</span>
+              <span className="text-sm font-medium">Agentic QA Boilerplate</span>
               <span className="text-[var(--color-accent)] text-sm">↗</span>
             </div>
           </a>

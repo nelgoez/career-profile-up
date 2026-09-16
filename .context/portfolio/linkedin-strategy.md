@@ -24,7 +24,7 @@
 > • 🧠 2024: Agentic workflows (AI writes tests, I review)
 > • ⚙️ 2026: Built agentic QA platform (KATA architecture) with Supabase + Playwright — AI plans tests, I approve and review
 > • 🎓 2026: Developed diploma tracking system with RLS-secured Supabase backend + Moodle integration
-> • 📈 2026: Expanded food-app test coverage 40% → 78% with Jest + Playwright E2E critical paths
+> • 📦 2026: Built & open-sourced the Agentic QA Boilerplate — create-agentic-qa scaffolder, 20+ skills, Xray CLI, 7 MCPs
 > • 🚀 2026: Launched career portfolio at nelthor.com.ar — built via agentic dev workflows, now a free GitHub template
 >
 > The biggest unlock? Realizing that **test automation is not about recording scripts — it's about designing systems that find bugs faster than humans can think of them.**
@@ -100,7 +100,7 @@
 >
 > The framework should make it easy for AI to contribute without breaking the abstraction.
 >
-> This is exactly what I've been building with KATA (Knowledge-Augmented Test Automation).
+> This is exactly what I've been building with KATA (Component Action Test Architecture).
 >
 > More details in an upcoming blog post — but the tl;dr: **design your framework for AI collaboration, not just human maintenance.**
 >

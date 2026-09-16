@@ -72,41 +72,41 @@
   <g>
     <rect x="470" y="130" width="380" height="34" rx="8" fill="#181818" stroke="#7c3aed" stroke-width="1.5"/>
     <rect x="470" y="130" width="6" height="34" rx="3" fill="#7c3aed"/>
-    <text x="660" y="151" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#e0e0e0">AC Gherkin</text>
+    <text x="660" y="151" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#e0e0e0">create-agentic-qa scaffolder</text>
     <line x1="660" y1="164" x2="660" y2="181" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
   </g>
 
   <g>
     <rect x="470" y="184" width="380" height="34" rx="8" fill="#181818" stroke="#7c3aed" stroke-width="1.5"/>
     <rect x="470" y="184" width="6" height="34" rx="3" fill="#7c3aed"/>
-    <text x="660" y="205" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#e0e0e0">AI Test Gen</text>
+    <text x="660" y="205" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#e0e0e0">20+ agent skills (Stage 0→6)</text>
     <line x1="660" y1="218" x2="660" y2="235" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
   </g>
 
   <g>
     <rect x="470" y="238" width="380" height="34" rx="8" fill="#181818" stroke="#7c3aed" stroke-width="1.5"/>
     <rect x="470" y="238" width="6" height="34" rx="3" fill="#7c3aed"/>
-    <text x="660" y="259" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#e0e0e0">KATA Framework</text>
+    <text x="660" y="259" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#e0e0e0">KATA Components</text>
     <line x1="660" y1="272" x2="660" y2="289" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
   </g>
 
   <g>
     <rect x="470" y="292" width="380" height="34" rx="8" fill="#181818" stroke="#7c3aed" stroke-width="1.5"/>
     <rect x="470" y="292" width="6" height="34" rx="3" fill="#7c3aed"/>
-    <text x="660" y="313" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#e0e0e0">GitHub Actions</text>
+    <text x="660" y="313" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#e0e0e0">Xray CLI + @atc traceability</text>
     <line x1="660" y1="326" x2="660" y2="343" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
   </g>
 
   <g>
     <rect x="470" y="346" width="380" height="34" rx="8" fill="#181818" stroke="#7c3aed" stroke-width="1.5"/>
     <rect x="470" y="346" width="6" height="34" rx="3" fill="#7c3aed"/>
-    <text x="660" y="367" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#e0e0e0">Health Checks</text>
+    <text x="660" y="367" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#e0e0e0">7 MCP integrations</text>
     <line x1="660" y1="380" x2="660" y2="397" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
   </g>
 
   <g>
     <rect x="470" y="400" width="380" height="34" rx="8" fill="#7c3aed" fill-opacity="0.08" stroke="#7c3aed" stroke-width="2"/>
     <rect x="470" y="400" width="6" height="34" rx="3" fill="#7c3aed"/>
-    <text x="660" y="421" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#7c3aed">Deploy</text>
+    <text x="660" y="421" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#7c3aed">Release GO/NO-GO</text>
   </g>
 </svg>

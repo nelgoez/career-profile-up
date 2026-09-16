@@ -9,7 +9,7 @@ Córdoba, Argentina · +54 351 380-8759 · gomeznahuel.le@gmail.com
 
 ## Professional Summary
 
-Senior QA Automation Engineer with 6 years of experience building and scaling test automation for SaaS platforms.
+Senior QA Automation Engineer with 6 years in IT and 5+ years specializing in QA and test automation for SaaS platforms.
 Specialized in Playwright, TypeScript, Python, and Robot Framework with a strong track record of migrating legacy suites,
 integrating tests into CI/CD pipelines, and driving shift-left quality culture. Recently focused on AI/LLM quality
 engineering — building agentic testing frameworks with KATA architecture, designing CI/CD quality gates with
@@ -59,10 +59,11 @@ Global leader in web hosting and digital presence — Bluehost, HostGator, Domai
 
 **Agentic QA Engineer (DOJO Program)**
 
-- Built bunkai-qa-engineering: an agentic QA framework (KATA architecture, Playwright + TypeScript) providing automated testing for UPEX's bunkai-tms product.
+- Built the Agentic QA Boilerplate — an open-source QA framework (KATA architecture, Playwright + TypeScript) shipped with a create-agentic-qa scaffolder, 20+ agent skills, a full Xray CLI, and 7 MCP integrations.
+- Orchestrated the Stage 0→6 QA lifecycle across agent skills: shift-left testing, sprint testing, test documentation, test automation, and regression GO/NO-GO.
 - QA'd UPEX's diploma tracking platform (production-bound) — E2E Playwright suites, API testing (45+ endpoints), accessibility (axe-core), and multi-role authorization.
-- Designed CI/CD quality gates across 6+ GitHub Actions workflows — Allure dashboards auto-deployed to GitHub Pages on every run.
-- Implemented Jira/Xray test traceability with structured decorators for automated test case synchronization.
+- Designed CI/CD quality gates across GitHub Actions workflows — Allure dashboards auto-deployed to GitHub Pages on every run.
+- Implemented Jira/Xray test traceability with @atc decorators and a 13-command Xray CLI for automated test case synchronization.
 - Evaluated through UPEX's Agentic QA DOJO — peer-reviewed test architecture and CI/CD design on production-grade products.
 
 ### Coderhouse — Argentina

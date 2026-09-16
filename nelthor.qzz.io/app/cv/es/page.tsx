@@ -36,7 +36,7 @@ export default function CVEsPage() {
         <section className="mb-8">
           <h2 className="text-xl font-bold mb-3 border-b border-[var(--color-border)] pb-2">Resumen Profesional</h2>
           <p className="text-[var(--color-text)] leading-relaxed">
-            Senior QA Automation Engineer con 6 años de experiencia construyendo y escalando automatización de pruebas para plataformas SaaS.
+            Senior QA Automation Engineer con 6 años de experiencia en IT y 5+ años especializado en QA y automatización de pruebas para plataformas SaaS.
             Especializado en Playwright, TypeScript, Python y Robot Framework, con un historial comprobado de migración de suites heredadas,
             integración de pruebas en pipelines CI/CD y promoción de cultura shift-left. Enfocado recientemente en ingeniería de calidad con IA/LLM —
             construyendo frameworks de testing agente con arquitectura KATA, diseñando quality gates en CI/CD con flujos autónomos y combinando
@@ -122,13 +122,17 @@ export default function CVEsPage() {
                 <h3 className="font-semibold">UPEX Galaxy</h3>
                 <p className="text-sm text-[var(--color-text-muted)]">Remoto, Argentina</p>
               </div>
-              <span className="text-sm text-[var(--color-text-muted)] whitespace-nowrap">Ene 2026 – Presente • 7 meses</span>
+              <span className="text-sm text-[var(--color-text-muted)] whitespace-nowrap">Ene 2026 – Presente</span>
             </div>
             <p className="text-sm text-[var(--color-accent)] font-medium mb-1">Agentic QA Engineer (Programa DOJO)</p>
             <ul className="space-y-2 text-sm text-[var(--color-text)]">
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Construí bunkai-qa-engineering: un framework de QA agente (arquitectura KATA, Playwright + TypeScript) para testing automatizado del producto bunkai-tms de UPEX.
+                Construí el Agentic QA Boilerplate — un framework de QA open-source (arquitectura KATA, Playwright + TypeScript) con scaffolder create-agentic-qa, 20+ skills de agente, un CLI completo de Xray y 7 integraciones MCP.
+              </li>
+              <li className="flex gap-2">
+                <span className="text-[var(--color-accent)] mt-1">▸</span>
+                Orquesté el ciclo de vida QA Stage 0→6 con skills de agente: shift-left testing, sprint testing, documentación de pruebas, automatización y regresión GO/NO-GO.
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>
@@ -136,11 +140,11 @@ export default function CVEsPage() {
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Diseñé quality gates en CI/CD con 6+ workflows de GitHub Actions — dashboards Allure publicados automáticamente en GitHub Pages en cada ejecución.
+                Diseñé quality gates en CI/CD con workflows de GitHub Actions — dashboards Allure publicados automáticamente en GitHub Pages en cada ejecución.
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Implementé trazabilidad de pruebas con Jira/Xray usando decoradores estructurados para sincronización automatizada de casos de prueba.
+                Implementé trazabilidad de pruebas con Jira/Xray usando decoradores @atc y un CLI de Xray de 13 comandos para sincronización automatizada de casos de prueba.
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>

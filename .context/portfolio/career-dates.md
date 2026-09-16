@@ -1,7 +1,7 @@
 # Canonical Career Dates — Single Source of Truth
 
 > Keep every date reference across the site + drafts coherent with these facts.
-> Last verified: 2026-08-14.
+> Last verified: 2026-09-03.
 
 ## Timeline
 
@@ -11,14 +11,15 @@
 | Tutor (Backend/MERN) | Coderhouse | Jul 2021 | Feb 2022 | 8 mos |
 | Software Development Engineer | Newfold Digital | Aug 2021 | Feb 2022 | — |
 | SDET II | Newfold Digital | Mar 2022 | Jan 2026 | — |
-| Agentic QA Engineer (DOJO) | UPEX Galaxy | Jan 2026 | Present | 7 mos |
+| Agentic QA Engineer (DOJO) | UPEX Galaxy | Jan 2026 | Present | — |
 
 ## Non-negotiable facts
 
 - **Newfold Digital ended Jan 2026** (NOT 2025, NOT 2023).
 - **UPEX Galaxy started Jan 2026** (NOT 2025).
 - **Newfold tenure ≈ 4.5 yrs** (Aug 2021 – Jan 2026). Use "4+ years" for Newfold-specific claims.
-- **Total experience = 6 years** (broader "programmer" role, Henry Apr 2021 → present, calendar-inclusive). Use "6 years" for total-experience claims.
+- **Total IT experience = 6 years** (Henry Bootcamp Apr 2021 → present, calendar-inclusive — includes full-stack + tutoring roles). Use "6 years" for total-IT claims.
+- **QA / Automation experience = 5+ years** (Newfold Aug 2021 → present). Use "5+ years" for QA/Automation-specific claims.
 - The agentic QA work (KATA / bunkai-qa-engineering, diploma tracking platform, food-app coverage) all happened at **UPEX in 2026**.
 
 ## Where these dates appear (re-audit checklist)

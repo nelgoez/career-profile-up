@@ -26,7 +26,7 @@
   <a href="https://wa.link/mtf64p">WhatsApp</a>
 </p>
 
-<p><i>SDET turned Agentic QA Engineer. 4+ years building test automation at Newfold Digital. Now designing intelligent quality systems that work alongside AI agents.</i></p>
+<p><i>SDET turned Agentic QA Engineer. 5+ years building test automation — now author of the open-source Agentic QA Boilerplate (KATA + Playwright, 20+ skills, Xray CLI, 7 MCPs).</i></p>
 
 <br />
 
@@ -59,8 +59,8 @@ Two ways to use this repo:
 | **Projects** | Live repos from GitHub API, tech stack, links |
 | **Behind the Scenes** | How this was built — traditional QA vs agentic workflows |
 | **Blog** | Articles on Agentic QA, test automation, career |
-| **Experience** | Timeline: Newfold Digital → Agentic QA Engineer |
-| **QA Scorecard** | Testability guide with live Allure dashboards |
+| **Experience** | Timeline: Newfold Digital → Agentic QA Engineer (UPEX Galaxy) |
+| **QA Scorecard** | Testability layers + live Allure dashboards + Jira/Xray traceability |
 
 ---
 

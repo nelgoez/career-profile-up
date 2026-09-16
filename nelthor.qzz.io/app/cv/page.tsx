@@ -33,7 +33,7 @@ export default function CVPage() {
         <section className="mb-8">
           <h2 className="text-xl font-bold mb-3 border-b border-[var(--color-border)] pb-2">Professional Summary</h2>
           <p className="text-[var(--color-text)] leading-relaxed">
-            Senior QA Automation Engineer with 6 years of experience building and scaling test automation for SaaS platforms.
+            Senior QA Automation Engineer with 6 years in IT and 5+ years specializing in QA and test automation for SaaS platforms.
             Specialized in Playwright, TypeScript, Python, and Robot Framework with a strong track record of migrating legacy suites,
             integrating tests into CI/CD pipelines, and driving shift-left quality culture. Recently focused on AI/LLM quality
             engineering — building agentic testing frameworks with KATA architecture, designing CI/CD quality gates with
@@ -120,13 +120,17 @@ export default function CVPage() {
                 <h3 className="font-semibold">UPEX Galaxy</h3>
                 <p className="text-sm text-[var(--color-text-muted)]">Remote, Argentina</p>
               </div>
-              <span className="text-sm text-[var(--color-text-muted)] whitespace-nowrap">Jan 2026 – Present • 7 mos</span>
+              <span className="text-sm text-[var(--color-text-muted)] whitespace-nowrap">Jan 2026 – Present</span>
             </div>
             <p className="text-sm text-[var(--color-accent)] font-medium mb-1">Agentic QA Engineer (DOJO Program)</p>
             <ul className="space-y-2 text-sm text-[var(--color-text)]">
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Built bunkai-qa-engineering: an agentic QA framework (KATA architecture, Playwright + TypeScript) providing automated testing for UPEX's bunkai-tms product.
+                Built the Agentic QA Boilerplate — an open-source QA framework (KATA architecture, Playwright + TypeScript) shipped with a create-agentic-qa scaffolder, 20+ agent skills, a full Xray CLI, and 7 MCP integrations.
+              </li>
+              <li className="flex gap-2">
+                <span className="text-[var(--color-accent)] mt-1">▸</span>
+                Orchestrated the Stage 0→6 QA lifecycle across agent skills: shift-left testing, sprint testing, test documentation, test automation, and regression GO/NO-GO.
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>
@@ -134,11 +138,11 @@ export default function CVPage() {
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Designed CI/CD quality gates across 6+ GitHub Actions workflows — Allure dashboards auto-deployed to GitHub Pages on every run.
+                Designed CI/CD quality gates across GitHub Actions workflows — Allure dashboards auto-deployed to GitHub Pages on every run.
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Implemented Jira/Xray test traceability with structured decorators for automated test case synchronization.
+                Implemented Jira/Xray test traceability with @atc decorators and a 13-command Xray CLI for automated test case synchronization.
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>

@@ -40,6 +40,7 @@ interface MergedCard {
   featured: boolean
   stargazersCount: number
   updatedAt: string
+  links: Record<string, string>
 }
 
 const LANGUAGE_COLORS: Record<string, string> = {
@@ -67,6 +68,7 @@ function buildCard(repo: Repo, synced?: SyncedProject): MergedCard {
     featured: synced?.featured ?? false,
     stargazersCount: repo.stargazers_count,
     updatedAt: repo.updated_at,
+    links: synced?.links ?? {},
   };
 }
 
@@ -108,6 +110,7 @@ export function ProjectsSection({ initialProjects }: Props) {
       featured: s.featured,
       stargazersCount: 0,
       updatedAt: s.updatedAt,
+      links: s.links ?? {},
     }));
   });
   const [loading, setLoading] = useState(!initialProjects);
@@ -136,6 +139,11 @@ export function ProjectsSection({ initialProjects }: Props) {
                 href={card.url}
                 className="block p-6 rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)] hover:border-[var(--color-accent)] transition-colors transition-transform hover:scale-[1.02]"
               >
+                {card.thumbnail && (
+                  <div className="aspect-video overflow-hidden rounded-lg mb-4 border border-[var(--color-border)] bg-[var(--color-bg)]">
+                    <img src={card.thumbnail} alt={card.displayName} className="w-full h-full object-cover object-top" loading="lazy" />
+                  </div>
+                )}
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center gap-2 min-w-0">
                     <h3 className="font-semibold text-lg truncate">{card.displayName}</h3>
@@ -164,6 +172,24 @@ export function ProjectsSection({ initialProjects }: Props) {
                         className="text-[11px] px-2 py-0.5 rounded-full bg-zinc-700/50 text-zinc-300 border border-zinc-600/40"
                       >
                         {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
+                {Object.keys(card.links).length > 0 && (
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {Object.entries(card.links).map(([label, url]) => (
+                      <span
+                        key={label}
+                        role="link"
+                        tabIndex={0}
+                        onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open(url, '_blank', 'noopener,noreferrer'); }}
+                        onKeyDown={(e) => { if (e.key === 'Enter') { window.open(url, '_blank', 'noopener,noreferrer'); } }}
+                        className="cursor-pointer text-[11px] px-2 py-0.5 rounded-full border border-[var(--color-accent)]/30 text-[var(--color-accent)] hover:bg-[var(--color-accent)]/10"
+                      >
+                        {label}
+                        {' '}
+                        ↗
                       </span>
                     ))}
                   </div>

@@ -4,7 +4,9 @@ const { chromium } = require('playwright');
 const CV_DIR = path.resolve(__dirname, '..', '..', '..', 'Career', 'CVs');
 const files = [
   'nahuel-gomez-qa-automation.html',
+  'nahuel-gomez-qa-automation-es.html',
   'nahuel-gomez-full-career.html',
+  'nahuel-gomez-full-career-en.html',
   'nahuel-gomez-non-it.html',
 ];
 

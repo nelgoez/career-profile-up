@@ -90,7 +90,8 @@ Delivered instruction and hands-on mentoring for Node.js, Express, MongoDB, and 
 | Full Stack Web Development | Henry Bootcamp | 2021 |
 | Agentic Quality Analyst Engineer | UPEX Galaxy | 2026 |
 | Jira & Xray — Test Management | UPEX Galaxy | 2026 |
-| Agentic Automation Engineering | UPEX Galaxy | In progress, 2026 |
+| Agentic Quality Automation Engineer | UPEX Galaxy | 2026 |
+| Playwright — Test Automation Expertise | UPEX Galaxy | 2026 |
 | IA y Automatización de Flujos de Trabajo | Campus Virtual UNC | Jan 2026 |
 | EF SET English Certificate (C1 Advanced) | EF International Language Centers | — |
 | How to Give Feedback People Can Actually Use | LinkedIn Learning | Mar 2024 |

@@ -213,8 +213,22 @@ export default function CVPage() {
               </p>
             </div>
             <div className="p-4 rounded-lg bg-[var(--color-bg)] border border-[var(--color-border)]">
-              <h3 className="font-semibold text-sm">Agentic Automation Engineering</h3>
-              <p className="text-sm text-[var(--color-text-muted)]">UPEX Galaxy • In Progress, 2026</p>
+              <h3 className="font-semibold text-sm">Agentic Quality Automation Engineer</h3>
+              <p className="text-sm text-[var(--color-text-muted)]">UPEX Galaxy • 2026</p>
+              <p className="text-xs mt-1">
+                <a href="https://www.upexgalaxy.com/verify/UPEX-CERT-2026-E9BXXHB5" target="_blank" className="text-[var(--color-accent)]">Verify ↗</a>
+                <span className="mx-1">·</span>
+                <a href="/certificates/Agentic-Quality-Automation-Engineer-UPEX.pdf" target="_blank" className="text-[var(--color-accent)]">PDF</a>
+              </p>
+            </div>
+            <div className="p-4 rounded-lg bg-[var(--color-bg)] border border-[var(--color-border)]">
+              <h3 className="font-semibold text-sm">Playwright — Test Automation Expertise</h3>
+              <p className="text-sm text-[var(--color-text-muted)]">UPEX Galaxy • 2026</p>
+              <p className="text-xs mt-1">
+                <a href="https://www.upexgalaxy.com/verify/UPEX-CERT-2026-V3VRACJC" target="_blank" className="text-[var(--color-accent)]">Verify ↗</a>
+                <span className="mx-1">·</span>
+                <a href="/certificates/Playwright-Test-Automation-Expertise-UPEX.pdf" target="_blank" className="text-[var(--color-accent)]">PDF</a>
+              </p>
             </div>
 
             <div className="p-4 rounded-lg bg-[var(--color-bg)] border border-[var(--color-border)]">

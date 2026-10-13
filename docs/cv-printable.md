@@ -10,7 +10,7 @@ Córdoba, Argentina · +54 351 380-8759 · gomeznahuel.le@gmail.com
 ## Professional Summary
 
 Senior QA Automation Engineer with 6 years in IT and 5+ years specializing in QA and test automation for SaaS platforms.
-Specialized in Playwright, TypeScript, Python, and Robot Framework with a strong track record of migrating legacy suites,
+Specialized in Playwright, TypeScript, Python, Cucumber, and Robot Framework with a strong track record of modernizing legacy suites,
 integrating tests into CI/CD pipelines, and driving shift-left quality culture. Recently focused on AI/LLM quality
 engineering — building agentic testing frameworks with KATA architecture, designing CI/CD quality gates with
 autonomous workflows, and combining traditional automation with AI-assisted test generation. Fluent in English
@@ -22,10 +22,12 @@ with extensive experience in distributed engineering teams.
 
 | Area | Skills |
 |------|--------|
-| Test Automation | Playwright, Selenium WebDriver, WebdriverIO, Cypress, Robot Framework, Cucumber |
-| Languages | TypeScript, JavaScript, Python, Node.js |
-| API Testing | REST APIs, Microservices, Middleware validation, Postman, Automated API suites |
-| CI/CD & Automation | Jenkins, GitHub Actions — pipeline design, maintenance, quality gates |
+| Test Automation | Playwright, Cucumber (over WebdriverIO), Robot Framework, Selenium WebDriver, WebdriverIO, Cypress, Protractor |
+| Languages | TypeScript, JavaScript, Python, Node.js, SQL |
+| API Testing | REST APIs, Microservices, middleware validation, Postman, automated API suites |
+| CI/CD & Automation | Jenkins, GitHub Actions, Bitbucket — pipeline design, maintenance, quality gates |
+| Data & Databases | SQL / MySQL / NoSQL validation, DBeaver, DBHub MCP |
+| Management | Jira, Zephyr, Xray, Confluence, Git, GitHub |
 | Infrastructure & Containers | Docker, Kubernetes (basic), AWS (familiar), sandbox environments |
 | Monitoring & Observability | Kibana, Grafana, Allure Framework — dashboards, logging, runtime tracking |
 | AI & Developer Tooling | Claude Code, GitHub Copilot, Cursor — AI-assisted testing, code review |
@@ -43,16 +45,16 @@ Global leader in web hosting and digital presence — Bluehost, HostGator, Domai
 **Software Development Engineer in Test II (SDET II) — Mar 2022 – Jan 2026**
 
 - QA'd consumer-facing products at scale — NetworkSolutions.com, Bluehost.com — serving millions of users across hosting and small business platforms.
-- Spearheaded migration of legacy WebdriverIO suite (600+ cases) to Robot Framework over Python, reducing regression cycle time by 60%.
+- Refactored the legacy Cucumber (over WebdriverIO) suite on my own initiative — regression from 3.5–6 h to ~1:45–2 h (~60%) while trimming ~600–630 → ~430–440 cases.
+- Re-platformed the suite to Robot Framework + Python (~430 cases), shifting UI coverage to faster API/DB (headless) tests — runs under 1:30 h with equal coverage and higher precision.
+- Validated schemas, statuses, data structures and interaction results across SQL, MySQL and NoSQL during the migration from physical servers to Oracle Cloud Infrastructure (OCI) — via DBeaver, direct DB connections and APIs (mostly manual; a few promoted to regression).
 - Designed test strategies across multiple product lines — functional, API, cross-browser, regression.
-- Led automation improvements and mentored team members on clean code and test design.
-- Embedded automated suites into CI/CD (Jenkins + Jira), shifting quality left in the dev cycle.
+- Embedded suites into CI/CD (Jenkins over Bitbucket) with Jira + Zephyr test management, and mentored peers on clean-code automation.
 
 **Software Development Engineer — Aug 2021 – Feb 2022**
 
-- Migrated legacy test suite (600+ cases) from manual/functional to automated WebdriverIO + TypeScript.
+- Led the initial migration of the legacy 600+ case suite from Protractor/JS to Cucumber (over WebdriverIO).
 - Collaborated with DevOps and Dev teams to integrate testing earlier in the SDLC, reducing defects reaching production.
-- Built foundation for the automation framework that later scaled to Robot Framework + Python.
 
 ### UPEX Galaxy — Remote, Argentina
 *Jan 2026 – Present · 7 mos*

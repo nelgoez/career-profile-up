@@ -36,11 +36,11 @@ export default function CVEsPage() {
         <section className="mb-8">
           <h2 className="text-xl font-bold mb-3 border-b border-[var(--color-border)] pb-2">Resumen Profesional</h2>
           <p className="text-[var(--color-text)] leading-relaxed">
-            Senior QA Automation Engineer con 6 años de experiencia en IT y 5+ años especializado en QA y automatización de pruebas para plataformas SaaS.
-            Especializado en Playwright, TypeScript, Python y Robot Framework, con un historial comprobado de migración de suites heredadas,
-            integración de pruebas en pipelines CI/CD y promoción de cultura shift-left. Enfocado recientemente en ingeniería de calidad con IA/LLM —
-            construyendo frameworks de testing agente con arquitectura KATA, diseñando quality gates en CI/CD con flujos autónomos y combinando
-            automatización tradicional con generación de pruebas asistida por IA. Inglés fluido con amplia experiencia en equipos de ingeniería distribuidos.
+            Ingeniero Senior en Automatización de QA con 6 años en IT y 5+ años especializado en QA y automatización de pruebas para plataformas SaaS.
+            Especializado en Playwright, TypeScript, Python, Cucumber y Robot Framework, con un historial comprobado de modernización de
+            suites legacy, integración de tests en pipelines CI/CD e impulso de la cultura shift-left. Recientemente enfocado en ingeniería
+            de calidad con IA/LLM — construcción de frameworks de testing agente con arquitectura KATA, diseño de quality gates en CI/CD y
+            combinación de automatización tradicional con generación de tests asistida por IA. Inglés fluido con experiencia en equipos distribuidos.
           </p>
         </section>
 
@@ -48,12 +48,13 @@ export default function CVEsPage() {
           <h2 className="text-xl font-bold mb-3 border-b border-[var(--color-border)] pb-2">Competencias Clave</h2>
           <div className="grid md:grid-cols-2 gap-4">
             {[
-              { label: 'Automatización de Pruebas', items: 'Playwright, Selenium WebDriver, WebdriverIO, Cypress, Robot Framework, Cucumber' },
-              { label: 'Lenguajes', items: 'TypeScript, JavaScript, Python, Node.js' },
+              { label: 'Automatización de Pruebas', items: 'Playwright, Cucumber (sobre WebdriverIO), Robot Framework, Selenium WebDriver, WebdriverIO, Cypress, Protractor' },
+              { label: 'Lenguajes', items: 'TypeScript, JavaScript, Python, Node.js, SQL' },
               { label: 'Testing de APIs', items: 'REST APIs, Microservicios, Middleware, Postman, Suites automatizadas' },
-              { label: 'CI/CD & Automatización', items: 'Jenkins, GitHub Actions — diseño de pipelines, mantenimiento, quality gates' },
+              { label: 'CI/CD & Automatización', items: 'Jenkins, GitHub Actions, Bitbucket — diseño de pipelines, mantenimiento, quality gates' },
               { label: 'Infraestructura & Contenedores', items: 'Docker, Kubernetes (básico), AWS (familiar), entornos sandbox' },
               { label: 'Monitoreo & Observabilidad', items: 'Kibana, Grafana, Allure Framework — dashboards, logging, seguimiento' },
+              { label: 'Datos y Bases de Datos', items: 'validación SQL / MySQL / NoSQL, DBeaver, DBHub MCP' },
               { label: 'IA & Herramientas de Desarrollo', items: 'Claude Code, GitHub Copilot, Cursor — testing asistido por IA' },
               { label: 'Metodologías', items: 'Shift-Left Testing, KATA Architecture, Agile/Scrum, Diseño de Planes de Prueba' },
             ].map(cat => (
@@ -80,38 +81,42 @@ export default function CVEsPage() {
             <ul className="space-y-2 text-sm text-[var(--color-text)] mb-4">
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>
-                QA de productos a escala global — NetworkSolutions.com, Bluehost.com — sirviendo a millones de usuarios en plataformas de hosting y pequeñas empresas.
+                QA de productos de cara al usuario a escala — NetworkSolutions.com, Bluehost.com — sirviendo a millones de usuarios en plataformas de hosting y small business.
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Lideré la migración de una suite legacy de WebdriverIO (600+ casos) a Robot Framework sobre Python, reduciendo el tiempo de regresión en un 60%.
+                Refactoricé por iniciativa propia la suite legacy de Cucumber (sobre WebdriverIO) — regresión de 3.5–6 h a ~1:45–2 h (~60%) y reducción de ~600–630 a ~430–440 casos.
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Diseñé estrategias de prueba en múltiples líneas de productos — funcional, API, cross-browser, regresión.
+                Migré la suite a Robot Framework + Python (~430 casos), moviendo cobertura de UI a tests más rápidos de API/DB (headless) — ejecuciones bajo 1:30 h con la misma cobertura y mayor precisión.
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Lideré mejoras de automatización y mentoricé a miembros del equipo en código limpio y diseño de pruebas.
+                Validé esquemas, estados, estructuras de datos y resultados de interacción en SQL, MySQL y algunas NoSQL durante la migración de servidores físicos a Oracle Cloud Infrastructure (OCI) — con DBeaver, conexiones directas a las DB y APIs (mayormente manual; algunos casos fijos en regresión).
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Integré suites automatizadas en CI/CD (Jenkins + Jira), moviendo la calidad hacia la izquierda en el ciclo de desarrollo.
+                Diseñé estrategias de testing para múltiples líneas de producto — funcional, API, cross-browser, regresión.
+              </li>
+              <li className="flex gap-2">
+                <span className="text-[var(--color-accent)] mt-1">▸</span>
+                Integré las suites en CI/CD (Jenkins sobre Bitbucket) con Jira + Zephyr para gestión de casos, y mentoreé a compañeros en automatización limpia.
               </li>
             </ul>
             <p className="text-sm text-[var(--color-accent)] font-medium mb-1">Software Development Engineer — Ago 2021 – Feb 2022</p>
             <ul className="space-y-2 text-sm text-[var(--color-text)]">
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Migré una suite de pruebas legacy (600+ casos) de manual/funcional a WebdriverIO + TypeScript automatizado.
+                Lideré la migración inicial de la suite legacy de 600+ casos de Protractor/JS a Cucumber (sobre WebdriverIO).
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Colaboré con DevOps y equipos de desarrollo para integrar pruebas temprano en el SDLC, reduciendo defectos en producción.
+                Colaboré con DevOps y Desarrollo para integrar el testing más temprano en el SDLC, reduciendo defectos en producción.
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Construí la base del framework de automatización que luego escaló a Robot Framework + Python.
+                Construí la base del framework que luego fue re-plataformado a Robot Framework + Python.
               </li>
             </ul>
           </div>

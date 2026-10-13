@@ -14,7 +14,8 @@
 
 > QA'd consumer-facing products at scale — **networksolutions.com**, **bluehost.com** — serving millions of users across domains, hosting, and small business platforms.
 >
-> - **QA Automation Architecture**: Spearheaded end-to-end migration of legacy WebdriverIO + TypeScript suite (600+ cases) to Robot Framework over Python, improving execution speed and framework maintainability.
+> - **QA Automation Architecture**: Refactored the legacy suite on my own initiative — Protractor/JS → Cucumber (over WebdriverIO) → Robot Framework + Python — reducing regression cycles by ~60% (3.5–6 h → ~1:45–2 h) and improving execution speed and framework maintainability.
+> - **Data Validation**: Also validated schemas, statuses, structures and interaction results across SQL/MySQL/NoSQL during the physical→OCI migration (DBeaver, direct DB connections, APIs).
 > - **Test Strategy & Planning**: Designed comprehensive test plans for complex web applications across Network Solutions, Bluehost, and other Newfold brands — functional, regression, API, cross-browser.
 > - **Quality Leadership**: Led automation improvements and regression strategy, mentoring team members on clean code and test design best practices.
 > - **Shift-Left Integration**: Worked closely with DevOps and Development to embed automated suites into CI/CD pipelines, catching defects earlier in the cycle.
@@ -22,6 +23,6 @@
 
 ## SD I (Aug 2021 - Feb 2022)
 
-> - **QA Automation Architecture**: Led migration of legacy suite (600+ cases) to WebdriverIO + TypeScript, reducing execution time and improving reliability.
+> - **QA Automation Architecture**: Led migration of legacy suite (600+ cases) to Cucumber (over WebdriverIO), reducing execution time and improving reliability.
 > - **Shift-Left Enablement**: Partnered with DevOps and Dev teams to push testing earlier in the SDLC, transitioning manual functional QA toward continuous automated validation.
 > - **Portfolio**: [nelthor.com.ar](https://nelthor.com.ar)

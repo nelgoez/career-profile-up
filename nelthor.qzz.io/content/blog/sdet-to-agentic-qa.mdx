@@ -13,9 +13,9 @@ Same job title (QA Engineer). Completely different job.
 
 The shift happened gradually:
 
-- **2021:** Manual → Automated (WebdriverIO + TypeScript)
-- **2022:** Framework architecture — Cucumber + TypeScript, Robot Framework + Python
-- **2024:** Agentic workflows — AI writes tests, I review
+- **2021:** Protractor/JS → Cucumber (over WebdriverIO)
+- **2022:** Maintained and refactored the Cucumber suite — regression cut from 3.5–6 h to ~1:45–2 h (~60%)
+- **2024:** Re-platformed to Robot Framework + Python · agentic workflows — AI writes tests, I review
 - **2026:** Built the Agentic QA Boilerplate (KATA + Playwright) — open-source, with a create-agentic-qa scaffolder, 20+ agent skills, a full Xray CLI, and 7 MCP integrations
 - **2026:** Launched career portfolio at nelthor.com.ar — built via agentic dev workflows
 
@@ -23,7 +23,7 @@ The shift happened gradually:
 
 I joined Newfold Digital as an SDET working across consumer-facing products — networksolutions.com, bluehost.com — serving millions of users. My first task was taking over a 600+ test suite and making it maintainable.
 
-We migrated from legacy WebdriverIO + TypeScript to **Robot Framework over Python**, which improved execution speed and framework maintainability. Then we layered Cucumber + TypeScript on top for teams that preferred BDD-style test definition.
+We started by migrating it from Protractor/JS to **Cucumber over WebdriverIO**, then I refactored that suite on my own initiative — cutting regression from 3.5–6 h to ~1:45–2 h (~60%) while trimming ~600–630 → ~430–440 cases. Around 2024 we re-platformed to **Robot Framework + Python**, shifting UI coverage to faster API/DB (headless) tests — runs under 1:30 h with equal coverage and higher precision.
 
 The key lesson: framework architecture matters more than tool choice. A well-structured test suite survives team changes, product pivots, and technology refreshes. A poorly structured one becomes a liability.
 

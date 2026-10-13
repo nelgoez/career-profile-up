@@ -19,8 +19,8 @@
 > Same job title (QA Engineer). Completely different job.
 >
 > The shift happened gradually:
-> • 🤖 2021: Manual → Automated (Selenium → Playwright)
-> • 🏗️ 2022: Framework architecture (Cucumber + TypeScript, Robot Framework + Python)
+> • 🤖 2021: Manual → Automated (Protractor/JS → Cucumber)
+> • 🏗️ 2022: Framework architecture (Cucumber over WebdriverIO → Robot Framework + Python)
 > • 🧠 2024: Agentic workflows (AI writes tests, I review)
 > • ⚙️ 2026: Built agentic QA platform (KATA architecture) with Supabase + Playwright — AI plans tests, I approve and review
 > • 🎓 2026: Developed diploma tracking system with RLS-secured Supabase backend + Moodle integration

@@ -107,7 +107,7 @@ export default function BehindTheScenesPage() {
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)]">•</span>
-                Allure reports, Jira traceability
+                Jira + Zephyr test management
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)]">•</span>

@@ -34,11 +34,11 @@ export default function CVPage() {
           <h2 className="text-xl font-bold mb-3 border-b border-[var(--color-border)] pb-2">Professional Summary</h2>
           <p className="text-[var(--color-text)] leading-relaxed">
             Senior QA Automation Engineer with 6 years in IT and 5+ years specializing in QA and test automation for SaaS platforms.
-            Specialized in Playwright, TypeScript, Python, and Robot Framework with a strong track record of migrating legacy suites,
-            integrating tests into CI/CD pipelines, and driving shift-left quality culture. Recently focused on AI/LLM quality
-            engineering — building agentic testing frameworks with KATA architecture, designing CI/CD quality gates with
-            autonomous workflows, and combining traditional automation with AI-assisted test generation. Fluent in English
-            with extensive experience in distributed engineering teams.
+            Specialized in Playwright, TypeScript, Python, Cucumber, and Robot Framework with a strong track record of modernizing
+            legacy suites, integrating tests into CI/CD pipelines, and driving shift-left quality culture. Recently focused on AI/LLM
+            quality engineering — building agentic testing frameworks with KATA architecture, designing CI/CD quality gates with
+            autonomous workflows, and combining traditional automation with AI-assisted test generation. Fluent in English with
+            extensive experience in distributed engineering teams.
           </p>
         </section>
 
@@ -46,12 +46,13 @@ export default function CVPage() {
           <h2 className="text-xl font-bold mb-3 border-b border-[var(--color-border)] pb-2">Core Competencies</h2>
           <div className="grid md:grid-cols-2 gap-4">
             {[
-              { label: 'Test Automation', items: 'Playwright, Selenium WebDriver, WebdriverIO, Cypress, Robot Framework, Cucumber' },
-              { label: 'Languages', items: 'TypeScript, JavaScript, Python, Node.js' },
+              { label: 'Test Automation', items: 'Playwright, Cucumber (over WebdriverIO), Robot Framework, Selenium WebDriver, WebdriverIO, Cypress, Protractor' },
+              { label: 'Languages', items: 'TypeScript, JavaScript, Python, Node.js, SQL' },
               { label: 'API Testing', items: 'REST APIs, Microservices, Middleware validation, Postman, Automated API suites' },
-              { label: 'CI/CD & Automation', items: 'Jenkins, GitHub Actions — pipeline design, maintenance, quality gates' },
+              { label: 'CI/CD & Automation', items: 'Jenkins, GitHub Actions, Bitbucket — pipeline design, maintenance, quality gates' },
               { label: 'Infrastructure & Containers', items: 'Docker, Kubernetes (basic), AWS (familiar), sandbox environments' },
               { label: 'Monitoring & Observability', items: 'Kibana, Grafana, Allure Framework — dashboards, logging, runtime tracking' },
+              { label: 'Data & Databases', items: 'SQL / MySQL / NoSQL validation, DBeaver, DBHub MCP' },
               { label: 'AI & Developer Tooling', items: 'Claude Code, GitHub Copilot, Cursor — AI-assisted testing, code review' },
               { label: 'Methodologies', items: 'Shift-Left Testing, KATA Architecture, Agile/Scrum, Test Plan Design, Risk-Based Testing' },
             ].map(cat => (
@@ -82,7 +83,15 @@ export default function CVPage() {
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Spearheaded migration of legacy WebdriverIO suite (600+ cases) to Robot Framework over Python, reducing regression cycle time by 60%.
+                Refactored the legacy Cucumber (over WebdriverIO) suite on my own initiative — regression from 3.5–6 h to ~1:45–2 h (~60%) while trimming ~600–630 → ~430–440 cases.
+              </li>
+              <li className="flex gap-2">
+                <span className="text-[var(--color-accent)] mt-1">▸</span>
+                Re-platformed the suite to Robot Framework + Python (~430 cases), shifting UI coverage to faster API/DB (headless) tests — runs under 1:30 h with equal coverage and higher precision.
+              </li>
+              <li className="flex gap-2">
+                <span className="text-[var(--color-accent)] mt-1">▸</span>
+                Validated schemas, statuses, data structures and interaction results across SQL, MySQL and NoSQL during the migration from physical servers to Oracle Cloud Infrastructure (OCI) — via DBeaver, direct DB connections and APIs (mostly manual; a few promoted to regression).
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>
@@ -90,18 +99,14 @@ export default function CVPage() {
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Led automation improvements and mentored team members on clean code and test design.
-              </li>
-              <li className="flex gap-2">
-                <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Embedded automated suites into CI/CD (Jenkins + Jira), shifting quality left in the dev cycle.
+                Embedded suites into CI/CD (Jenkins over Bitbucket) with Jira + Zephyr test management, and mentored peers on clean-code automation.
               </li>
             </ul>
             <p className="text-sm text-[var(--color-accent)] font-medium mb-1">Software Development Engineer — Aug 2021 – Feb 2022</p>
             <ul className="space-y-2 text-sm text-[var(--color-text)]">
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Migrated legacy test suite (600+ cases) from manual/functional to automated WebdriverIO + TypeScript.
+                Led the initial migration of the legacy 600+ case suite from Protractor/JS to Cucumber (over WebdriverIO).
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>
@@ -109,7 +114,7 @@ export default function CVPage() {
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Built foundation for the automation framework that later scaled to Robot Framework + Python.
+                Built the foundation for the framework later re-platformed to Robot Framework + Python.
               </li>
             </ul>
           </div>

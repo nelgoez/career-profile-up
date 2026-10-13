@@ -28,7 +28,7 @@ This is now built into the template as a ready-to-use GitHub Actions workflow.
 
 **Also in this refresh:**
 
-• New stack badges: Bun, n8n, k6, WebdriverIO, Confluence
+• New stack badges: Bun, n8n, k6, Cucumber, WebdriverIO, Confluence
 • Agentic AI section — Claude, OpenCode, Tavily now visible on profile
 • README rewritten with step-by-step guide for non-developers
 • Agentic-debate skill — binary (quick) or multi-agent (deep) modes

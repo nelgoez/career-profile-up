@@ -21,7 +21,7 @@ export function NavClient() {
       <button
         onClick={() => setLocale(locale === 'en' ? 'es' : 'en')}
         className="ml-auto px-2 py-1 rounded border border-[var(--color-border)] text-xs hover:border-[var(--color-accent)] transition-colors cursor-pointer"
-        aria-label="Toggle language"
+        aria-label={t('nav.toggle-language')}
       >
         {locale === 'en' ? 'ES' : 'EN'}
       </button>

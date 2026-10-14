@@ -1,0 +1,79 @@
+---
+title: 'Detrás de Escena: Mismo Problema, Dos Épocas'
+date: '2026-06-15'
+description: 'Comparación lado a lado de flujos de trabajo de desarrollo tradicional vs. agéntico — de pipelines de Jenkins a código asistido por IA.'
+tags: ['Meta', 'Agentic', 'Proceso']
+---
+
+Este portfolio (nelthor.qzz.io) se construyó con flujos de trabajo de desarrollo agéntico.
+
+Pero ¿qué significa eso en la práctica? Dejame mostrarte comparando cómo construiría una feature en 2022 vs 2026.
+
+## La Forma Tradicional (2022)
+
+Construir una feature de portfolio en Newfold Digital se veía así:
+
+1. **Llega el ticket** en Jira con criterios de aceptación
+2. **Planificás** la implementación en un design doc
+3. **Escribís el código** en una feature branch
+4. **Escribís los tests** — casi siempre después del código
+5. **Push a Jenkins** para CI
+6. **Review del PR** con otro ingeniero
+7. **Merge y deploy** — quizás el mismo día, quizás la semana siguiente
+8. **Verificación en producción**
+
+Cada paso era manual. Cada handoff generaba demoras. El cuello de botella era el **ancho de banda humano**.
+
+## La Forma Agéntica (2026)
+
+Construir la misma feature de portfolio con flujos de trabajo asistidos por IA:
+
+1. Se **refina la story** en el backlog con escenarios Gherkin
+2. La **IA propone** un plan de implementación
+3. **Reviso y apruebo** el plan (5 minutos)
+4. La **IA genera** el código — componentes, tests, types
+5. **Reviso** el diff — me enfoco en la lógica, no en el boilerplate
+6. El **agente corre** lint, typecheck, tests
+7. **Deploy** — `git push`, CI se encarga del resto
+8. **Verifico** — el sitio se actualiza en minutos
+
+El cuello de botella se corrió de **escribir código** a **revisar la intención**.
+
+## Cara a Cara
+
+| Paso | Tradicional (2022) | Agéntico (2026) |
+|------|-------------------|----------------|
+| Planificación | 2-4 horas | 5-10 minutos |
+| Código | 4-8 horas | La IA genera, yo reviso |
+| Testing | 2-4 horas (manual) | La IA genera, yo valido |
+| Review | 1-2 horas (síncrono) | Asíncrono, enfocado en la lógica |
+| Deploy | Disparo manual en Jenkins | Push-to-deploy |
+| Total | 1-2 días | 1-2 horas |
+
+## Qué Cambió
+
+El trabajo no desapareció — subió en la escalera de abstracción:
+
+- **Antes:** pasaba el 60% de mi tiempo escribiendo código y el 40% pensando
+- **Después:** paso el 80% pensando y el 20% revisando código
+
+El agente no reemplaza el criterio. Lo amplifica.
+
+## Las Herramientas
+
+Este portfolio se construyó con:
+
+- **OpenCode** — plataforma de orquestación de agentes
+- **Next.js 15** — framework de exportación estática
+- **Tailwind CSS 4** — estilos
+- **GitHub Pages** — hosting
+- **Supabase** — capa de datos (para otros proyectos)
+- **Skills custom de IA** — project-foundation, sprint-development, product-management
+
+Cada feature siguió el mismo ciclo: plan → implement → review → deploy. La IA nunca trabajó sola. Proponía, yo aprobaba. Codeaba, yo revisaba. Deployeaba, yo verificaba.
+
+## La Lección Real
+
+La misma disciplina que detecta bugs en producción también detecta layouts rotos, contenido desactualizado y branding inconsistente. Calidad es calidad, ya sea que el código esté escrito a mano o generado por IA.
+
+El desarrollo agéntico no se trata de reemplazar ingenieros. Se trata de correr el trabajo de **escribir código** a **dirigir la calidad**.

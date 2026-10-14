@@ -1,0 +1,87 @@
+---
+title: 'Construir un Framework KATA con Playwright'
+date: '2026-06-20'
+description: 'Tutorial paso a paso para implementar Component Action Test Architecture con Playwright y TypeScript.'
+tags: ['Tutorial', 'Playwright', 'KATA']
+---
+
+La mayoría de los frameworks de test fracasan por arquitectura, no por herramientas.
+
+Después de construir automatización a escala durante más de 5 años, el patrón que funciona de manera consistente es el framework **KATA (Component Action Test Architecture)**: una arquitectura de tres capas diseñada para la colaboración tanto humana como de IA.
+
+## El Patrón de 3 Capas
+
+| Capa | Nombre | Propósito | Responsable |
+|-------|------|---------|-------|
+| 1 | Component | Qué testás — page objects, clientes de API, componentes de UI | Dev |
+| 2 | Action | Cómo interactuás — patrones de interacción reutilizables | Framework |
+| 3 | Test | Qué assertás — escenarios y aserciones | IA + Humano |
+
+## Capa 1: Components
+
+Los components encapsulan lo que existe en el sistema bajo test. Son la capa más delgada — solo la estructura necesaria para identificar elementos y endpoints:
+
+```typescript
+// Component layer — pure page objects
+export class LoginPage {
+  readonly emailInput = page.getByLabel('Email')
+  readonly passwordInput = page.getByLabel('Password')
+  readonly submitButton = page.getByRole('button', { name: 'Sign in' })
+
+  async goto() { await page.goto('/login') }
+}
+```
+
+## Capa 2: Actions
+
+Los actions componen components en operaciones con significado para el usuario. Acá es donde vive la lógica de negocio:
+
+```typescript
+// Action layer — reusable business flows
+export class AuthActions {
+  constructor(private login: LoginPage) {}
+
+  async loginAs(email: string, password: string) {
+    await this.login.goto()
+    await this.login.emailInput.fill(email)
+    await this.login.passwordInput.fill(password)
+    await this.login.submitButton.click()
+    await expect(page.getByText('Dashboard')).toBeVisible()
+  }
+}
+```
+
+## Capa 3: Tests
+
+Los tests son la capa más delgada — pura intención, mínimo detalle de implementación. Acá es donde las aserciones generadas por IA encajan naturalmente:
+
+```typescript
+// Test layer — intent-driven
+test('user can sign in with valid credentials', async () => {
+  const auth = new AuthActions(new LoginPage(page))
+  await auth.loginAs('user@example.com', 'valid-password')
+  await expect(page).toHaveURL(/dashboard/)
+})
+```
+
+## Por Qué KATA Funciona para la Colaboración con IA
+
+La arquitectura está diseñada para que la IA pueda contribuir en cualquier capa sin romper las demás:
+
+- La **IA genera los tests de la Capa 3** desde lenguaje natural: "test que un usuario puede iniciar sesión" → el test de arriba
+- La **IA sugiere actions de la Capa 2** a partir del análisis de user flows
+- El **humano es dueño de los components de la Capa 1** — los selectores de elementos requieren verificación visual
+
+Las capas de abstracción permiten que la IA genere escenarios de test significativos sin necesitar conocer la estructura exacta del DOM. Y el humano puede actualizar el selector de un component sin romper ningún test.
+
+## Ejecutarlo
+
+```bash
+npx playwright test
+```
+
+Eso es todo. El framework se encarga de la ejecución paralela, el reporting y los reintentos. KATA se encarga de la mantenibilidad.
+
+## Más Información
+
+La implementación completa de KATA está en **[bunkai-qa-engineering](https://github.com/nelgoez/bunkai-qa-engineering)** — mi Agentic QA Boilerplate open-source. Más detalles en un deep-dive que viene pronto.

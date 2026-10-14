@@ -3,7 +3,15 @@
     "home": "Home",
     "projects": "Projects",
     "blog": "Blog",
-    "behind-the-scenes": "Behind the Scenes"
+    "behind-the-scenes": "Behind the Scenes",
+    "toggle-language": "Toggle language"
+  },
+  "common": {
+    "close": "Close"
+  },
+  "bts": {
+    "gallery-title": "Media Gallery",
+    "gallery-desc": "Screenshots, diagrams, and recordings showing the portfolio and workflows in action."
   },
   "hero": {
     "tagline": "SDET → Agentic QA Engineer · Backend Dev · TypeScript & Python",
@@ -80,7 +88,8 @@
     "description": "Thoughts on QA engineering, agentic development, and career growth.",
     "back": "← Back",
     "back-to-blog": "← Back to Blog",
-    "not-found": "Post not found"
+    "not-found": "Post not found",
+    "en-only": "This post doesn't have a Spanish version yet — showing the English original."
   },
   "cv": { "save-pdf": "Save as PDF", "back": "← Back" },
   "qa": {

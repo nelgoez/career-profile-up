@@ -3,7 +3,15 @@
     "home": "Inicio",
     "projects": "Proyectos",
     "blog": "Blog",
-    "behind-the-scenes": "Detrás de Escena"
+    "behind-the-scenes": "Detrás de Escena",
+    "toggle-language": "Cambiar idioma"
+  },
+  "common": {
+    "close": "Cerrar"
+  },
+  "bts": {
+    "gallery-title": "Galería de Medios",
+    "gallery-desc": "Capturas, diagramas y grabaciones que muestran el portfolio y los flujos de trabajo en acción."
   },
   "hero": {
     "tagline": "SDET → Agente QA · Backend Dev · TypeScript & Python",
@@ -80,7 +88,8 @@
     "description": "Reflexiones sobre ingeniería de calidad, desarrollo agente y crecimiento profesional.",
     "back": "← Volver",
     "back-to-blog": "← Volver al Blog",
-    "not-found": "Post no encontrado"
+    "not-found": "Post no encontrado",
+    "en-only": "Este post todavía no tiene versión en español — se muestra el original en inglés."
   },
   "cv": { "save-pdf": "Guardar como PDF", "back": "← Volver" },
   "qa": {

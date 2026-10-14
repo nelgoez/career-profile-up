@@ -1,0 +1,93 @@
+---
+title: 'Testing de Agentes de IA — Una Guía Práctica'
+date: '2026-06-28'
+description: 'Estrategias para validar salidas de IA no deterministas, flujos de trabajo agénticos y comportamientos probabilísticos en sistemas en producción.'
+tags: ['Testing', 'AI', 'Guía']
+---
+
+"La IA no puede testear sistemas no deterministas."
+
+Escucho esto bastante. Y es medio cierto.
+
+![Cuatro estrategias para testear agentes de IA: aserciones semánticas, property-based testing, gates human-in-the-loop y validación basada en observabilidad.](/ai-testing-strategies.svg)
+
+El testing tradicional asume comportamiento determinista — mismo input, mismo output, siempre. Los agentes de IA rompen esa suposición. Un LLM al que se le da el mismo prompt dos veces puede devolver respuestas distintas, igualmente válidas. Un framework de tests construido sobre coincidencias exactas falla antes siquiera de empezar.
+
+Esto es lo que realmente funciona al testear aplicaciones impulsadas por IA.
+
+## 1. Aserciones Semánticas
+
+No hagas assert sobre el output exacto. Hacé assert sobre la **intención** y la **estructura**:
+
+```typescript
+// Don't ❌
+expect(response.text).toBe('The weather in Tokyo is 22°C and sunny')
+
+// Do ✅
+expect(response.text).toContainIntent('weather information for Tokyo')
+expect(response.text).toMatchStructure({
+  contains: ['temperature', 'condition', 'location'],
+  excludes: ['unrelated topics', 'harmful content'],
+})
+```
+
+Las aserciones semánticas usan embeddings o LLM-as-judge para verificar que el output satisface la intención del request, sin importar la redacción exacta.
+
+## 2. Property-Based Testing
+
+Testeá **invariantes**, no outputs específicos. Cada respuesta de IA debe satisfacer ciertas propiedades independientemente del contenido:
+
+| Propiedad | Ejemplo |
+|----------|---------|
+| Seguridad | Sin contenido dañino, sesgado o tóxico |
+| Formato | La respuesta coincide con el schema esperado (JSON, markdown, etc.) |
+| Relevancia | La respuesta aborda la pregunta del usuario |
+| Consistencia | Misma query → respuestas semánticamente equivalentes |
+| Latencia | Tiempo de respuesta dentro del SLA (p95 < 2s) |
+
+```python
+@given(st.text())
+def test_safety_property(prompt):
+    response = model.generate(prompt)
+    assert not contains_harmful_content(response)
+    assert response.format_matches(expected_schema)
+```
+
+## 3. Gates Human-in-the-Loop
+
+Para decisiones de IA de alto riesgo, no dejes que el agente corra totalmente autónomo. Insertá gates:
+
+1. La **IA propone** un test o una decisión
+2. El **humano revisa** la correctitud
+3. El **gate aprueba o bloquea** la acción
+4. **El feedback regresa** para mejorar el modelo
+
+Este es el patrón que uso en mis flujos de trabajo de Agentic QA. La IA es rápida y exhaustiva; el humano es cuidadoso y contextual. Se necesita de ambos.
+
+## 4. Testing Basado en Observabilidad
+
+Logueá todo. Hacé assert sobre patrones.
+
+Cuando el sistema bajo test es no determinista por sí mismo, el framework de tests necesita correrse de las **aserciones pre-ejecución** al **análisis post-ejecución**:
+
+```typescript
+// Collect traces from every agent interaction
+const trace = await collectTrace({
+  steps: agent.executionSteps,
+  decisions: agent.decisionLog,
+  outputs: agent.generatedContent,
+})
+
+// Assert on behavioral patterns
+expect(trace).toSatisfyPattern({
+  noRetryLoops: true,
+  decisionWithinBoundary: true,
+  humanApprovalRateAbove: 0.8,
+})
+```
+
+## La Conclusión
+
+Los frameworks que construimos en Newfold Digital (Cucumber + TypeScript, Robot Framework) siguen aplicando — pero el **problema del oracle** cambia cuando el sistema bajo test es no determinista por sí mismo.
+
+¿Escribiste un test para una feature impulsada por un LLM? Me encantaría comparar enfoques.

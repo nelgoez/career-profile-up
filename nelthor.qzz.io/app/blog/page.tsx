@@ -1,36 +1,15 @@
-import fs from 'node:fs';
-import path from 'node:path';
-import matter from 'gray-matter';
+'use client';
+
 import Link from 'next/link';
 import { T } from '@/components/t';
-
-interface PostMeta {
-  title: string
-  date: string
-  description: string
-  tags: string[]
-  slug: string
-}
-
-function getPosts(): PostMeta[] {
-  const dir = path.join(process.cwd(), 'content/blog');
-  const files = fs.readdirSync(dir).filter(f => f.endsWith('.mdx'));
-
-  return files.map((f) => {
-    const source = fs.readFileSync(path.join(dir, f), 'utf8');
-    const { data } = matter(source);
-    return {
-      title: data.title,
-      date: data.date,
-      description: data.description,
-      tags: data.tags ?? [],
-      slug: f.replace(/\.mdx$/, ''),
-    };
-  }).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-}
+import { blogContent, getLocalePost } from '@/lib/blog-data';
+import { useLocale } from '@/lib/locale-context';
 
 export default function BlogPage() {
-  const posts = getPosts();
+  const { locale } = useLocale();
+  const posts = blogContent.slugs
+    .map(slug => ({ slug, post: getLocalePost(blogContent, slug, locale) }))
+    .filter((p): p is { slug: string, post: NonNullable<ReturnType<typeof getLocalePost>> } => p.post !== null);
 
   return (
     <main>
@@ -46,8 +25,8 @@ export default function BlogPage() {
       </p>
 
       <div className="space-y-6">
-        {posts.map(post => (
-          <Link key={post.slug} href={`/blog/${post.slug}`}>
+        {posts.map(({ slug, post }) => (
+          <Link key={slug} href={`/blog/${slug}`}>
             <article className="p-8 rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)] hover:border-[var(--color-accent)] transition-colors">
               <div className="text-sm text-[var(--color-text-muted)] mb-2">{post.date}</div>
               <h2 className="text-xl font-semibold mb-3">{post.title}</h2>

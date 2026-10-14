@@ -44,7 +44,7 @@ const BRANDS: Brand[] = [
 ];
 
 export function BrandsSection() {
-  const { t } = useLocale();
+  const { locale, t } = useLocale();
   return (
     <section className="py-16 border-t border-[var(--color-border)]">
       <h2 className="text-2xl font-bold mb-2">{t('brands.title')}</h2>
@@ -74,7 +74,7 @@ export function BrandsSection() {
       </div>
       <div className="mt-8 text-center">
         <a
-          href="/cv"
+          href={locale === 'es' ? '/cv/es' : '/cv'}
           className="inline-flex items-center gap-1.5 text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent-hover)] transition-colors"
         >
           {t('brands.cta')}

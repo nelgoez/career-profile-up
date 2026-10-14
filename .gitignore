@@ -134,3 +134,6 @@ graphify-out/
 # Generated media copies (from scripts/build-media-index.ts)
 nelthor.qzz.io/public/media/
 nul
+
+# Generated blog manifest (built by scripts/generate-blog-manifest.mjs)
+nelthor.qzz.io/lib/blog-content.json

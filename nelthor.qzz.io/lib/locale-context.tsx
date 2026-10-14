@@ -12,6 +12,7 @@ const messagesMap: Record<Locale, Messages> = { en, es };
 
 interface LocaleContextValue {
   locale: Locale
+  ready: boolean
   setLocale: (l: Locale) => void
   t: (path: string) => string
 }
@@ -32,20 +33,23 @@ function resolve(obj: Record<string, unknown>, path: string): string {
 
 export function LocaleProvider({ children }: { children: ReactNode }) {
   const [locale, setLocale] = useState<Locale>('en');
+  const [ready, setReady] = useState(false);
 
   useEffect(() => {
     const stored = localStorage.getItem('locale');
     if (stored === 'en' || stored === 'es') { setLocale(stored); }
+    setReady(true);
   }, []);
 
   useEffect(() => {
+    if (!ready) { return; }
     localStorage.setItem('locale', locale);
     document.documentElement.lang = locale;
-  }, [locale]);
+  }, [locale, ready]);
 
   const t = (path: string) => resolve(messagesMap[locale] as unknown as Record<string, unknown>, path);
 
-  return <LocaleContext.Provider value={{ locale, setLocale, t }}>{children}</LocaleContext.Provider>;
+  return <LocaleContext.Provider value={{ locale, ready, setLocale, t }}>{children}</LocaleContext.Provider>;
 }
 
 export function useLocale() {

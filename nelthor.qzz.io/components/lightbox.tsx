@@ -2,6 +2,7 @@
 
 import { X } from 'lucide-react';
 import { useCallback, useEffect } from 'react';
+import { useLocale } from '@/lib/locale-context';
 
 interface LightboxProps {
   src: string
@@ -10,6 +11,7 @@ interface LightboxProps {
 }
 
 export function Lightbox({ src, alt, onClose }: LightboxProps) {
+  const { t } = useLocale();
   const handleKey = useCallback((e: KeyboardEvent) => {
     if (e.key === 'Escape') { onClose(); }
   }, [onClose]);
@@ -31,7 +33,7 @@ export function Lightbox({ src, alt, onClose }: LightboxProps) {
       <button
         onClick={onClose}
         className="absolute top-4 right-4 p-2 rounded-full bg-black/60 text-white hover:bg-black/80 transition-colors"
-        aria-label="Close"
+        aria-label={t('common.close')}
       >
         <X size={24} />
       </button>

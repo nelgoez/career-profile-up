@@ -3,10 +3,11 @@
 import { Bug, Code, Wrench } from 'lucide-react';
 import Link from 'next/link';
 import { Timeline } from '@/components/timeline';
+import { getLatest } from '@/lib/blog-data';
 import { useLocale } from '@/lib/locale-context';
 
 export function HeroSection() {
-  const { t } = useLocale();
+  const { locale, t } = useLocale();
   return (
     <section className="py-20 text-center hero-fade-in">
       <div className="hero-name-wrapper">
@@ -21,7 +22,7 @@ export function HeroSection() {
         <Link href="/projects" className="px-6 py-2 rounded-lg bg-[var(--color-accent-strong)] text-white font-semibold hover:opacity-90 shadow-sm">
           {t('hero.view-projects')}
         </Link>
-        <a href="/cv" className="px-6 py-2 rounded-lg bg-[var(--color-accent-strong)] text-white font-semibold hover:opacity-90 shadow-sm">
+        <a href={locale === 'es' ? '/cv/es' : '/cv'} className="px-6 py-2 rounded-lg bg-[var(--color-accent-strong)] text-white font-semibold hover:opacity-90 shadow-sm">
           {t('hero.download-cv')}
         </a>
         <a href="mailto:gomeznahuel.le@gmail.com" className="px-6 py-2 rounded-lg border border-[var(--color-accent)] text-[var(--color-accent)] font-medium hover:opacity-80">
@@ -81,15 +82,16 @@ export function ContactSection() {
   );
 }
 
-export function LatestPostsSection({ posts }: { posts: { title: string, date: string, description: string, slug: string }[] }) {
-  const { t } = useLocale();
+export function LatestPostsSection() {
+  const { locale, t } = useLocale();
+  const posts = getLatest(locale, 3);
   return (
     <section className="py-16 border-t border-[var(--color-border)]">
       <h2 className="text-2xl font-bold mb-4">{t('latest-posts.title')}</h2>
       <p className="text-[var(--color-text-muted)] mb-8">{t('latest-posts.description')}</p>
       <div className="space-y-4">
-        {posts.map(post => (
-          <Link key={post.slug} href={`/blog/${post.slug}`}>
+        {posts.map(({ slug, post }) => (
+          <Link key={slug} href={`/blog/${slug}`}>
             <article className="p-6 rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)] hover:border-[var(--color-accent)] transition-colors">
               <div className="text-xs text-[var(--color-text-muted)] mb-2">{post.date}</div>
               <h3 className="font-semibold mb-2">{post.title}</h3>

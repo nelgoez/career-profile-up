@@ -1,10 +1,17 @@
 'use client';
 
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 import { useLocale } from '@/lib/locale-context';
 
 export default function CVPage() {
-  const { t } = useLocale();
+  const { locale, ready, t } = useLocale();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (ready && locale === 'es') { router.replace('/cv/es'); }
+  }, [ready, locale, router]);
   return (
     <main>
       <div className="mb-8 flex justify-between items-center">

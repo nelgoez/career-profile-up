@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Carousel } from '@/components/carousel';
 import { Lightbox } from '@/components/lightbox';
+import { T } from '@/components/t';
 
 interface MediaAsset { id: string, type: string, file: string, alt_text: string }
 
@@ -18,9 +19,9 @@ export function BtsMediaGallery({ assets }: BtsMediaGalleryProps) {
   return (
     <>
       <section className="mb-16">
-        <h2 className="text-2xl font-bold mb-6">Media Gallery</h2>
+        <h2 className="text-2xl font-bold mb-6"><T k="bts.gallery-title" /></h2>
         <p className="text-[var(--color-text-muted)] mb-8">
-          Screenshots, diagrams, and recordings showing the portfolio and workflows in action.
+          <T k="bts.gallery-desc" />
         </p>
         <Carousel
           slides={assets.map(asset => (

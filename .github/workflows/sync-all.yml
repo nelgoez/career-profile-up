@@ -44,7 +44,10 @@ jobs:
 
       - name: Checkout source repos
         run: |
-          REPOS="bunkai-qa-engineering agentic-diplo-track-sys diploma-tracking-sys unc-agentic-dev"
+          # NOTE: DTS (diploma-tracking-sys) and its harness (agentic-diplo-track-sys) were
+          # deprecated and their repos removed. They are preserved in _projects.json as
+          # archived entries (see scripts/sync-all.ts) instead of being cloned here.
+          REPOS="bunkai-qa-engineering unc-agentic-dev"
           if [ -n "${{ github.event.client_payload.repo }}" ]; then
             # Single repo from repository_dispatch
             SINGLE_REPO="${{ github.event.client_payload.repo }}"

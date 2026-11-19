@@ -19,10 +19,11 @@
 ### 1. Hero / Intro — "My QA Approach" (Option B)
 2-3 sentences framing the philosophy. Bilingual (EN/ES via existing i18n).
 
-### 2. Testability Scorecard — DTS as worked example (Option C)
+### 2. Testability Scorecard — DTS (archived) as historical worked example (Option C)
 Architecture summary → Score per layer (UI/API/DB/CI-CD) → Risk areas → Recommendations.
+> Update (2026-11): the current worked example is Bunkai TMS; DTS is kept as archived evidence.
 
-### 3. Live Evidence — bunkai-tms QA artifacts (Option A)
+### 3. Live Evidence — Bunkai TMS QA artifacts (Option A)
 Bug screenshots found during testing + Allure report summary + kata-manifest.json reference.
 Shows real enterprise tooling (Playwright, Cucumber, Allure, Jira).
 

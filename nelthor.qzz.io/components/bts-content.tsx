@@ -37,6 +37,7 @@ const COPY: Record<'en' | 'es', BtsCopy> = {
     tradItems: [
       'Cucumber + TypeScript Page Object Model',
       'Robot Framework + Python for API tests',
+      'Playwright POCs — Robot → Playwright migration initiative (2025)',
       'Jenkins pipeline with manual stage config',
       'Jira + Zephyr test management',
       'Manual Cucumber feature file authoring',
@@ -91,6 +92,7 @@ const COPY: Record<'en' | 'es', BtsCopy> = {
     tradItems: [
       'Cucumber + Page Object Model en TypeScript',
       'Robot Framework + Python para tests de API',
+      'POCs de Playwright — iniciativa de migración Robot → Playwright (2025)',
       'Pipeline Jenkins con configuración manual de etapas',
       'Gestión de tests con Jira + Zephyr',
       'Redacción manual de feature files de Cucumber',

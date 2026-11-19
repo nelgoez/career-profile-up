@@ -6,7 +6,7 @@
 >
 > - **Open-Source Framework**: Built and shipped the Agentic QA Boilerplate — orchestrating the Stage 0→6 QA lifecycle (shift-left → sprint testing → test documentation → automation → regression GO/NO-GO).
 > - **Test Automation**: KATA-compliant Playwright + TypeScript suites with @atc decorators and a 13-command Xray CLI for Jira/Xray traceability.
-> - **Product QA**: QA'd a production-bound diploma tracking platform — E2E Playwright, API (45+ endpoints), accessibility (axe-core), and multi-role authorization.
+> - **Product QA**: QA'd Bunkai TMS and a now-archived diploma tracking platform — E2E Playwright, API (45+ endpoints), accessibility (axe-core), and multi-role authorization.
 > - **CI/CD**: GitHub Actions quality gates with Allure dashboards auto-deployed to GitHub Pages on every run.
 > - **Portfolio**: [nelthor.com.ar](https://nelthor.com.ar) — built with AI agent workflows, demonstrating agentic QA engineering.
 
@@ -15,6 +15,7 @@
 > QA'd consumer-facing products at scale — **networksolutions.com**, **bluehost.com** — serving millions of users across domains, hosting, and small business platforms.
 >
 > - **QA Automation Architecture**: Refactored the legacy suite on my own initiative — Protractor/JS → Cucumber (over WebdriverIO) → Robot Framework + Python — reducing regression cycles by ~60% (3.5–6 h → ~1:45–2 h) and improving execution speed and framework maintainability.
+> - **Playwright Adoption (2nd half 2025)**: Kicked off the Robot Framework → Playwright migration initiative — UI E2E POCs with page objects, API testing POCs, a technical framework comparison, and the migration plan for the suite.
 > - **Data Validation**: Also validated schemas, statuses, structures and interaction results across SQL/MySQL/NoSQL during the physical→OCI migration (DBeaver, direct DB connections, APIs).
 > - **Test Strategy & Planning**: Designed comprehensive test plans for complex web applications across Network Solutions, Bluehost, and other Newfold brands — functional, regression, API, cross-browser.
 > - **Quality Leadership**: Led automation improvements and regression strategy, mentoring team members on clean code and test design best practices.

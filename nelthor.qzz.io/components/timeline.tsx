@@ -19,6 +19,7 @@ const EXPERIENCE: Record<'en' | 'es', ExperienceEntry[]> = {
         'Migrated the legacy suite from Protractor/JS to Cucumber (over WebdriverIO), then re-platformed it to Robot Framework + Python across multiple product lines',
         'Refactored the Cucumber suite on my own initiative — regression from 3.5–6 h to ~1:45–2 h (~60%) while trimming ~600–630 → ~430–440 cases',
         'Validated schemas, statuses, data structures and interaction results across SQL/MySQL/NoSQL during the migration to Oracle Cloud Infrastructure (OCI) — via DBeaver, direct DB connections and APIs',
+        'Kicked off the Robot Framework → Playwright migration initiative (2nd half 2025) — UI E2E POCs with page objects, API testing POCs, framework comparison and migration plan',
         'Managed CI/CD pipelines on Jenkins over Bitbucket with Jira + Zephyr test management',
         'Collaborated with distributed US/India teams on quality strategy and release sign-off',
       ],
@@ -30,7 +31,7 @@ const EXPERIENCE: Record<'en' | 'es', ExperienceEntry[]> = {
       details: [
         'Built the Agentic QA Boilerplate (KATA + Playwright + TypeScript) — open-source framework shipped with a create-agentic-qa scaffolder, 20+ agent skills, a full Xray CLI, and 7 MCP integrations',
         'Orchestrated the full Stage 0→6 QA lifecycle: shift-left testing → sprint testing → test documentation → test automation → regression GO/NO-GO',
-        'QA\'d UPEX\'s diploma tracking platform — E2E Playwright, API (45+ endpoints), accessibility (axe-core), multi-role auth',
+        'QA\'d UPEX\'s Bunkai TMS and the now-archived diploma tracking platform — E2E Playwright, API (45+ endpoints), accessibility (axe-core), multi-role auth',
         'CI/CD quality gates across GitHub Actions workflows — Allure dashboards auto-deployed on every run',
         'Jira/Xray traceability via @atc decorators and a 13-command Xray CLI for automated case sync',
         'Evaluated through UPEX\'s Agentic QA DOJO program',
@@ -46,6 +47,7 @@ const EXPERIENCE: Record<'en' | 'es', ExperienceEntry[]> = {
         'Migré la suite legacy de Protractor/JS a Cucumber (sobre WebdriverIO) y luego la replataformé a Robot Framework + Python en múltiples líneas de producto',
         'Refactoricé la suite de Cucumber por iniciativa propia — regresión de 3.5–6 h a ~1:45–2 h (~60%) reduciendo ~600–630 → ~430–440 casos',
         'Validé esquemas, estados, estructuras de datos y resultados de interacción en SQL/MySQL/NoSQL durante la migración a Oracle Cloud Infrastructure (OCI) — vía DBeaver, conexiones directas a DB y APIs',
+        'Inicié la migración de Robot Framework a Playwright (2do semestre 2025) — POCs de E2E de UI con page objects, POCs de testing de API, comparación de frameworks y plan de migración',
         'Administré pipelines CI/CD en Jenkins sobre Bitbucket con gestión de tests en Jira + Zephyr',
         'Colaboré con equipos distribuidos US/India en estrategia de calidad y aprobación de releases',
       ],
@@ -57,7 +59,7 @@ const EXPERIENCE: Record<'en' | 'es', ExperienceEntry[]> = {
       details: [
         'Construí el Agentic QA Boilerplate (KATA + Playwright + TypeScript) — framework open-source con scaffolder create-agentic-qa, 20+ skills de agente, un CLI completo de Xray y 7 integraciones MCP',
         'Orquesté el ciclo de vida QA Stage 0→6 completo: shift-left testing → sprint testing → documentación de pruebas → automatización → regresión GO/NO-GO',
-        'Hice QA de la plataforma de seguimiento de diplomas de UPEX — E2E con Playwright, API (45+ endpoints), accesibilidad (axe-core), auth multi-rol',
+        'Hice QA de Bunkai TMS de UPEX y de su plataforma de seguimiento de diplomas, hoy archivada — E2E con Playwright, API (45+ endpoints), accesibilidad (axe-core), auth multi-rol',
         'Quality gates de CI/CD en workflows de GitHub Actions — dashboards Allure desplegados automáticamente en cada ejecución',
         'Trazabilidad Jira/Xray vía decoradores @atc y un CLI de Xray de 13 comandos para sincronización automatizada de casos',
         'Evaluado a través del programa Agentic QA DOJO de UPEX',

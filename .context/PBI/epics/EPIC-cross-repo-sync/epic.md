@@ -238,4 +238,5 @@ After Phase 3, the profile gets these new sections (data sourced from portfolio)
 - Open-source template for others
 
 ### Roll out to remaining repos
-- Add `portfolio.json` + `trigger-portfolio-sync.yml` to: `agentic-diplo-track-sys`, `diploma-tracking-sys`, `unc-agentic-dev`
+- Add `portfolio.json` + `trigger-portfolio-sync.yml` to: `unc-agentic-dev`
+- ~~`agentic-diplo-track-sys`, `diploma-tracking-sys`~~ — DTS project and its harness were deprecated; repos removed. Keep them only as archived entries in `_projects.json`.

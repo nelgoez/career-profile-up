@@ -23,7 +23,7 @@
 > • 🏗️ 2022: Framework architecture (Cucumber over WebdriverIO → Robot Framework + Python)
 > • 🧠 2024: Agentic workflows (AI writes tests, I review)
 > • ⚙️ 2026: Built agentic QA platform (KATA architecture) with Supabase + Playwright — AI plans tests, I approve and review
-> • 🎓 2026: Developed diploma tracking system with RLS-secured Supabase backend + Moodle integration
+> • 🎓 2026: Developed (now-archived) diploma tracking system with RLS-secured Supabase backend + Moodle integration
 > • 📦 2026: Built & open-sourced the Agentic QA Boilerplate — create-agentic-qa scaffolder, 20+ skills, Xray CLI, 7 MCPs
 > • 🚀 2026: Launched career portfolio at nelthor.com.ar — built via agentic dev workflows, now a free GitHub template
 >

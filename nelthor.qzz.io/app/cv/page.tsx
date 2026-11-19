@@ -53,7 +53,7 @@ export default function CVPage() {
           <h2 className="text-xl font-bold mb-3 border-b border-[var(--color-border)] pb-2">Core Competencies</h2>
           <div className="grid md:grid-cols-2 gap-4">
             {[
-              { label: 'Test Automation', items: 'Playwright, Cucumber (over WebdriverIO), Robot Framework, Selenium WebDriver, WebdriverIO, Cypress, Protractor' },
+              { label: 'Test Automation', items: 'Playwright (TypeScript — page objects, fixtures, API testing), Cucumber (over WebdriverIO), Robot Framework, Selenium WebDriver, WebdriverIO, Cypress, Protractor' },
               { label: 'Languages', items: 'TypeScript, JavaScript, Python, Node.js, SQL' },
               { label: 'API Testing', items: 'REST APIs, Microservices, Middleware validation, Postman, Automated API suites' },
               { label: 'CI/CD & Automation', items: 'Jenkins, GitHub Actions, Bitbucket — pipeline design, maintenance, quality gates' },
@@ -98,6 +98,10 @@ export default function CVPage() {
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>
+                Kicked off the next-generation automation initiative (2nd half 2025): evaluated Playwright as the successor to Robot Framework — UI E2E proof-of-concepts with page objects, API testing POCs, a technical framework comparison, and the migration plan for the suite.
+              </li>
+              <li className="flex gap-2">
+                <span className="text-[var(--color-accent)] mt-1">▸</span>
                 Validated schemas, statuses, data structures and interaction results across SQL, MySQL and NoSQL during the migration from physical servers to Oracle Cloud Infrastructure (OCI) — via DBeaver, direct DB connections and APIs (mostly manual; a few promoted to regression).
               </li>
               <li className="flex gap-2">
@@ -113,7 +117,7 @@ export default function CVPage() {
             <ul className="space-y-2 text-sm text-[var(--color-text)]">
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>
-                Led the initial migration of the legacy 600+ case suite from Protractor/JS to Cucumber (over WebdriverIO).
+                Led the initial migration of the legacy 600+ case suite from Protractor/JS to Cucumber (over WebdriverIO), standardizing the suite on a Page Object Model architecture.
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>
@@ -146,7 +150,7 @@ export default function CVPage() {
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>
-                QA'd UPEX's diploma tracking platform (production-bound) — E2E Playwright suites, API testing (45+ endpoints), accessibility (axe-core), and multi-role authorization.
+                QA'd UPEX's Bunkai TMS and the now-archived diploma tracking platform — E2E Playwright suites, API testing (45+ endpoints), accessibility (axe-core), and multi-role authorization.
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--color-accent)] mt-1">▸</span>

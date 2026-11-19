@@ -292,7 +292,7 @@ function generateReadme(user: GitHubUser, repos: Repo[], posts: BlogPost[]): str
     '',
     '<div align="center">',
     '',
-    '<i>⚡ Profile auto-generated from live repo data — blog posts, project metadata, and screenshots synced from bunkai-qa-engineering, agentic-diplo-track-sys, and more.</i>',
+    '<i>⚡ Profile auto-generated from live repo data — blog posts, project metadata, and screenshots synced from bunkai-qa-engineering, unc-agentic-dev, and more.</i>',
     '',
     '<br/><br/>',
     '',

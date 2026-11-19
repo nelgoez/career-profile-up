@@ -28,8 +28,10 @@ async function fetchAllureSummary(url: string): Promise<AllureStat | null> {
       return null;
     }
     const redirectTarget = match[1];
-    const versionBase = redirectTarget.replace(/\/[^/]+\/?$/, '');
-    const summaryResp = await fetch(`${versionBase}/widgets/summary.json`);
+    // The Allure landing pages use a relative redirect (e.g. "./182/index.html"),
+    // so resolve against the report URL instead of the current page origin.
+    const target = new URL(redirectTarget, url);
+    const summaryResp = await fetch(new URL('widgets/summary.json', target).toString());
     if (!summaryResp.ok) {
       return null;
     }
@@ -69,10 +71,11 @@ function useMetrics() {
     let cancelled = false;
 
     const load = async () => {
-      const [repoResp, dtsStaging, dtsProduction, uncSummary] = await Promise.allSettled([
+      // DTS (diploma-tracking-sys) was deprecated; its Allure pages are gone.
+      // Bunkai TMS publishes Allure 3, which has no Allure 2-style summary.json endpoint,
+      // so the aggregate pass rate uses the live UNC Allure 2 dashboard.
+      const [repoResp, uncSummary] = await Promise.allSettled([
         fetch('https://api.github.com/users/nelgoez/repos?per_page=100&type=public'),
-        fetchAllureSummary('https://nelgoez.github.io/diploma-tracking-sys/staging/smoke/'),
-        fetchAllureSummary('https://nelgoez.github.io/diploma-tracking-sys/production/smoke/'),
         fetchAllureSummary('https://nelgoez.github.io/unc-agentic-dev/allure/'),
       ]);
 
@@ -87,7 +90,7 @@ function useMetrics() {
         }
       }
 
-      const summaries = [dtsStaging, dtsProduction, uncSummary].filter(isFulfilled).map(s => s.value).filter(Boolean) as AllureStat[];
+      const summaries = [uncSummary].filter(isFulfilled).map(s => s.value).filter(Boolean) as AllureStat[];
 
       if (summaries.length > 0) {
         const totalPassed = summaries.reduce((s, v) => s + v.passed, 0);
@@ -97,7 +100,7 @@ function useMetrics() {
         }
       }
 
-      const KEY_REPOS = ['diploma-tracking-sys', 'bunkai-qa-engineering', 'unc-agentic-dev', 'career-profile-up'];
+      const KEY_REPOS = ['bunkai-qa-engineering', 'unc-agentic-dev', 'career-profile-up'];
       const workflowResults = await Promise.allSettled(KEY_REPOS.map(loadRepoWorkflows));
       const wfCount = workflowResults.filter(isFulfilled).reduce((s, r) => s + r.value, 0);
 

@@ -1,5 +1,7 @@
 # agentic-diplo-track-sys
 
+> **ARCHIVED — DEPRECATED HARNESS.** This dev harness was retired together with the Diploma Tracking System project. This README is kept as a historical record only.
+
 > **Agentic dev boilerplate** — From PRD to staging deploy, driven by AI skills. Built and maintained by [Nahuel Gomez](https://nelthor.com.ar).
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)

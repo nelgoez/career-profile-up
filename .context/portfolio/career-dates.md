@@ -20,7 +20,10 @@
 - **Newfold tenure ≈ 4.5 yrs** (Aug 2021 – Jan 2026). Use "4+ years" for Newfold-specific claims.
 - **Total IT experience = 6 years** (Henry Bootcamp Apr 2021 → present, calendar-inclusive — includes full-stack + tutoring roles). Use "6 years" for total-IT claims.
 - **QA / Automation experience = 5+ years** (Newfold Aug 2021 → present). Use "5+ years" for QA/Automation-specific claims.
-- The agentic QA work (KATA / bunkai-qa-engineering, diploma tracking platform, food-app coverage) all happened at **UPEX in 2026**.
+- The agentic QA work (KATA / bunkai-qa-engineering, Bunkai TMS + the now-archived diploma tracking platform, food-app coverage) all happened at **UPEX in 2026**.
+- **Newfold Playwright initiative = 2nd half 2025** (≈ Jul/Ago 2025 → Ene 2026, ~6 mos): UI E2E POCs with page objects, API testing POCs, framework comparison (Playwright vs Robot), and the Robot → Playwright migration plan. Phrase as "2nd half 2025" / "2do semestre 2025" — NOT "1 year".
+- **Total Playwright experience ≈ 15 months** (Jul/Ago 2025 → present, continuous through Newfold POCs + UPEX hands-on). Safe claim: "1.5 years" / "más de un año".
+- **Convention for ongoing roles (UPEX):** show "Jan 2026 – Present" / "Ene 2026 – Presente" WITHOUT a month count — never goes stale. Closed roles keep their fixed durations.
 
 ## Where these dates appear (re-audit checklist)
 

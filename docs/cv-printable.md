@@ -22,7 +22,7 @@ with extensive experience in distributed engineering teams.
 
 | Area | Skills |
 |------|--------|
-| Test Automation | Playwright, Cucumber (over WebdriverIO), Robot Framework, Selenium WebDriver, WebdriverIO, Cypress, Protractor |
+| Test Automation | Playwright (TypeScript — page objects, fixtures, API testing), Cucumber (over WebdriverIO), Robot Framework, Selenium WebDriver, WebdriverIO, Cypress, Protractor |
 | Languages | TypeScript, JavaScript, Python, Node.js, SQL |
 | API Testing | REST APIs, Microservices, middleware validation, Postman, automated API suites |
 | CI/CD & Automation | Jenkins, GitHub Actions, Bitbucket — pipeline design, maintenance, quality gates |
@@ -47,23 +47,24 @@ Global leader in web hosting and digital presence — Bluehost, HostGator, Domai
 - QA'd consumer-facing products at scale — NetworkSolutions.com, Bluehost.com — serving millions of users across hosting and small business platforms.
 - Refactored the legacy Cucumber (over WebdriverIO) suite on my own initiative — regression from 3.5–6 h to ~1:45–2 h (~60%) while trimming ~600–630 → ~430–440 cases.
 - Re-platformed the suite to Robot Framework + Python (~430 cases), shifting UI coverage to faster API/DB (headless) tests — runs under 1:30 h with equal coverage and higher precision.
+- Kicked off the next-generation automation initiative (2nd half 2025): evaluated Playwright as the successor to Robot Framework — UI E2E proof-of-concepts with page objects, API testing POCs, a technical framework comparison, and the migration plan for the suite.
 - Validated schemas, statuses, data structures and interaction results across SQL, MySQL and NoSQL during the migration from physical servers to Oracle Cloud Infrastructure (OCI) — via DBeaver, direct DB connections and APIs (mostly manual; a few promoted to regression).
 - Designed test strategies across multiple product lines — functional, API, cross-browser, regression.
 - Embedded suites into CI/CD (Jenkins over Bitbucket) with Jira + Zephyr test management, and mentored peers on clean-code automation.
 
 **Software Development Engineer — Aug 2021 – Feb 2022**
 
-- Led the initial migration of the legacy 600+ case suite from Protractor/JS to Cucumber (over WebdriverIO).
+- Led the initial migration of the legacy 600+ case suite from Protractor/JS to Cucumber (over WebdriverIO), standardizing the suite on a Page Object Model architecture.
 - Collaborated with DevOps and Dev teams to integrate testing earlier in the SDLC, reducing defects reaching production.
 
 ### UPEX Galaxy — Remote, Argentina
-*Jan 2026 – Present · 7 mos*
+*Jan 2026 – Present*
 
 **Agentic QA Engineer (DOJO Program)**
 
 - Built the Agentic QA Boilerplate — an open-source QA framework (KATA architecture, Playwright + TypeScript) shipped with a create-agentic-qa scaffolder, 20+ agent skills, a full Xray CLI, and 7 MCP integrations.
 - Orchestrated the Stage 0→6 QA lifecycle across agent skills: shift-left testing, sprint testing, test documentation, test automation, and regression GO/NO-GO.
-- QA'd UPEX's diploma tracking platform (production-bound) — E2E Playwright suites, API testing (45+ endpoints), accessibility (axe-core), and multi-role authorization.
+- QA'd UPEX's Bunkai TMS and the now-archived diploma tracking platform — E2E Playwright suites, API testing (45+ endpoints), accessibility (axe-core), and multi-role authorization.
 - Designed CI/CD quality gates across GitHub Actions workflows — Allure dashboards auto-deployed to GitHub Pages on every run.
 - Implemented Jira/Xray test traceability with @atc decorators and a 13-command Xray CLI for automated test case synchronization.
 - Evaluated through UPEX's Agentic QA DOJO — peer-reviewed test architecture and CI/CD design on production-grade products.

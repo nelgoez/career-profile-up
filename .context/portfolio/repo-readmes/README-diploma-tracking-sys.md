@@ -1,5 +1,7 @@
 # diploma-tracking-sys
 
+> **ARCHIVED — DEPRECATED PROJECT.** The repository, staging deployment and Allure pages were retired. This README is kept as a historical record only.
+
 > **Full-stack academic diploma tracking platform** — Supabase + Next.js + Hono API. Built and maintained by [Nahuel Gomez](https://nelthor.com.ar).
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -34,13 +36,13 @@ Full-stack academic platform for managing diploma tracking, student progress, ce
 
 ## Demo access
 
-One-click demo mode at `https://diplomatrackingsystem.qzz.io/` — mock data, no signup required.
+~~One-click demo mode at `https://diplomatrackingsystem.qzz.io/`~~ — the demo, staging deployment and repository were retired with the project.
 
 ## Related
 
 - [Portfolio](https://nelthor.com.ar) — Nahuel Gomez, Agentic QA Engineer
-- [agentic-diplo-track-sys](https://github.com/nelgoez/agentic-diplo-track-sys) — dev workflow hub (companion repo)
-- [bunkai-qa-engineering](https://github.com/nelgoez/bunkai-qa-engineering) — QA automation framework
+- ~~[agentic-diplo-track-sys](https://github.com/nelgoez/agentic-diplo-track-sys) — dev workflow hub (companion repo)~~ — archived with this project
+- [bunkai-qa-engineering](https://github.com/nelgoez/bunkai-qa-engineering) — QA automation framework (current)
 
 ---
 

@@ -18,7 +18,7 @@ const SCORE: ScoreLayer[] = [
     detailKey: 'qa.layer-ui-detail',
     color: '#10B981',
     reportUrls: [
-      { label: 'DTS Staging', url: 'https://nelgoez.github.io/diploma-tracking-sys/staging/smoke/' },
+      { label: 'Bunkai TMS — Smoke', url: 'https://nelgoez.github.io/bunkai-qa-engineering/staging/smoke/' },
       { label: 'UNC Course Audit', url: 'https://nelgoez.github.io/unc-agentic-dev/allure/' },
     ],
   },
@@ -28,7 +28,7 @@ const SCORE: ScoreLayer[] = [
     detailKey: 'qa.layer-api-detail',
     color: '#10B981',
     reportUrls: [
-      { label: 'DTS API', url: 'https://nelgoez.github.io/diploma-tracking-sys/staging/smoke/' },
+      { label: 'Bunkai TMS — Regression', url: 'https://nelgoez.github.io/bunkai-qa-engineering/staging/regression/' },
       { label: 'UNC Moodle API', url: 'https://nelgoez.github.io/unc-agentic-dev/allure/' },
     ],
   },
@@ -38,7 +38,7 @@ const SCORE: ScoreLayer[] = [
     detailKey: 'qa.layer-db-detail',
     color: '#10B981',
     reportUrls: [
-      { label: 'DTS RLS', url: 'https://nelgoez.github.io/diploma-tracking-sys/staging/smoke/' },
+      { label: 'Bunkai TMS — Smoke', url: 'https://nelgoez.github.io/bunkai-qa-engineering/staging/smoke/' },
     ],
   },
   {
@@ -47,7 +47,7 @@ const SCORE: ScoreLayer[] = [
     detailKey: 'qa.layer-cicd-detail',
     color: '#10B981',
     reportUrls: [
-      { label: 'DTS Actions', url: 'https://github.com/nelgoez/diploma-tracking-sys/actions' },
+      { label: 'Bunkai Actions', url: 'https://github.com/nelgoez/bunkai-qa-engineering/actions' },
       { label: 'UNC Audit CI', url: 'https://github.com/nelgoez/unc-agentic-dev/actions/workflows/audit-ci.yml' },
     ],
   },
@@ -72,6 +72,19 @@ const SCREENSHOTS = [
   { src: '/media/qa/unc-audit-section0.png', key: 'qa.evidence-unc-audit-section0' },
   { src: '/media/qa/unc-audit-section4.png', key: 'qa.evidence-unc-audit-section4' },
   { src: '/media/qa/unc-admin-explore.png', key: 'qa.evidence-unc-admin-explore' },
+];
+
+// DTS (Diploma Tracking System) was deprecated: its repo, staging deploy and Allure
+// pages are gone. These screenshots are kept as historical evidence and link to the
+// local assets instead of the retired external dashboards.
+const ARCHIVED = [
+  { src: '/media/qa/DTS-smoke-allure-report.png', caption: 'DTS — Staging smoke report' },
+  { src: '/media/qa/DTS-smoke-suites-PROD.png', caption: 'DTS — Production smoke suites' },
+  { src: '/media/qa/DTS-smoke-allure-graphs.png', caption: 'DTS — Allure graphs' },
+  { src: '/media/qa/DTS-smoke-graphs-PROD.png', caption: 'DTS — Production graphs' },
+  { src: '/media/qa/DTS-smoke-leng-options-ES-categories-section.png', caption: 'DTS — ES categories section' },
+  { src: '/media/qa/DTS-smoke-funtionalities-video-check-PROD.png', caption: 'DTS — Production video check' },
+  { src: '/media/qa/DTS-smoke-suite-details.png', caption: 'DTS — Suite details' },
 ];
 
 export default function QAPage() {
@@ -147,28 +160,30 @@ export default function QAPage() {
         </p>
         <div className="grid md:grid-cols-4 gap-6">
           <a
-            href="https://nelgoez.github.io/diploma-tracking-sys/staging/smoke/"
+            href="https://nelgoez.github.io/bunkai-qa-engineering/staging/smoke/"
             target="_blank"
+            rel="noopener noreferrer"
             className="group block rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)] overflow-hidden hover:border-[var(--color-accent)]/50 transition-all hover:scale-[1.02]"
           >
             <div className="aspect-video overflow-hidden">
-              <img src="/media/qa/DTS-smoke-allure-report.png" alt="DTS Staging Smoke" className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <img src="/media/qa/bunkasi-allure-failed-case-details.png" alt="Bunkai TMS Staging Smoke" className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" loading="lazy" />
             </div>
             <div className="p-4 flex items-center justify-between">
-              <span className="text-sm font-medium">DTS — Staging Smoke</span>
+              <span className="text-sm font-medium">Bunkai TMS — Staging Smoke</span>
               <span className="text-[var(--color-accent)] text-sm">↗</span>
             </div>
           </a>
           <a
-            href="https://nelgoez.github.io/diploma-tracking-sys/production/smoke/"
+            href="https://nelgoez.github.io/bunkai-qa-engineering/staging/regression/"
             target="_blank"
+            rel="noopener noreferrer"
             className="group block rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)] overflow-hidden hover:border-[var(--color-accent)]/50 transition-all hover:scale-[1.02]"
           >
             <div className="aspect-video overflow-hidden">
-              <img src="/media/qa/DTS-smoke-suites-PROD.png" alt="DTS Production Smoke" className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <img src="/media/qa/bk147-multi-tab.png" alt="Bunkai TMS Regression" className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" loading="lazy" />
             </div>
             <div className="p-4 flex items-center justify-between">
-              <span className="text-sm font-medium">DTS — Production Smoke</span>
+              <span className="text-sm font-medium">Bunkai TMS — Regression</span>
               <span className="text-[var(--color-accent)] text-sm">↗</span>
             </div>
           </a>
@@ -202,6 +217,33 @@ export default function QAPage() {
               </p>
             </div>
           </a>
+        </div>
+      </section>
+
+      <section className="mb-16">
+        <h2 className="text-2xl font-bold mb-2">Archived Evidence — Diploma Tracking System</h2>
+        <p className="text-[var(--color-text-muted)] mb-8">
+          DTS was deprecated and its repository, staging deployment and Allure dashboards were retired.
+          These screenshots are kept as historical QA evidence.
+        </p>
+        <div className="grid md:grid-cols-4 gap-4">
+          {ARCHIVED.map(a => (
+            <figure key={a.src} className="p-3 rounded-xl bg-[var(--color-surface)] border border-amber-500/20 opacity-80">
+              <a href={a.src} target="_blank" rel="noopener noreferrer">
+                <img
+                  src={a.src}
+                  alt={a.caption}
+                  className="w-full rounded-lg border border-[var(--color-border)]"
+                  loading="lazy"
+                />
+              </a>
+              <figcaption className="text-xs text-[var(--color-text-muted)] mt-2 px-1">
+                {a.caption}
+                {' '}
+                · archived
+              </figcaption>
+            </figure>
+          ))}
         </div>
       </section>
 

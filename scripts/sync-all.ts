@@ -51,6 +51,8 @@ interface ProjectEntry {
   tags: string[]
   thumbnail: string | null
   featured: boolean
+  deprecated?: boolean
+  deprecatedNote?: string
   order: number
   updatedAt: string
   screenshots: { path: string, alt: string }[]
@@ -197,6 +199,17 @@ function generatePortfolioContent(repos: SourceRepo[]) {
     screenshots: r.metadata.screenshots ?? [],
     links: r.metadata.links ?? {},
   }));
+
+  // Preserve deprecated/archived entries (e.g. the retired DTS project + harness) so the
+  // historical record survives every regeneration from live source repos.
+  const existingManifest = readJSON<{ repos: ProjectEntry[] }>(PROJECTS_MANIFEST);
+  const archivedEntries = (existingManifest?.repos ?? []).filter(r => r.deprecated);
+  if (archivedEntries.length > 0) {
+    const currentNames = new Set(entries.map(e => e.name));
+    for (const archived of archivedEntries) {
+      if (!currentNames.has(archived.name)) { entries.push(archived); }
+    }
+  }
 
   entries.sort((a, b) => a.order - b.order);
   writeJSON(PROJECTS_MANIFEST, { updated: new Date().toISOString().split('T')[0], repos: entries });
@@ -503,7 +516,7 @@ function generateProfileReadme(_repos: SourceRepo[]) {
     '',
     '<div align="center">',
     '',
-    '<i>⚡ Profile auto-generated from live repo data — blog posts, project metadata, and screenshots synced from bunkai-qa-engineering, agentic-diplo-track-sys, and more.</i>',
+    '<i>⚡ Profile auto-generated from live repo data — blog posts, project metadata, and screenshots synced from bunkai-qa-engineering, unc-agentic-dev, and more.</i>',
     '',
     '<br/><br/>',
     '',

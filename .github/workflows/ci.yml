@@ -14,6 +14,9 @@ jobs:
       - uses: oven-sh/setup-bun@v2
       - run: bun install
       - run: bun install --cwd nelthor.qzz.io
+      # lib/blog-content.json is generated (gitignored) and imported by blog-data.ts.
+      - run: node scripts/generate-blog-manifest.mjs
+        working-directory: nelthor.qzz.io
       - run: bun run types:check
       - run: bun run lint:check
       - run: bun run format:check
